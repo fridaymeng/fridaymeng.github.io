@@ -33,7 +33,8 @@ window.onload = function(){
         {"href": "http://www.reactnative.com/","text" : "reactnative"},
         {"href": "http://openprocessing.org/","text" : "openprocessing"},
         {"href": "http://www.deviantart.com/","text" : "deviantart"},
-        {"href": "http://techfieldday.com/","text" : "techfieldday"}
+        {"href": "http://techfieldday.com/","text" : "techfieldday"},
+        {"href": "http://www.vicarious.com/","text" : "vicarious"}
       ],
       "links": []
     };
