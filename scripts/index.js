@@ -38,8 +38,8 @@ window.onload = function(){
       ],
       "links": []
     };
-	var  width = parseInt(document.body.offsetWidth),
-        height = parseInt(document.body.offsetHeight),
+	var  width = window.screen.width,
+        height = window.screen.height,
              φ = 20,
              α = 0,
              λ = {},
