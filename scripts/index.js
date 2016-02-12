@@ -34,7 +34,8 @@ window.onload = function(){
         {"href": "http://openprocessing.org/","text" : "openprocessing"},
         {"href": "http://www.deviantart.com/","text" : "deviantart"},
         {"href": "http://techfieldday.com/","text" : "techfieldday"},
-        {"href": "http://www.vicarious.com/","text" : "vicarious"}
+        {"href": "http://www.vicarious.com/","text" : "vicarious"},
+        {"href": "http://www.magicleap.com/","text" : "Magic Leap"}
       ],
       "links": []
     };
