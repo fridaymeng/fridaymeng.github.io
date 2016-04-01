@@ -42,7 +42,7 @@ window.onload = function(){
     };
 	var  width = window.screen.width,
         height = window.screen.height,
-             φ = 20,
+             φ = 30,
              α = 0,
              λ = {},
            num = data.nodes.length;
