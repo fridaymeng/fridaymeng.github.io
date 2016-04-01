@@ -35,7 +35,8 @@ window.onload = function(){
         {"href": "http://www.deviantart.com/","text" : "deviantart"},
         {"href": "http://techfieldday.com/","text" : "techfieldday"},
         {"href": "http://www.vicarious.com/","text" : "vicarious"},
-        {"href": "http://www.magicleap.com/","text" : "Magic Leap"}
+        {"href": "http://www.magicleap.com/","text" : "Magic Leap"},
+        {"href": "http://www.fooplot.com/","text" : "Function Plot"}
       ],
       "links": []
     };
@@ -49,7 +50,7 @@ window.onload = function(){
    		λ = pos();
    		data.nodes[i].x = λ.x;
    		data.nodes[i].y = λ.y;
-   		//data.nodes[i].fixed = true;
+   		data.nodes[i].fixed = true;
    		data.links.unshift({"source": i, "target":  i+1});
    	};
    	data.links.pop();
