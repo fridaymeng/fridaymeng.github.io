@@ -38,7 +38,8 @@ window.onload = function(){
         {"href": "http://www.magicleap.com/","text" : "Magic Leap"},
         {"href": "http://www.fooplot.com/","text" : "Function Plot"},
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
-        {"href": "http://www.webdesignerdepot.com/","text" : "Webdesigner Depot"}
+        {"href": "http://www.webdesignerdepot.com/","text" : "Webdesigner Depot"},
+        {"href": "http://www.zwbk.org/","text" : "中文百科"}
       ],
       "links": []
     };
