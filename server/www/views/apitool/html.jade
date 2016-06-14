@@ -1,0 +1,271 @@
+extends ../toollayout
+
+block Content
+  include ../toolmenu
+  .particles
+  .toolmain
+    .tool-wrap
+      .tool-sec
+        h3 HTML资源
+        ul
+          li: a(href="http://www.w3.org/html/",title="Official Website",target="_blank") Official Website
+          li: a(href="http://www.html.su/",title="HTML/XTML in one page",target="_blank") HTML/XTML in one page
+          li: a(href="/download/html-cheat-sheet.pdf",title="HTML Cheat Sheet",target="_blank") HTML Cheat Sheet [.pdf]
+          li: a(href="/download/html1_quickref.pdf",title="HTML quick reference",target="_blank") HTML quick reference [.pdf]
+          li: a(href="/download/HTML-XHTML_Tag_Sheet.pdf",title="HTML &amp; XHTML Tag Quick Reference",target="_blank") HTML &amp; XHTML Tag Quick Reference [.pdf]
+          li: a(href="/download/HTML5_Canvas_Cheat_Sheet.pdf",title="HTML5 Canvas Cheat Sheet",target="_blank") HTML5 Canvas Cheat Sheet [.pdf]
+      .tool-sec
+          h3 基础标签
+          ul
+            li: a(href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-B63ED1A31",title="Defines the document type",target="_blank") &lt;!DOCTYPE&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/html",title="Defines an HTML document",target="_blank") &lt;html&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/body",title="Defines the document's body",target="_blank") &lt;body&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/h1",title="Defines HTML headings",target="_blank") &lt;h1&gt; to &lt;h6&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/p",title="Defines a paragraph",target="_blank") &lt;p&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/br",title="Inserts a single line break",target="_blank") &lt;br /&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/hr",title="Defines a horizontal line",target="_blank") &lt;hr /&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/img",title="Defines an image",target="_blank") &lt;img /&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/map",title="Defines an image-map",target="_blank") &lt;map&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/area",title="Defines an area inside an image-map",target="_blank") &lt;area /&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/a",title="Defines an anchor",target="_blank") &lt;a&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/link",title="Defines the relationship between a document and an external resource",target="_blank") &lt;link /&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/ul",title="defines an unordered list",target="_blank") &lt;ul&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/ol",title="defines an ordered list",target="_blank") &lt;ol&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/li",title="defines a list item",target="_blank") &lt;li&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/dir",title="deprecated.defines a directory list",target="_blank") &lt;dir&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/dl",title="defines a definition list",target="_blank") &lt;dl&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/dt",title="defines an item in a definition list",target="_blank") &lt;dt&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/dd",title="defines a description of an item in a definition list",target="_blank") &lt;dd&gt;
+            li: a(href="https://developer.mozilla.org/en-US/docs/HTML/Element/menu",title="deprecated.defines a menu list",target="_blank") &lt;menu&gt;
+      .tool-sec
+        h3 格式化标签
+        ul
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/acronym" title="Defines an acronym">&lt;acronym&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/abbr" title="Defines an abbreviation">&lt;abbr&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/address" title="Defines contact information for the author/owner of a document">&lt;address&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/b" title="Defines bold text">&lt;b&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/bdo" title="Overrides the current text direction">&lt;bdo&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/big" title="Defines big text">&lt;big&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/blockquote" title="Defines a long quotation">&lt;blockquote&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/center" title="Deprecated.Defines centered text">&lt;center&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/cite" title="Defines a citation">&lt;cite&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/code" title="Defines a piece of computer code">&lt;code&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/del" title="Defines text that has been deleted from a document">&lt;del&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/dfn" title="Defines a definition term">&lt;dfn&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/em" title="Defines emphasized text&nbsp;">&lt;em&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/font" title="Deprecated.Defines font, color, and size for text">&lt;font&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/i" title="Defines italic text">&lt;i&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/ins" title="Defines text that has been inserted into a document">&lt;ins&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/kbd" title="Defines keyboard input">&lt;kbd&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/pre" title="Defines preformatted text">&lt;pre&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/q" title="Defines a short quotation">&lt;q&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/s" title="Deprecated.Defines strikethrough text">&lt;s&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/samp" title="Defines sample output from a computer program">&lt;samp&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/small" title="Defines smaller text">&lt;small&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/strike" title="Deprecated.Defines strikethrough text">&lt;strike&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/strong" title="Defines strong text">&lt;strong&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/sub" title="Defines subscripted text">&lt;sub&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/sup" title="Defines superscripted text">&lt;sup&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/tt" title="Defines teletype text">&lt;tt&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/u" title="Deprecated.Defines underlined text">&lt;u&gt;</a>
+            li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/var" title="Defines a variable">&lt;var&gt;</a>
+            li <span title="Deprecated.Defines preformatted text">&lt;xmp&gt;</span>
+      .tool-sec
+        h3 表单和表格
+        ul
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/form" title="defines an html form for user input">&lt;form&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/input" title="defines an input control">&lt;input /&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/textarea" title="defines a multiline input control (text area)">&lt;textarea&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/button" title="defines a clickable button">&lt;button&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/select" title="defines a drop-down list">&lt;select&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/optgroup" title="defines a group of related options in a drop-down list">&lt;optgroup&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/option" title="defines an option in a drop-down list">&lt;option&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/label" title="defines a label&nbsp;for an &lt;input&gt; element">&lt;label&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/fieldset" title="groups related elements in a form">&lt;fieldset&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/legend" title="defines a caption for a &lt;fieldset&gt; element">&lt;legend&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/table" title="defines a table">&lt;table&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/caption" title="defines a table caption">&lt;caption&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/th" title="defines a header cell in a table">&lt;th&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/tr" title="defines a row in a table">&lt;tr&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/td" title="defines a cell in a table">&lt;td&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/thead" title="groups the header content in a table">&lt;thead&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/tbody" title="groups the body content in a table">&lt;tbody&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/tfoot" title="groups the footer content in a table">&lt;tfoot&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/col" title="defines attribute values for one or more columns in a table">&lt;col /&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/colgroup" title="defines a group of columns in a table for formatting">&lt;colgroup&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/frame" title=" Defines a window (a frame) in a frameset">&lt;frame /&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/frameset" title="Defines a set of frames">&lt;frameset&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/noframes" title="Defines an alternate content for users that do not support frames">&lt;noframes&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/iframe" title="Defines an inline frame">&lt;iframe&gt;</a>
+      .tool-sec
+        h3 其它常用标签
+        ul
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/style" title="defines style information for a document">&lt;style&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/div" title="defines a section in a document">&lt;div&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/span" title="defines a section in a document">&lt;span&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/head" title="defines information about the document">&lt;head&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/title" title="defines the document title">&lt;title&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/meta" title="defines metadata about an html document">&lt;meta&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/base" title="specifies the base url/target for all relative urls in a document">&lt;base /&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/basefont" title="deprecated. specifies a default color, size,or font for all the text in a document">&lt;basefont /&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/script" title="defines a client-side script">&lt;script&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/noscript" title="defines an alternate content for users that do not support lient-side scripts">&lt;noscript&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/applet" title="deprecated. defines an embedded applet">&lt;applet&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/object" title="defines an embedded object">&lt;object&gt;</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/param" title="Defines a parameter for an object">&lt;param /&gt;</a>
+      .tool-sec
+        h3 标签属性
+        ul
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/CSS/Class_selectors" title="pecifies one or more classnames for an element (refers to a class in a style sheet)">class</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/CSS/ID_selectors" title="pecifies a unique id for an element">id</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/style" title="pecifies an inline CSS style for an element">style</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/title" title="pecifies extra information about an element">title</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Element/dir" title="pecifies the text direction for the content in an element">dir</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/DOM/element.lang" title="pecifies the language of the element's content">lang</a>
+          li <span title="pecifies the text direction for the content in an element" title="pecifies the language of the element's content (for XHTML documents)">xml:lang</span>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/DOM/element.accessKey" title="Specifies a shortcut key to activate/focus an element">accesskey</a>
+          li <a target="_blank" href="https://developer.mozilla.org/en-US/docs/DOM/element.tabIndex" title="Specifies the tabbing order of an element">tabindex</a>  
+      .tool-sec
+        h3 常用符号
+        ul
+          li <span>&#34;</span><span class="right">&#38;#34;</span>
+          li <span>&#38;</span><span class="right">&#38;#38;</span>
+          li <span>&#60;</span><span class="right">&#38;#60;</span>
+          li <span>&#62;</span><span class="right">&#38;#62;</span>
+          li <span>&#64;</span><span class="right">&#38;#64;</span>
+          li <span>&#128;</span><span class="right">&#38;#128;</span>
+          li <span>&#149;</span><span class="right">&#38;#149;</span>
+          li <span>&#153;</span><span class="right">&#38;#153;</span>
+          li <span>&#163;</span><span class="right">&#38;#163;</span>
+          li <span>&#160;</span><span class="right">&#38;#160;</span>
+          li <span>&#169;</span><span class="right">&#38;#169;</span>
+      .tool-sec
+        h3 HTTP状态码 1XX
+        ul
+          li <span>100 Continue</span>
+          li(class="tip")  The server has received the request headers, and the client should proceed to send the request body
+          li <span>101 Switching Protocols</span>
+          li(class="tip") The requester has asked the server to switch protocols
+          li <span>103 Checkpoint</span>
+          li(class="tip") Used in the resumable requests proposal to resume aborted PUT or POST requests
+      .tool-sec
+        h3 HTTP状态码 2XX
+        ul
+          li 200 OK
+          li(class="tip") The request is OK (this is the standard response for successful HTTP requests)
+          li 201 Created
+          li(class="tip") The request has been fulfilled, and a new resource is created
+          li 202 Accepted
+          li(class="tip") The request has been accepted for processing, but the processing has not been completed
+          li 203 Non-Authoritative Information
+          li(class="tip") The request has been successfully processed, but is returning information that may be from another source
+          li 204 No Content
+          li(class="tip") The request has been successfully processed, but is not returning any content
+          li 205 Reset Content
+          li(class="tip") The request has been successfully processed, but is not returning any content, and requires that the requester reset the document view
+          li 206 Partial Content
+          li(class="tip") The server is delivering only part of the resource due to a range header sent by the client
+      .tool-sec
+        h3 HTTP状态码 3XX
+        ul
+          li 300 Multiple Choices
+          li(class="tip") A link list. The user can select a link and go to that location. Maximum five addresses
+          li 301 Moved Permanently
+          li(class="tip") The requested page has moved to a new URL
+          li 302 Found
+          li(class="tip") The requested page has moved temporarily to a new URL
+          li 303 See Other
+          li(class="tip") The requested page can be found under a different URL
+          li 304 Not Modified
+          li(class="tip") Indicates the requested page has not been modified since last requested
+          li 306 Switch Proxy
+          li(class="tip") <i>No longer used</i>
+          li 307 Temporary Redirect
+          li(class="tip") The requested page has moved temporarily to a new URL
+          li 308 Resume Incomplete
+          li(class="tip") Used in the resumable requests proposal to resume aborted PUT or POST requests
+      .tool-sec
+        h3 HTTP状态码 4XX
+        ul
+          li 400 Bad Request
+          li(class="tip") The request cannot be fulfilled due to bad syntax
+          li 401 Unauthorized
+          li(class="tip") The request was a legal request, but the server is refusing to respond to it. For use when authentication is possible but has failed or not yet been provided
+          li 402 Payment Required
+          li(class="tip") Reserved for future use
+          li 403 Forbidden
+          li(class="tip") The request was a legal request, but the server is refusing to respond to it
+          li 404 Not Found
+          li(class="tip") The requested page could not be found but may be available again in the future
+          li 405 Method Not Allowed
+          li(class="tip") A request was made of a page using a request method not supported by that page
+          li 406 Not Acceptable
+          li(class="tip") The server can only generate a response that is not accepted by the client
+          li 407 Proxy Authentication Required
+          li(class="tip") The client must first authenticate itself with the proxy
+          li 408 Request Timeout
+          li(class="tip") The server timed out waiting for the request
+          li 409 Conflict
+          li(class="tip") The request could not be completed because of a conflict in the request
+          li 410 Gone
+          li(class="tip") The requested page is no longer available
+          li 411 Length Required
+          li(class="tip") The "Content-Length" is not defined. The server will not accept the request without it
+          li 412 Precondition Failed
+          li(class="tip") The precondition given in the request evaluated to false by the server
+          li 413 Request Entity Too Large
+          li(class="tip") The server will not accept the request, because the request entity is too large
+          li 414 Request-URI Too Long
+          li(class="tip") The server will not accept the request, because the URL is too long. Occurs when you convert a POST request to a GET request with a long query information
+          li 415 Unsupported Media Type
+          li(class="tip") The server will not accept the request, because the media type is not supported 
+          li 416 Requested Range Not Satisfiable
+          li(class="tip") The client has asked for a portion of the file, but the server cannot supply that portion
+          li 417 Expectation Failed
+          li(class="tip") The server cannot meet the requirements of the Expect request-header field
+      .tool-sec
+        h3 HTTP状态码 5XX
+        ul
+          li 500 Internal Server Error
+          li(class="tip") A generic error message, given when no more specific message is suitable
+          li 501 Not Implemented
+          li(class="tip") The server either does not recognize the request method, or it lacks the ability to fulfill the request
+          li 502 Bad Gateway
+          li(class="tip") The server was acting as a gateway or proxy and received an invalid response from the upstream server
+          li 503 Service Unavailable
+          li(class="tip") The server is currently unavailable (overloaded or down)
+          li 504 Gateway Timeout
+          li(class="tip") The server was acting as a gateway or proxy and did not receive a timely response from the upstream server
+          li 505 HTTP Version Not Supported
+          li(class="tip") The server does not support the HTTP protocol version used in the request
+          li 511 Network Authentication Required
+          li(class="tip") The client needs to authenticate to gain network access
+
+  script.
+    $(function(){
+      var toollist = $(".tool-sec");
+      var toolwrap = $(".tool-wrap").width();
+      var w_num = parseInt(toolwrap/217);
+      for(i = 0; i < toollist.length; i ++){
+        if(i > w_num - 1 && i < w_num*2){
+          for(m = 0; m < w_num; m ++){
+            toollist.eq(m + w_num).animate({
+                  "left" : 235*m,
+                   "top" : toollist.eq(m).height() + 40
+            })
+          }
+        }else if(i > w_num*2 - 1 ){
+          for(m = 0; m < w_num; m ++){
+            toollist.eq(m + w_num*2).animate({
+                  "left" : 235*m,
+                   "top" : toollist.eq(m).height() + toollist.eq(m+w_num).height() + 80
+            })
+          }
+        }else{
+          toollist.eq(i).animate({
+                "left" : 235*i,
+                 "top" : 0
+          })
+        }
+      }
+    })

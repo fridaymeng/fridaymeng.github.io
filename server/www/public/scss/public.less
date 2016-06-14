@@ -1,0 +1,180 @@
+@pageWidth : 80%;
+@ResponsePageWidth : 98%;
+canvas{
+	background: none;
+}
+#container {
+	background: #fff;
+	padding: 2em .2em;
+	border-radius: 5px;
+	min-height: 600px;
+	position: relative;
+	z-index: 10;
+	margin: .2em auto 0;
+	&.login{
+		min-height: 200px;
+		margin:10% auto 0;
+		opacity:.6;
+	}
+}
+.overlay-white{
+	position: absolute;
+	z-index: 99;
+	background: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.clear {
+	clear: both;
+}
+.statistics{
+	display: none;
+}
+.share-with{
+	padding: 10px 0 30px;
+	text-align: right;
+	.bdsharebuttonbox{
+		a{
+			float: right!important;
+		}
+	}
+}
+#menu{
+	background: url(../images/phy_02.png);
+	padding: 7px 0 12px;
+	border-radius:0 0 5px 5px;
+	overflow: hidden;
+	opacity: .9;
+	position: fixed;
+	height: 39px;
+	//width: @pageWidth;
+	width: 100%;
+	margin: 0 auto;
+	//border: 1px solid #222;
+	border-top: none;
+	z-index: 100;
+	@media (max-width: 1200px) {
+	  //width : @ResponsePageWidth;
+	}
+	ul{
+		width: @pageWidth;
+		margin: 0 auto;
+		li{
+			float: left;
+			background: url(../images/phy_05.png) no-repeat right center;
+			padding: 0 1.2em 0 0.3em;
+			&:last-child{
+				background : none;
+			}
+			a{
+				display: block;
+				padding: 10px 12px;
+				border-radius: 5px;
+				color: #fff;
+				margin: 0 .1em;
+				text-shadow:0 0 3px #888;
+				&.active,&:hover{
+					background: #fff;
+					color: #111;
+					text-shadow:none;
+				}
+			}
+		}
+	}
+}
+.padding {
+	padding: 30px 0;
+}
+
+.list-both {
+	line-height: 2em;
+	clear: both;
+	overflow: hidden;
+	.list-left{
+		width: 25%;
+		float: left;
+		text-align: right;
+		padding: 8px 0;
+	}
+	.list-right{
+		width: 70%;
+		float: left;
+		padding: 8px 0 8px 1%;
+	}
+}
+textarea{
+	&.textarea-text {
+		height: 290px;
+		width: 90%;
+	}
+}
+a{
+	&.btn{
+		padding: 10px 15px 8px;
+		background: #08c;
+		color: #fff;
+		border-radius: 3px;
+		box-shadow: 0 0 3px #aaa;
+		&.delete{
+			background: #900;
+			&.deleteCommentsLink{
+				padding: 3px 8px;
+			}
+		}
+		&:hover{
+			background: #f90;
+		}
+	}
+}
+span.notice-span{
+	color: #f60;
+	margin: 0 8px;
+	font-size: 12px;
+}
+.copyright {
+	text-align: center;
+	padding: 10px 0;
+	color: #eee;
+	text-shadow:0 0 2px #999;
+	clear: both;
+	a{
+		color: #666;
+		text-shadow: none;
+	}
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+span.time-tutle{
+	font-size: 12px;
+	color: #666;
+}
+input.article-title {
+	width: 80%;
+}
+		
+input.article-subtitle{
+    width: 80%;
+}
+.width1{
+	width: 100%;
+}
+.width2{
+	width: 50%;
+}
+.width3{
+	width: 33%;
+}
+.width4{
+	width: 25%;
+}
+.width5{
+	width: 20%;
+}
+.width6{
+	width: 16%;
+}

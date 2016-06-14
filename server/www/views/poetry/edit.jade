@@ -1,0 +1,19 @@
+extends ../poemlayout
+
+block Content
+  #container.main
+    #article
+    .edit
+      ul
+        each val,index in article
+          li(class="editcmts")
+            h3= (index+1) + "、" + (val.poemTitle ? val.poemTitle : "没有名字")
+              a(href="###",class="btn delete deleteArticleLink",id="#{val._id}") 删除
+              a(href="/editpoem/#{val._id}",target="_blank",class="btn editArticleLink",edit-id="#{val._id}") 编辑
+              if val.comments
+                -var commentsLi = val.comments
+                -for(cnum = 0;cnum < commentsLi.length;cnum ++)
+                  if commentsLi[cnum]
+                    p= "留言标题："+ commentsLi[cnum].conmentsName + ",内容：" + commentsLi[cnum].conmentsContent 
+                      if cnum == commentsLi.length - 1
+                        a(href="###",class="btn delete deleteCommentsLink",id="#{val._id}",num="#{cnum}",tit="#{commentsLi[cnum].conmentsName}",content="#{commentsLi[cnum].conmentsContent}",cttime="#{commentsLi[cnum].conmentsTime}",cmtscond="#{commentsLi[cnum].conmentsCond}") 删除

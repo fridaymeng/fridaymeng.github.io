@@ -1,0 +1,1676 @@
+8389
+8389
+8389
+8389
+physicsloversblog
+8389
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+Failed to load c++ bson extension, using pure JS version
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: undefined is not a function
+    at Db._executeInsertCommand (/var/www/node_modules/mongodb/lib/mongodb/db.js:1900:46)
+    at insertAll (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:223:26)
+    at Collection.insert (/var/www/node_modules/mongodb/lib/mongodb/collection/core.js:35:3)
+    at /var/www/mongodb.js:74:28
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.save (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:49:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:165:31)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:220:4)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:236:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+/var/www
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+TypeError: Object #<Object> has no method 'sort'
+    at /var/www/mongodb.js:62:114
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.findById (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:46:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+    at param (/var/www/node_modules/express/lib/router/index.js:138:11)
+    at param (/var/www/node_modules/express/lib/router/index.js:135:11)
+    at pass (/var/www/node_modules/express/lib/router/index.js:145:5)
+TypeError: Object #<Object> has no method 'sort'
+    at /var/www/mongodb.js:62:114
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.findById (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:46:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+    at param (/var/www/node_modules/express/lib/router/index.js:138:11)
+    at param (/var/www/node_modules/express/lib/router/index.js:135:11)
+    at pass (/var/www/node_modules/express/lib/router/index.js:145:5)
+TypeError: Object #<Object> has no method 'sort'
+    at /var/www/mongodb.js:62:114
+    at /var/www/mongodb.js:20:10
+    at Db.collection (/var/www/node_modules/mongodb/lib/mongodb/db.js:495:44)
+    at ArticleProvider.getCollection (/var/www/mongodb.js:18:11)
+    at ArticleProvider.findById (/var/www/mongodb.js:59:10)
+    at /var/www/app.js:46:19
+    at callbacks (/var/www/node_modules/express/lib/router/index.js:164:37)
+    at param (/var/www/node_modules/express/lib/router/index.js:138:11)
+    at param (/var/www/node_modules/express/lib/router/index.js:135:11)
+    at pass (/var/www/node_modules/express/lib/router/index.js:145:5)
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+
+/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:242
+        throw message;      
+              ^
+TypeError: Cannot read property 'type' of null
+    at /var/www/app.js:71:24
+    at /var/www/mongodb.js:64:16
+    at /var/www/node_modules/mongodb/lib/mongodb/collection/query.js:147:5
+    at /var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:35
+    at Cursor.close (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:959:5)
+    at Cursor.nextObject (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:17)
+    at commandHandler (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:713:14)
+    at /var/www/node_modules/mongodb/lib/mongodb/db.js:1806:9
+    at Server.Base._callHandler (/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:442:41)
+    at /var/www/node_modules/mongodb/lib/mongodb/connection/server.js:485:18
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+
+/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:242
+        throw message;      
+              ^
+TypeError: Cannot read property 'type' of null
+    at /var/www/app.js:72:24
+    at /var/www/mongodb.js:64:16
+    at /var/www/node_modules/mongodb/lib/mongodb/collection/query.js:147:5
+    at /var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:35
+    at Cursor.close (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:959:5)
+    at Cursor.nextObject (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:17)
+    at commandHandler (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:713:14)
+    at /var/www/node_modules/mongodb/lib/mongodb/db.js:1806:9
+    at Server.Base._callHandler (/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:442:41)
+    at /var/www/node_modules/mongodb/lib/mongodb/connection/server.js:485:18
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+/var/local/mongodb/bin/mongod --help for help and startup options
+Fri Apr 18 20:47:57.824 [initandlisten] MongoDB starting : pid=23893 port=27017 dbpath=/data/db/ 64-bit host=AY130720105934844c71Z
+Fri Apr 18 20:47:57.825 [initandlisten] db version v2.4.9
+Fri Apr 18 20:47:57.825 [initandlisten] git version: 52fe0d21959e32a5bdbecdc62057db386e4e029c
+Fri Apr 18 20:47:57.825 [initandlisten] build info: Linux ip-10-2-29-40 2.6.21.7-2.ec2.v1.2.fc8xen #1 SMP Fri Nov 20 17:48:28 EST 2009 x86_64 BOOST_LIB_VERSION=1_49
+Fri Apr 18 20:47:57.825 [initandlisten] allocator: tcmalloc
+Fri Apr 18 20:47:57.825 [initandlisten] options: {}
+Fri Apr 18 20:47:57.838 [initandlisten] journal dir=/data/db/journal
+Fri Apr 18 20:47:57.839 [initandlisten] recover : no journal files present, no recovery needed
+Fri Apr 18 20:47:57.856 [initandlisten] waiting for connections on port 27017
+Fri Apr 18 20:47:57.856 [websvr] admin web console waiting for connections on port 28017
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+Fri Apr 18 20:48:16.156 [initandlisten] connection accepted from 127.0.0.1:60630 #1 (1 connection now open)
+Fri Apr 18 20:48:16.970 [conn1] end connection 127.0.0.1:60630 (0 connections now open)
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+
+events.js:82
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EADDRINUSE
+    at exports._errnoException (util.js:683:11)
+    at Server._listen2 (net.js:1083:14)
+    at listen (net.js:1105:10)
+    at Server.listen (net.js:1180:5)
+    at Function.app.listen (/var/www/node_modules/express/lib/application.js:533:24)
+    at Object.<anonymous> (/var/www/app.js:232:5)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:349:32)
+    at Function.Module._load (module.js:305:12)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+Fri Apr 18 20:48:54.855 [initandlisten] connection accepted from 127.0.0.1:60633 #2 (1 connection now open)
+Fri Apr 18 20:49:00.559 [conn2] end connection 127.0.0.1:60633 (0 connections now open)
+Fri Apr 18 20:49:16.132 [initandlisten] connection accepted from 127.0.0.1:60634 #3 (1 connection now open)
+Fri Apr 18 20:49:16.134 [initandlisten] connection accepted from 127.0.0.1:60635 #4 (2 connections now open)
+Fri Apr 18 20:49:16.135 [initandlisten] connection accepted from 127.0.0.1:60636 #5 (3 connections now open)
+Fri Apr 18 20:49:16.135 [initandlisten] connection accepted from 127.0.0.1:60637 #6 (4 connections now open)
+Fri Apr 18 20:49:16.136 [initandlisten] connection accepted from 127.0.0.1:60638 #7 (5 connections now open)
+Fri Apr 18 20:49:21.990 [conn3] end connection 127.0.0.1:60634 (4 connections now open)
+Fri Apr 18 20:49:21.990 [conn4] end connection 127.0.0.1:60635 (3 connections now open)
+Fri Apr 18 20:49:21.990 [conn5] end connection 127.0.0.1:60636 (2 connections now open)
+Fri Apr 18 20:49:21.991 [conn6] end connection 127.0.0.1:60637 (1 connection now open)
+Fri Apr 18 20:49:21.991 [conn7] end connection 127.0.0.1:60638 (0 connections now open)
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+Fri Apr 18 20:49:29.249 [initandlisten] connection accepted from 127.0.0.1:60646 #8 (1 connection now open)
+Fri Apr 18 20:49:29.252 [initandlisten] connection accepted from 127.0.0.1:60647 #9 (2 connections now open)
+Fri Apr 18 20:49:29.253 [initandlisten] connection accepted from 127.0.0.1:60648 #10 (3 connections now open)
+Fri Apr 18 20:49:29.253 [initandlisten] connection accepted from 127.0.0.1:60649 #11 (4 connections now open)
+Fri Apr 18 20:49:29.254 [initandlisten] connection accepted from 127.0.0.1:60650 #12 (5 connections now open)
+Fri Apr 18 23:02:47.960 [signalProcessingThread] got signal 1 (Hangup), will terminate after current cmd ends
+Fri Apr 18 23:02:47.960 [signalProcessingThread] now exiting
+Fri Apr 18 23:02:47.960 dbexit: 
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: going to close listening sockets...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] closing listening socket: 9
+Fri Apr 18 23:02:47.960 [signalProcessingThread] closing listening socket: 10
+Fri Apr 18 23:02:47.960 [signalProcessingThread] closing listening socket: 11
+Fri Apr 18 23:02:47.960 [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: going to flush diaglog...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: going to close sockets...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: waiting for fs preallocator...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: lock for final commit...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: final commit...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] shutdown: closing all files...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] closeAllFiles() finished
+Fri Apr 18 23:02:47.960 [signalProcessingThread] journalCleanup...
+Fri Apr 18 23:02:47.960 [signalProcessingThread] removeJournalFiles
+Fri Apr 18 23:02:47.962 [conn11] end connection 127.0.0.1:60649 (4 connections now open)
+Fri Apr 18 23:02:47.965 [conn8] end connection 127.0.0.1:60646 (4 connections now open)
+Fri Apr 18 23:02:47.965 [conn12] end connection 127.0.0.1:60650 (4 connections now open)
+Fri Apr 18 23:02:47.965 [conn10] end connection 127.0.0.1:60648 (4 connections now open)
+Fri Apr 18 23:02:47.965 [conn9] end connection 127.0.0.1:60647 (4 connections now open)
+Fri Apr 18 23:02:48.054 [signalProcessingThread] shutdown: removing fs lock...
+Fri Apr 18 23:02:48.054 dbexit: really exiting now
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+
+events.js:82
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EADDRINUSE
+    at exports._errnoException (util.js:683:11)
+    at Server._listen2 (net.js:1083:14)
+    at listen (net.js:1105:10)
+    at Server.listen (net.js:1180:5)
+    at Function.app.listen (/var/www/node_modules/express/lib/application.js:533:24)
+    at Object.<anonymous> (/var/www/app.js:232:5)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:349:32)
+    at Function.Module._load (module.js:305:12)
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8389
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+
+events.js:82
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EADDRINUSE
+    at exports._errnoException (util.js:683:11)
+    at Server._listen2 (net.js:1083:14)
+    at listen (net.js:1105:10)
+    at Server.listen (net.js:1180:5)
+    at Function.app.listen (/var/www/node_modules/express/lib/application.js:533:24)
+    at Object.<anonymous> (/var/www/app.js:232:5)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:349:32)
+    at Function.Module._load (module.js:305:12)
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+TypeError: Cannot read property 'length' of undefined
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:198:61)
+    at eval (eval at <anonymous> (/var/www/node_modules/jade/lib/jade.js:162:8), <anonymous>:426:21)
+    at res (/var/www/node_modules/jade/lib/jade.js:163:38)
+    at Object.exports.render (/var/www/node_modules/jade/lib/jade.js:259:10)
+    at Object.exports.renderFile (/var/www/node_modules/jade/lib/jade.js:295:18)
+    at View.exports.renderFile [as engine] (/var/www/node_modules/jade/lib/jade.js:280:21)
+    at View.render (/var/www/node_modules/express/lib/view.js:76:8)
+    at Function.app.render (/var/www/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/var/www/node_modules/express/lib/response.js:798:7)
+    at /var/www/app.js:36:11
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8383
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8383
+
+/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:242
+        throw message;      
+              ^
+TypeError: Cannot read property 'type' of null
+    at /var/www/app.js:76:24
+    at /var/www/mongodb.js:64:16
+    at /var/www/node_modules/mongodb/lib/mongodb/collection/query.js:147:5
+    at /var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:35
+    at Cursor.close (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:959:5)
+    at Cursor.nextObject (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:17)
+    at commandHandler (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:713:14)
+    at /var/www/node_modules/mongodb/lib/mongodb/db.js:1806:9
+    at Server.Base._callHandler (/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:442:41)
+    at /var/www/node_modules/mongodb/lib/mongodb/connection/server.js:485:18
+========================================================================================
+=  Please ensure that you set the default write concern for the database by setting    =
+=   one of the options                                                                 =
+=                                                                                      =
+=     w: (value of > -1 or the string 'majority'), where < 1 means                     =
+=        no write acknowledgement                                                       =
+=     journal: true/false, wait for flush to journal before acknowledgement             =
+=     fsync: true/false, wait for flush to file system before acknowledgement           =
+=                                                                                      =
+=  For backward compatibility safe is still supported and                              =
+=   allows values of [true | false | {j:true} | {w:n, wtimeout:n} | {fsync:true}]      =
+=   the default value is false which means the driver receives does not                =
+=   return the information of the success/error of the insert/update/remove            =
+=                                                                                      =
+=   ex: new Db(new Server('localhost', 27017), {safe:false})                           =
+=                                                                                      =
+=   http://www.mongodb.org/display/DOCS/getLastError+Command                           =
+=                                                                                      =
+=  The default of no acknowledgement will change in the very near future                =
+=                                                                                      =
+=  This message will disappear when the default safe is set on the driver Db           =
+========================================================================================
+physicsloversblog
+8383
+
+/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:242
+        throw message;      
+              ^
+TypeError: Cannot read property 'type' of null
+    at /var/www/app.js:76:24
+    at /var/www/mongodb.js:64:16
+    at /var/www/node_modules/mongodb/lib/mongodb/collection/query.js:147:5
+    at /var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:35
+    at Cursor.close (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:959:5)
+    at Cursor.nextObject (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:738:17)
+    at commandHandler (/var/www/node_modules/mongodb/lib/mongodb/cursor.js:713:14)
+    at /var/www/node_modules/mongodb/lib/mongodb/db.js:1806:9
+    at Server.Base._callHandler (/var/www/node_modules/mongodb/lib/mongodb/connection/base.js:442:41)
+    at /var/www/node_modules/mongodb/lib/mongodb/connection/server.js:485:18

@@ -1,0 +1,425 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.3.25
+3 info using node@v0.11.11
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'F:\\blog',
+6 verbose install   [ 'express',
+6 verbose install     'jade',
+6 verbose install     'mongodb',
+6 verbose install     'grunt',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-contrib-compass',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-less' ] ]
+7 info preinstall physicsloversblog@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping express@3.x F:\blog
+10 verbose already installed skipping jade@1.3.0 F:\blog
+11 verbose cache add [ 'mongodb@1.3.23', null ]
+12 verbose cache add name=undefined spec="mongodb@1.3.23" args=["mongodb@1.3.23",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'mongodb@1.3.23',
+13 verbose parsed url   path: 'mongodb@1.3.23',
+13 verbose parsed url   href: 'mongodb@1.3.23' }
+14 verbose cache add name="mongodb" spec="1.3.23" args=["mongodb","1.3.23"]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: '1.3.23',
+15 verbose parsed url   path: '1.3.23',
+15 verbose parsed url   href: '1.3.23' }
+16 verbose addNamed [ 'mongodb', '1.3.23' ]
+17 verbose addNamed [ '1.3.23', '1.3.23' ]
+18 verbose already installed skipping grunt@~0.4.0 F:\blog
+19 silly lockFile 130bb479-mongodb-1-3-23 mongodb@1.3.23
+20 verbose lock mongodb@1.3.23 C:\Users\Administrator\AppData\Roaming\npm-cache\130bb479-mongodb-1-3-23.lock
+21 verbose already installed skipping grunt-contrib-uglify@~0.1.1 F:\blog
+22 verbose already installed skipping grunt-contrib-concat@~0.1.3 F:\blog
+23 verbose already installed skipping grunt-contrib-watch@~0.2.0 F:\blog
+24 verbose already installed skipping grunt-contrib-compass@~0.6.0 F:\blog
+25 verbose url raw mongodb/1.3.23
+26 verbose url resolving [ 'http://npm.hacknodejs.com/', './mongodb/1.3.23' ]
+27 verbose url resolved http://npm.hacknodejs.com/mongodb/1.3.23
+28 info trying registry request attempt 1 at 21:49:10
+29 verbose etag "-2047605371"
+30 http GET http://npm.hacknodejs.com/mongodb/1.3.23
+31 verbose already installed skipping grunt-contrib-cssmin@~0.6.2 F:\blog
+32 verbose already installed skipping grunt-contrib-less@~0.8.1 F:\blog
+33 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+34 info trying registry request attempt 2 at 21:49:21
+35 verbose etag "-2047605371"
+36 http GET http://npm.hacknodejs.com/mongodb/1.3.23
+37 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+38 info trying registry request attempt 3 at 21:50:21
+39 verbose etag "-2047605371"
+40 http GET http://npm.hacknodejs.com/mongodb/1.3.23
+41 silly registry.get cb [ 304, undefined ]
+42 verbose etag mongodb/1.3.23 from cache
+43 silly lockFile 130bb479-mongodb-1-3-23 mongodb@1.3.23
+44 silly lockFile 130bb479-mongodb-1-3-23 mongodb@1.3.23
+45 silly resolved [ { name: 'mongodb',
+45 silly resolved     description: 'A node.js driver for MongoDB',
+45 silly resolved     keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+45 silly resolved     version: '1.3.23',
+45 silly resolved     author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+45 silly resolved     contributors:
+45 silly resolved      [ [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object],
+45 silly resolved        [Object] ],
+45 silly resolved     repository:
+45 silly resolved      { type: 'git',
+45 silly resolved        url: 'http://github.com/mongodb/node-mongodb-native.git' },
+45 silly resolved     bugs: { url: 'http://github.com/mongodb/node-mongodb-native/issues' },
+45 silly resolved     dependencies: { bson: '0.2.5', kerberos: '0.0.3' },
+45 silly resolved     devDependencies:
+45 silly resolved      { dox: '0.4.4',
+45 silly resolved        'uglify-js': '1.2.5',
+45 silly resolved        ejs: '0.6.1',
+45 silly resolved        request: '2.12.0',
+45 silly resolved        nodeunit: '0.7.4',
+45 silly resolved        markdown: '0.3.1',
+45 silly resolved        gleak: '0.2.3',
+45 silly resolved        step: '0.0.5',
+45 silly resolved        async: '0.1.22',
+45 silly resolved        integra: 'latest',
+45 silly resolved        optimist: 'latest' },
+45 silly resolved     optionalDependencies: { kerberos: '0.0.3' },
+45 silly resolved     config: { native: false },
+45 silly resolved     main: './lib/mongodb/index',
+45 silly resolved     homepage: 'http://mongodb.github.com/node-mongodb-native/',
+45 silly resolved     directories: { lib: './lib/mongodb' },
+45 silly resolved     engines: { node: '>=0.6.19' },
+45 silly resolved     scripts: { test: 'make test_functional' },
+45 silly resolved     licenses: [ [Object] ],
+45 silly resolved     readme: '## MongoDB Node.JS Driver\n \n| what          | where                                          |\n|---------------|------------------------------------------------|\n| documentation | http://mongodb.github.io/node-mongodb-native/  |\n| apidoc        | http://mongodb.github.io/node-mongodb-native/  |\n| source        | https://github.com/mongodb/node-mongodb-native |\n| mongodb       | http://www.mongodb.org/                        |\n\n### Bugs / Feature Requests\n\nThink you’ve found a bug? Want to see a new feature in PyMongo? Please open a\ncase in our issue management tool, JIRA:\n\n- Create an account and login <https://jira.mongodb.org>.\n- Navigate to the NODE project <https://jira.mongodb.org/browse/NODE>.\n- Click **Create Issue** - Please provide as much information as possible about the issue type and how to reproduce it.\n\nBug reports in JIRA for all driver projects (i.e. NODE, PYTHON, CSHARP, JAVA) and the\nCore Server (i.e. SERVER) project are **public**.\n\n### Questions and Bug Reports\n\n * mailing list: https://groups.google.com/forum/#!forum/node-mongodb-native\n * jira: http://jira.mongodb.org/\n\n### Change Log\n\nhttp://jira.mongodb.org/browse/NODE\n\n## Install\n\nTo install the most recent release from npm, run:\n\n    npm install mongodb\n\nThat may give you a warning telling you that bugs[\'web\'] should be bugs[\'url\'], it would be safe to ignore it (this has been fixed in the development version)\n\nTo install the latest from the repository, run::\n\n    npm install path/to/node-mongodb-native\n\n## Live Examples\n<a href="https://runnable.com/node-mongodb-native" target="_blank"><img src="https://runnable.com/external/styles/assets/runnablebtn.png" style="width:67px;height:25px;"></a>\n\n## Introduction\n\nThis is a node.js driver for MongoDB. It\'s a port (or close to a port) of the library for ruby at http://github.com/mongodb/mongo-ruby-driver/.\n\nA simple example of inserting a document.\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;\n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n\n    var collection = db.collection(\'test_insert\');\n    collection.insert({a:2}, function(err, docs) {\n      \n      collection.count(function(err, count) {\n        console.log(format("count = %s", count));\n      });\n\n      // Locate all the entries using find\n      collection.find().toArray(function(err, results) {\n        console.dir(results);\n        // Let\'s close the db\n        db.close();\n      });\n    });\n  })\n```\n\n## Data types\n\nTo store and retrieve the non-JSON MongoDb primitives ([ObjectID](http://www.mongodb.org/display/DOCS/Object+IDs), Long, Binary, [Timestamp](http://www.mongodb.org/display/DOCS/Timestamp+data+type), [DBRef](http://www.mongodb.org/display/DOCS/Database+References#DatabaseReferences-DBRef), Code).\n\nIn particular, every document has a unique `_id` which can be almost any type, and by default a 12-byte ObjectID is created. ObjectIDs can be represented as 24-digit hexadecimal strings, but you must convert the string back into an ObjectID before you can use it in the database. For example:\n\n```javascript\n  // Get the objectID type\n  var ObjectID = require(\'mongodb\').ObjectID;\n\n  var idString = \'4e4e1638c85e808431000003\';\n  collection.findOne({_id: new ObjectID(idString)}, console.log)  // ok\n  collection.findOne({_id: idString}, console.log)  // wrong! callback gets undefined\n```\n\nHere are the constructors the non-Javascript BSON primitive types:\n\n```javascript\n  // Fetch the library\n  var mongo = require(\'mongodb\');\n  // Create new instances of BSON types\n  new mongo.Long(numberString)\n  new mongo.ObjectID(hexString)\n  new mongo.Timestamp()  // the actual unique number is generated on insert.\n  new mongo.DBRef(collectionName, id, dbName)\n  new mongo.Binary(buffer)  // takes a string or Buffer\n  new mongo.Code(code, [context])\n  new mongo.Symbol(string)\n  new mongo.MinKey()\n  new mongo.MaxKey()\n  new mongo.Double(number)\t// Force double storage\n```\n\n### The C/C++ bson parser/serializer\n\nIf you are running a version of this library has the C/C++ parser compiled, to enable the driver to use the C/C++ bson parser pass it the option native_parser:true like below\n\n```javascript\n  // using native_parser:\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\'\n    , {db: {native_parser: true}}, function(err, db) {})\n```\n\nThe C++ parser uses the js objects both for serialization and deserialization.\n\n## GitHub information\n\nThe source code is available at http://github.com/mongodb/node-mongodb-native.\nYou can either clone the repository or download a tarball of the latest release.\n\nOnce you have the source you can test the driver by running\n\n    $ make test\n\nin the main directory. You will need to have a mongo instance running on localhost for the integration tests to pass.\n\n## Examples\n\nFor examples look in the examples/ directory. You can execute the examples using node.\n\n    $ cd examples\n    $ node queries.js\n\n## GridStore\n\nThe GridStore class allows for storage of binary files in mongoDB using the mongoDB defined files and chunks collection definition.\n\nFor more information have a look at [Gridstore](https://github.com/mongodb/node-mongodb-native/blob/master/docs/gridfs.md)\n\n## Replicasets\n\nFor more information about how to connect to a replicaset have a look at the extensive documentation [Documentation](http://mongodb.github.com/node-mongodb-native/)\n\n### Primary Key Factories\n\nDefining your own primary key factory allows you to generate your own series of id\'s\n(this could f.ex be to use something like ISBN numbers). The generated the id needs to be a 12 byte long "string".\n\nSimple example below\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;    \n\n  // Custom factory (need to provide a 12 byte array);\n  CustomPKFactory = function() {}\n  CustomPKFactory.prototype = new Object();\n  CustomPKFactory.createPk = function() {\n    return new ObjectID("aaaaaaaaaaaa");\n  }\n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n\n    db.dropDatabase(function(err, done) {\n      \n      db.createCollection(\'test_custom_key\', function(err, collection) {\n        \n        collection.insert({\'a\':1}, function(err, docs) {\n          \n          collection.find({\'_id\':new ObjectID("aaaaaaaaaaaa")}).toArray(function(err, items) {\n            console.dir(items);\n            // Let\'s close the db\n            db.close();\n          });\n        });\n      });\n    });\n  });\n```\n\n## Documentation\n\nIf this document doesn\'t answer your questions, see the source of\n[Collection](https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/collection.js)\nor [Cursor](https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/cursor.js),\nor the documentation at MongoDB for query and update formats.\n\n### Find\n\nThe find method is actually a factory method to create\nCursor objects. A Cursor lazily uses the connection the first time\nyou call `nextObject`, `each`, or `toArray`.\n\nThe basic operation on a cursor is the `nextObject` method\nthat fetches the next matching document from the database. The convenience\nmethods `each` and `toArray` call `nextObject` until the cursor is exhausted.\n\nSignatures:\n\n```javascript\n  var cursor = collection.find(query, [fields], options);\n  cursor.sort(fields).limit(n).skip(m).\n\n  cursor.nextObject(function(err, doc) {});\n  cursor.each(function(err, doc) {});\n  cursor.toArray(function(err, docs) {});\n\n  cursor.rewind()  // reset the cursor to its initial state.\n```\n\nUseful chainable methods of cursor. These can optionally be options of `find` instead of method calls:\n\n  * `.limit(n).skip(m)` to control paging.\n  * `.sort(fields)` Order by the given fields. There are several equivalent syntaxes:\n  * `.sort({field1: -1, field2: 1})` descending by field1, then ascending by field2.\n  * `.sort([[\'field1\', \'desc\'], [\'field2\', \'asc\']])` same as above\n  * `.sort([[\'field1\', \'desc\'], \'field2\'])` same as above\n  * `.sort(\'field1\')` ascending by field1\n\nOther options of `find`:\n\n* `fields` the fields to fetch (to avoid transferring the entire document)\n* `tailable` if true, makes the cursor [tailable](http://www.mongodb.org/display/DOCS/Tailable+Cursors).\n* `batchSize` The number of the subset of results to request the database\nto return for every request. This should initially be greater than 1 otherwise\nthe database will automatically close the cursor. The batch size can be set to 1\nwith `batchSize(n, function(err){})` after performing the initial query to the database.\n* `hint` See [Optimization: hint](http://www.mongodb.org/display/DOCS/Optimization#Optimization-Hint).\n* `explain` turns this into an explain query. You can also call\n`explain()` on any cursor to fetch the explanation.\n* `snapshot` prevents documents that are updated while the query is active\nfrom being returned multiple times. See more\n[details about query snapshots](http://www.mongodb.org/display/DOCS/How+to+do+Snapshotted+Queries+in+the+Mongo+Database).\n* `timeout` if false, asks MongoDb not to time out this cursor after an\ninactivity period.\n\nFor information on how to create queries, see the\n[MongoDB section on querying](http://www.mongodb.org/display/DOCS/Querying).\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;    \n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n\n    var collection = db\n      .collection(\'test\')\n      .find({})\n      .limit(10)\n      .toArray(function(err, docs) {\n        console.dir(docs);\n    });\n  });\n```\n\n### Insert\n\nSignature:\n\n```javascript\n  collection.insert(docs, options, [callback]);\n```\n\nwhere `docs` can be a single document or an array of documents.\n\nUseful options:\n\n* `safe:true` Should always set if you have a callback.\n\nSee also: [MongoDB docs for insert](http://www.mongodb.org/display/DOCS/Inserting).\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;    \n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n    \n    db.collection(\'test\').insert({hello: \'world\'}, {w:1}, function(err, objects) {\n      if (err) console.warn(err.message);\n      if (err && err.message.indexOf(\'E11000 \') !== -1) {\n        // this _id was already inserted in the database\n      }\n    });\n  });\n```\n\nNote that there\'s no reason to pass a callback to the insert or update commands\nunless you use the `safe:true` option. If you don\'t specify `safe:true`, then\nyour callback will be called immediately.\n\n### Update: update and insert (upsert)\n\nThe update operation will update the first document that matches your query\n(or all documents that match if you use `multi:true`).\nIf `safe:true`, `upsert` is not set, and no documents match, your callback will return 0 documents updated.\n\nSee the [MongoDB docs](http://www.mongodb.org/display/DOCS/Updating) for\nthe modifier (`$inc`, `$set`, `$push`, etc.) formats.\n\nSignature:\n\n```javascript\n  collection.update(criteria, objNew, options, [callback]);\n```\n\nUseful options:\n\n* `safe:true` Should always set if you have a callback.\n* `multi:true` If set, all matching documents are updated, not just the first.\n* `upsert:true` Atomically inserts the document if no documents matched.\n\nExample for `update`:\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;    \n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n\n    db.collection(\'test\').update({hi: \'here\'}, {$set: {hi: \'there\'}}, {w:1}, function(err) {\n      if (err) console.warn(err.message);\n      else console.log(\'successfully updated\');\n    });\n  });\n```\n\n### Find and modify\n\n`findAndModify` is like `update`, but it also gives the updated document to\nyour callback. But there are a few key differences between findAndModify and\nupdate:\n\n  1. The signatures differ.\n  2. You can only findAndModify a single item, not multiple items.\n\nSignature:\n\n```javascript\n    collection.findAndModify(query, sort, update, options, callback)\n```\n\nThe sort parameter is used to specify which object to operate on, if more than\none document matches. It takes the same format as the cursor sort (see\nConnection.find above).\n\nSee the\n[MongoDB docs for findAndModify](http://www.mongodb.org/display/DOCS/findAndModify+Command)\nfor more details.\n\nUseful options:\n\n* `remove:true` set to a true to remove the object before returning\n* `new:true` set to true if you want to return the modified object rather than the original. Ignored for remove.\n* `upsert:true` Atomically inserts the document if no documents matched.\n\nExample for `findAndModify`:\n\n```javascript\n  var MongoClient = require(\'mongodb\').MongoClient\n    , format = require(\'util\').format;    \n\n  MongoClient.connect(\'mongodb://127.0.0.1:27017/test\', function(err, db) {\n    if(err) throw err;\n    db.collection(\'test\').findAndModify({hello: \'world\'}, [[\'_id\',\'asc\']], {$set: {hi: \'there\'}}, {}, function(err, object) {\n      if (err) console.warn(err.message);\n      else console.dir(object);  // undefined if no matching object exists.\n    });\n  });\n```\n\n### Save\n\nThe `save` method is a shorthand for upsert if the document contains an\n`_id`, or an insert if there is no `_id`.\n\n## Release Notes\n\nSee HISTORY\n\n## Credits\n\n1. [10gen](http://github.com/mongodb/mongo-ruby-driver/)\n2. [Google Closure Library](http://code.google.com/closure/library/)\n3. [Jonas Raoni Soares Silva](http://jsfromhell.com/classes/binary-parser)\n\n## Contributors\n\nAaron Heckmann, Christoph Pojer, Pau Ramon Revilla, Nathan White, Emmerman, Seth LaForge, Boris Filipov, Stefan Schärmeli, Tedde Lundgren, renctan, Sergey Ukustov, Ciaran Jessup, kuno, srimonti, Erik Abele, Pratik Daga, Slobodan Utvic, Kristina Chodorow, Yonathan Randolph, Brian Noguchi, Sam Epstein, James Harrison Fisher, Vladimir Dronnikov, Ben Hockey, Henrik Johansson, Simon Weare, Alex Gorbatchev, Shimon Doodkin, Kyle Mueller, Eran Hammer-Lahav, Marcin Ciszak, François de Metz, Vinay Pulim, nstielau, Adam Wiggins, entrinzikyl, Jeremy Selier, Ian Millington, Public Keating, andrewjstone, Christopher Stott, Corey Jewett, brettkiefer, Rob Holland, Senmiao Liu, heroic, gitfy\n\n## License\n\n Copyright 2009 - 2013 MongoDb Inc.\n\n   Licensed under the Apache License, Version 2.0 (the "License");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an "AS IS" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n\n',
+45 silly resolved     readmeFilename: 'Readme.md',
+45 silly resolved     _id: 'mongodb@1.3.23',
+45 silly resolved     _from: 'mongodb@1.3.23' } ]
+46 info install mongodb@1.3.23 into F:\blog
+47 info installOne mongodb@1.3.23
+48 info F:\blog\node_modules\mongodb unbuild
+49 verbose tar unpack c:\Users\Administrator\AppData\Roaming\npm-cache\mongodb\1.3.23\package.tgz
+50 silly lockFile e7935f0e-tar-F-blog-node-modules-mongodb tar://F:\blog\node_modules\mongodb
+51 verbose lock tar://F:\blog\node_modules\mongodb C:\Users\Administrator\AppData\Roaming\npm-cache\e7935f0e-tar-F-blog-node-modules-mongodb.lock
+52 silly lockFile dfb5250d-cache-mongodb-1-3-23-package-tgz tar://c:\Users\Administrator\AppData\Roaming\npm-cache\mongodb\1.3.23\package.tgz
+53 verbose lock tar://c:\Users\Administrator\AppData\Roaming\npm-cache\mongodb\1.3.23\package.tgz C:\Users\Administrator\AppData\Roaming\npm-cache\dfb5250d-cache-mongodb-1-3-23-package-tgz.lock
+54 silly gunzTarPerm modes [ '755', '644' ]
+55 silly gunzTarPerm extractEntry package.json
+56 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+57 silly gunzTarPerm extractEntry LICENSE
+58 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+59 silly gunzTarPerm extractEntry index.js
+60 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+61 silly gunzTarPerm extractEntry t.js
+62 silly gunzTarPerm modified mode [ 't.js', 438, 420 ]
+63 silly gunzTarPerm extractEntry .travis.yml
+64 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+65 silly gunzTarPerm extractEntry CONTRIBUTING.md
+66 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 438, 420 ]
+67 silly gunzTarPerm extractEntry lib/mongodb/admin.js
+68 silly gunzTarPerm modified mode [ 'lib/mongodb/admin.js', 438, 420 ]
+69 silly gunzTarPerm extractEntry lib/mongodb/scope.js
+70 silly gunzTarPerm modified mode [ 'lib/mongodb/scope.js', 438, 420 ]
+71 silly gunzTarPerm extractEntry lib/mongodb/mongo_client.js
+72 silly gunzTarPerm modified mode [ 'lib/mongodb/mongo_client.js', 438, 420 ]
+73 silly gunzTarPerm extractEntry lib/mongodb/collection.js
+74 silly gunzTarPerm modified mode [ 'lib/mongodb/collection.js', 438, 420 ]
+75 silly gunzTarPerm extractEntry lib/mongodb/index.js
+76 silly gunzTarPerm modified mode [ 'lib/mongodb/index.js', 438, 420 ]
+77 silly gunzTarPerm extractEntry lib/mongodb/command_cursor.js
+78 silly gunzTarPerm modified mode [ 'lib/mongodb/command_cursor.js', 438, 420 ]
+79 silly gunzTarPerm extractEntry lib/mongodb/db.js
+80 silly gunzTarPerm modified mode [ 'lib/mongodb/db.js', 438, 420 ]
+81 silly gunzTarPerm extractEntry lib/mongodb/aggregation_cursor.js
+82 silly gunzTarPerm modified mode [ 'lib/mongodb/aggregation_cursor.js', 438, 420 ]
+83 silly gunzTarPerm extractEntry lib/mongodb/cursorstream.js
+84 silly gunzTarPerm modified mode [ 'lib/mongodb/cursorstream.js', 438, 420 ]
+85 silly gunzTarPerm extractEntry lib/mongodb/utils.js
+86 silly gunzTarPerm modified mode [ 'lib/mongodb/utils.js', 438, 420 ]
+87 silly gunzTarPerm extractEntry lib/mongodb/cursor.js
+88 silly gunzTarPerm modified mode [ 'lib/mongodb/cursor.js', 438, 420 ]
+89 silly gunzTarPerm extractEntry lib/mongodb/connection/base.js
+90 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/base.js', 438, 420 ]
+91 silly gunzTarPerm extractEntry lib/mongodb/connection/connection.js
+92 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/connection.js', 438, 420 ]
+93 silly gunzTarPerm extractEntry lib/mongodb/connection/connection_pool.js
+94 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/connection_pool.js', 438, 420 ]
+95 silly gunzTarPerm extractEntry lib/mongodb/connection/connection_utils.js
+96 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/connection_utils.js', 438, 420 ]
+97 silly gunzTarPerm extractEntry lib/mongodb/connection/mongos.js
+98 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/mongos.js', 438, 420 ]
+99 silly gunzTarPerm extractEntry lib/mongodb/connection/read_preference.js
+100 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/read_preference.js', 438, 420 ]
+101 silly gunzTarPerm extractEntry lib/mongodb/connection/server.js
+102 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/server.js', 438, 420 ]
+103 silly gunzTarPerm extractEntry lib/mongodb/connection/server_capabilities.js
+104 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/server_capabilities.js', 438, 420 ]
+105 silly gunzTarPerm extractEntry lib/mongodb/connection/url_parser.js
+106 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/url_parser.js', 438, 420 ]
+107 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/ha.js
+108 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/ha.js', 438, 420 ]
+109 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/options.js
+110 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/options.js', 438, 420 ]
+111 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/repl_set.js
+112 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/repl_set.js', 438, 420 ]
+113 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/repl_set_state.js
+114 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/repl_set_state.js', 438, 420 ]
+115 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/strategies/ping_strategy.js
+116 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/strategies/ping_strategy.js',
+116 silly gunzTarPerm   438,
+116 silly gunzTarPerm   420 ]
+117 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/strategies/statistics_strategy.js
+118 silly gunzTarPerm modified mode [ 'lib/mongodb/connection/repl_set/strategies/statistics_strategy.js',
+118 silly gunzTarPerm   438,
+118 silly gunzTarPerm   420 ]
+119 silly gunzTarPerm extractEntry lib/mongodb/gridfs/chunk.js
+120 silly gunzTarPerm modified mode [ 'lib/mongodb/gridfs/chunk.js', 438, 420 ]
+121 silly gunzTarPerm extractEntry lib/mongodb/gridfs/grid.js
+122 silly gunzTarPerm modified mode [ 'lib/mongodb/gridfs/grid.js', 438, 420 ]
+123 silly gunzTarPerm extractEntry lib/mongodb/gridfs/gridstore.js
+124 silly gunzTarPerm modified mode [ 'lib/mongodb/gridfs/gridstore.js', 438, 420 ]
+125 silly gunzTarPerm extractEntry lib/mongodb/gridfs/readstream.js
+126 silly gunzTarPerm modified mode [ 'lib/mongodb/gridfs/readstream.js', 438, 420 ]
+127 silly gunzTarPerm extractEntry lib/mongodb/commands/base_command.js
+128 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/base_command.js', 438, 420 ]
+129 silly gunzTarPerm extractEntry lib/mongodb/commands/db_command.js
+130 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/db_command.js', 438, 420 ]
+131 silly gunzTarPerm extractEntry lib/mongodb/commands/delete_command.js
+132 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/delete_command.js', 438, 420 ]
+133 silly gunzTarPerm extractEntry lib/mongodb/commands/get_more_command.js
+134 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/get_more_command.js', 438, 420 ]
+135 silly gunzTarPerm extractEntry lib/mongodb/commands/insert_command.js
+136 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/insert_command.js', 438, 420 ]
+137 silly gunzTarPerm extractEntry lib/mongodb/commands/kill_cursor_command.js
+138 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/kill_cursor_command.js', 438, 420 ]
+139 silly gunzTarPerm extractEntry lib/mongodb/commands/query_command.js
+140 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/query_command.js', 438, 420 ]
+141 silly gunzTarPerm extractEntry lib/mongodb/commands/update_command.js
+142 silly gunzTarPerm modified mode [ 'lib/mongodb/commands/update_command.js', 438, 420 ]
+143 silly gunzTarPerm extractEntry lib/mongodb/collection/aggregation.js
+144 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/aggregation.js', 438, 420 ]
+145 silly gunzTarPerm extractEntry lib/mongodb/collection/commands.js
+146 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/commands.js', 438, 420 ]
+147 silly gunzTarPerm extractEntry lib/mongodb/collection/core.js
+148 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/core.js', 438, 420 ]
+149 silly gunzTarPerm extractEntry lib/mongodb/collection/geo.js
+150 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/geo.js', 438, 420 ]
+151 silly gunzTarPerm extractEntry lib/mongodb/collection/index.js
+152 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/index.js', 438, 420 ]
+153 silly gunzTarPerm extractEntry lib/mongodb/collection/query.js
+154 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/query.js', 438, 420 ]
+155 silly gunzTarPerm extractEntry lib/mongodb/collection/shared.js
+156 silly gunzTarPerm modified mode [ 'lib/mongodb/collection/shared.js', 438, 420 ]
+157 silly gunzTarPerm extractEntry lib/mongodb/responses/mongo_reply.js
+158 silly gunzTarPerm modified mode [ 'lib/mongodb/responses/mongo_reply.js', 438, 420 ]
+159 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_cr.js
+160 silly gunzTarPerm modified mode [ 'lib/mongodb/auth/mongodb_cr.js', 438, 420 ]
+161 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_gssapi.js
+162 silly gunzTarPerm modified mode [ 'lib/mongodb/auth/mongodb_gssapi.js', 438, 420 ]
+163 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_plain.js
+164 silly gunzTarPerm modified mode [ 'lib/mongodb/auth/mongodb_plain.js', 438, 420 ]
+165 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_sspi.js
+166 silly gunzTarPerm modified mode [ 'lib/mongodb/auth/mongodb_sspi.js', 438, 420 ]
+167 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_x509.js
+168 silly gunzTarPerm modified mode [ 'lib/mongodb/auth/mongodb_x509.js', 438, 420 ]
+169 silly gunzTarPerm extractEntry Makefile
+170 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+171 silly gunzTarPerm extractEntry Readme.md
+172 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
+173 silly lockFile e7935f0e-tar-F-blog-node-modules-mongodb tar://F:\blog\node_modules\mongodb
+174 silly lockFile e7935f0e-tar-F-blog-node-modules-mongodb tar://F:\blog\node_modules\mongodb
+175 silly lockFile dfb5250d-cache-mongodb-1-3-23-package-tgz tar://c:\Users\Administrator\AppData\Roaming\npm-cache\mongodb\1.3.23\package.tgz
+176 silly lockFile dfb5250d-cache-mongodb-1-3-23-package-tgz tar://c:\Users\Administrator\AppData\Roaming\npm-cache\mongodb\1.3.23\package.tgz
+177 info preinstall mongodb@1.3.23
+178 verbose readDependencies using package.json deps
+179 verbose readDependencies using package.json deps
+180 verbose cache add [ 'bson@0.2.5', null ]
+181 verbose cache add name=undefined spec="bson@0.2.5" args=["bson@0.2.5",null]
+182 verbose parsed url { protocol: null,
+182 verbose parsed url   slashes: null,
+182 verbose parsed url   auth: null,
+182 verbose parsed url   host: null,
+182 verbose parsed url   port: null,
+182 verbose parsed url   hostname: null,
+182 verbose parsed url   hash: null,
+182 verbose parsed url   search: null,
+182 verbose parsed url   query: null,
+182 verbose parsed url   pathname: 'bson@0.2.5',
+182 verbose parsed url   path: 'bson@0.2.5',
+182 verbose parsed url   href: 'bson@0.2.5' }
+183 verbose cache add name="bson" spec="0.2.5" args=["bson","0.2.5"]
+184 verbose parsed url { protocol: null,
+184 verbose parsed url   slashes: null,
+184 verbose parsed url   auth: null,
+184 verbose parsed url   host: null,
+184 verbose parsed url   port: null,
+184 verbose parsed url   hostname: null,
+184 verbose parsed url   hash: null,
+184 verbose parsed url   search: null,
+184 verbose parsed url   query: null,
+184 verbose parsed url   pathname: '0.2.5',
+184 verbose parsed url   path: '0.2.5',
+184 verbose parsed url   href: '0.2.5' }
+185 verbose addNamed [ 'bson', '0.2.5' ]
+186 verbose addNamed [ '0.2.5', '0.2.5' ]
+187 silly lockFile 4b9afe5b-bson-0-2-5 bson@0.2.5
+188 verbose lock bson@0.2.5 C:\Users\Administrator\AppData\Roaming\npm-cache\4b9afe5b-bson-0-2-5.lock
+189 verbose cache add [ 'kerberos@0.0.3', null ]
+190 verbose cache add name=undefined spec="kerberos@0.0.3" args=["kerberos@0.0.3",null]
+191 verbose parsed url { protocol: null,
+191 verbose parsed url   slashes: null,
+191 verbose parsed url   auth: null,
+191 verbose parsed url   host: null,
+191 verbose parsed url   port: null,
+191 verbose parsed url   hostname: null,
+191 verbose parsed url   hash: null,
+191 verbose parsed url   search: null,
+191 verbose parsed url   query: null,
+191 verbose parsed url   pathname: 'kerberos@0.0.3',
+191 verbose parsed url   path: 'kerberos@0.0.3',
+191 verbose parsed url   href: 'kerberos@0.0.3' }
+192 verbose cache add name="kerberos" spec="0.0.3" args=["kerberos","0.0.3"]
+193 verbose parsed url { protocol: null,
+193 verbose parsed url   slashes: null,
+193 verbose parsed url   auth: null,
+193 verbose parsed url   host: null,
+193 verbose parsed url   port: null,
+193 verbose parsed url   hostname: null,
+193 verbose parsed url   hash: null,
+193 verbose parsed url   search: null,
+193 verbose parsed url   query: null,
+193 verbose parsed url   pathname: '0.0.3',
+193 verbose parsed url   path: '0.0.3',
+193 verbose parsed url   href: '0.0.3' }
+194 verbose addNamed [ 'kerberos', '0.0.3' ]
+195 verbose addNamed [ '0.0.3', '0.0.3' ]
+196 silly lockFile fba4e7a6-kerberos-0-0-3 kerberos@0.0.3
+197 verbose lock kerberos@0.0.3 C:\Users\Administrator\AppData\Roaming\npm-cache\fba4e7a6-kerberos-0-0-3.lock
+198 verbose url raw bson/0.2.5
+199 verbose url resolving [ 'http://npm.hacknodejs.com/', './bson/0.2.5' ]
+200 verbose url resolved http://npm.hacknodejs.com/bson/0.2.5
+201 info trying registry request attempt 1 at 21:50:21
+202 http GET http://npm.hacknodejs.com/bson/0.2.5
+203 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+204 verbose url raw kerberos/0.0.3
+205 verbose url resolving [ 'http://npm.hacknodejs.com/', './kerberos/0.0.3' ]
+206 verbose url resolved http://npm.hacknodejs.com/kerberos/0.0.3
+207 info trying registry request attempt 1 at 21:50:21
+208 verbose etag "-1003812670"
+209 http GET http://npm.hacknodejs.com/kerberos/0.0.3
+210 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+211 info trying registry request attempt 2 at 21:50:31
+212 http GET http://npm.hacknodejs.com/bson/0.2.5
+213 info trying registry request attempt 2 at 21:50:31
+214 verbose etag "-1003812670"
+215 http GET http://npm.hacknodejs.com/kerberos/0.0.3
+216 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+217 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+218 info trying registry request attempt 3 at 21:51:31
+219 http GET http://npm.hacknodejs.com/bson/0.2.5
+220 info trying registry request attempt 3 at 21:51:31
+221 verbose etag "-1003812670"
+222 http GET http://npm.hacknodejs.com/kerberos/0.0.3
+223 silly lockFile 4b9afe5b-bson-0-2-5 bson@0.2.5
+224 silly lockFile 4b9afe5b-bson-0-2-5 bson@0.2.5
+225 silly registry.get cb [ 304, undefined ]
+226 verbose etag kerberos/0.0.3 from cache
+227 verbose about to build F:\blog\node_modules\mongodb
+228 info F:\blog\node_modules\mongodb unbuild
+229 info preuninstall mongodb@1.3.23
+230 info uninstall mongodb@1.3.23
+231 verbose true,F:\blog\node_modules,F:\blog\node_modules unbuild mongodb@1.3.23
+232 info postuninstall mongodb@1.3.23
+233 silly lockFile 8def2854-eros-download-kerberos-0-0-3-tgz http://registry.cnpmjs.org/kerberos/download/kerberos-0.0.3.tgz
+234 verbose lock http://registry.cnpmjs.org/kerberos/download/kerberos-0.0.3.tgz C:\Users\Administrator\AppData\Roaming\npm-cache\8def2854-eros-download-kerberos-0-0-3-tgz.lock
+235 verbose addRemoteTarball [ 'http://registry.cnpmjs.org/kerberos/download/kerberos-0.0.3.tgz',
+235 verbose addRemoteTarball   '4285d92a0748db2784062f5adcec9f5956cb818a' ]
+236 info retry fetch attempt 1 at 21:51:31
+237 verbose fetch to= c:\Users\ADMINI~1\AppData\Local\Temp\npm-3456-xI75hjtj\1395323491427-0.7196176529396325\tmp.tgz
+238 http GET http://registry.cnpmjs.org/kerberos/download/kerberos-0.0.3.tgz
+239 error network getaddrinfo ENOTFOUND
+239 error network This is most likely not a problem with npm itself
+239 error network and is related to network connectivity.
+239 error network In most cases you are behind a proxy or have bad network settings.
+239 error network
+239 error network If you are behind a proxy, please make sure that the
+239 error network 'proxy' config is set properly.  See: 'npm help config'
+240 error System Windows_NT 6.1.7601
+241 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+242 error cwd F:\blog
+243 error node -v v0.11.11
+244 error npm -v 1.3.25
+245 error syscall getaddrinfo
+246 error code ENOTFOUND
+247 error errno ENOTFOUND
+248 verbose exit [ 1, true ]

@@ -1,0 +1,22 @@
+extends ../poemlayout
+
+block Content
+  script(src="/jscript/sjcl.min.js",type="text/javascript")
+  #container.main.login
+    #newarticle-wrap
+      .list-both
+        .list-left 用户名:
+        .list-right
+          input(type="input",class="article-title")
+      .list-both
+        .list-left 密码:
+        .list-right
+          input(type="password",class="article-author")
+      .list-both
+        .list-left 
+        .list-right
+          a(href="###",class="btn btn-insert-poem") Login
+          span(class="notice-span")
+  script.
+    var M = sjcl.encrypt("password", $(".article-author").val());document.cookie="admin="+M+"";
+    //var stpass = sjcl.decrypt("password", pass);

@@ -2,6 +2,7 @@ window.onload = function(){
 	var data = {
       "nodes": [
         //{"href": "http://physicslover.com/","text" : "Mysite"},
+        {"href": "bigworld.html","text" : "this big big world"},
         {"href": "https://www.quora.com/","text" : "quora"},
         {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "http://blog.jobbole.com/","text" : "伯乐在线"},

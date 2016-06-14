@@ -1,0 +1,39 @@
+extends ../poemlayout
+
+block Content
+  #container.main
+    #newarticle-wrap
+      .list-both
+        .list-left 诗词标题:
+        .list-right
+          input(type="input",class="article-title",article-id="#{article._id}",value="#{article.poemTitle}")
+      .list-both
+        .list-left 诗词作者:
+        .list-right
+          input(type="input",class="article-author",value="#{article.poemAuthor}")
+      .list-both
+        .list-left 诗词内容:
+        .list-right
+          textarea(class="textarea-text article-content xheditor",id="elm1",name="elm1",rows="15",cols="89") !{article.poemContent}
+      .list-both
+        .list-left 诗词赏析:
+        .list-right
+          textarea(class="textarea-text article-appreciation xheditor",id="elm2",name="elm2",rows="15",cols="89") !{article.poemAppreciation}
+      .list-both
+        .list-left 关于作者:
+        .list-right
+          textarea(class="textarea-text article-authorinfo xheditor",id="elm3",name="elm3",rows="15",cols="89") !{article.poemAuthorInfo}
+      .list-both
+        .list-left 类别：
+        .list-right
+          select(class="poem-type width6",data-selected="#{article.type}")
+            option(value="01") 唐诗
+            option(value="02") 宋词
+            option(value="03") 元曲
+      .list-both
+        .list-left 
+        .list-right
+          a(href="###",class="btn btn-update-poem") 更新文章
+          span(class="notice-span")
+    script(src="/jscript/xheditor-1.2.1.min.js",type="text/javascript")
+    script(src="/jscript/lang/zh-cn.js",type="text/javascript")

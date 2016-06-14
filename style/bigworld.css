@@ -1,0 +1,28 @@
+html,body{
+	background: #f3f4f5;
+	margin: 0;
+	padding: 0;
+	color:#fff;
+	font: normal 14px/1.5 "Times New Roman","Microsoft yahei","Helvetica Neue","Open Sans";
+}
+#svgvas{
+	opacity: 1;
+	overflow: hidden;
+}
+#svgvas text{
+	cursor: pointer;
+	fill: #888;
+}
+#svgvas .link {
+  stroke: #aaa;
+  stroke-width: 1px;
+}
+#svgvas .node {
+  cursor: move;
+  fill: #fff;
+  stroke: #111;
+  stroke-width: 1px;
+}
+#svgvas .node.fixed {
+  fill: #f90;
+}
