@@ -1,3 +1,7 @@
+var d3 = require('../scripts/d3.js');
+var $ = require('../scripts/jquery.min.js');
+var style = require('!raw!../style/index.css');
+$("style#style").append(style);
 window.onload = function(){
 	var data = {
       "nodes": [
@@ -45,7 +49,7 @@ window.onload = function(){
       "links": []
     };
 	var  width = window.screen.width,
-        height = window.screen.height,
+        height = window.screen.height*1.3,
              φ = 30,
              α = 0,
              λ = {},
@@ -110,12 +114,16 @@ window.onload = function(){
     }
     function dragstart(d) {
       d3.select(this).classed("fixed", d.fixed = true);
+      d3.event.sourceEvent.stopPropagation();
     }
+    var plusOrMinus = 1;
     function pos(){
-        α += Math.PI/Math.E;
+        //α += Math.E*Math.PI*Math.PI;
+        α += 15;
+        plusOrMinus = α & 1 ? 1 : -1;
         return {
-            x : width/2 + Math.cos(α)*(φ+=5),
-            y : height/2 + Math.sin(α)*(φ+=5)
+            x : width/2 ,//+ Math.cos(α)*(φ+=5),
+            y : height/2 + α*plusOrMinus//+ Math.sin(α)*(φ+=5)
         }
     }
 }
