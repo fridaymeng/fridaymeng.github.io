@@ -50,14 +50,16 @@ window.onload = function(){
       ],
       "links": []
     };
-	var  width = window.screen.width,
-        height = window.screen.height*1.3,
+	var    width = window.screen.width,
+        height = window.innerHeight,
              φ = 30,
              α = 0,
              λ = {},
-           num = data.nodes.length;
+           num = data.nodes.length,
+           arr = [1,1];
    	for (var i = data.nodes.length - 1; i >= 0; i--) {
-   		λ = pos();
+   		λ = screwPos();
+      console.log(λ);
    		data.nodes[i].x = λ.x;
    		data.nodes[i].y = λ.y;
    		data.nodes[i].fixed = true;
@@ -127,5 +129,13 @@ window.onload = function(){
             x : width/2 ,//+ Math.cos(α)*(φ+=5),
             y : height/2 + α*plusOrMinus//+ Math.sin(α)*(φ+=5)
         }
+    }
+    function screwPos(){
+      α += 1;
+      plusOrMinus = α & 1 ? 1 : -1;
+      return {
+          x : width/1.5 - α*20,
+          y : height/2 + (α*10)*plusOrMinus
+      }
     }
 }
