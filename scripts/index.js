@@ -134,8 +134,8 @@ window.onload = function(){
       α += 1;
       plusOrMinus = α & 1 ? 1 : -1;
       return {
-          x : width/1.5 - α*20,
-          y : height/2 + (α*10)*plusOrMinus
+          x : width/1.2 - α*30,
+          y : height/2 + (α*8)*plusOrMinus
       }
     }
 }
