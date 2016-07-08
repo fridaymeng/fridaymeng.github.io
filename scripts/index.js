@@ -12,7 +12,6 @@ window.onload = function(){
         {"href": "http://blog.jobbole.com/","text" : "伯乐在线"},
         {"href": "http://www.tianya.cn/techforum/articleslist/0/16.shtml","text" : "鬼话连篇"},
         {"href": "http://www.wise-qatar.org/","text" : "wise-qatar"},
-        {"href": "http://www.36kr.com/","text" : "36kr"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://thenextweb.com/","text" : "TheNextWeb"},
         {"href": "http://visjs.org/","text" : "visjs"},
@@ -51,15 +50,15 @@ window.onload = function(){
       "links": []
     };
 	var    width = window.screen.width,
-        height = window.innerHeight,
+        height = window.innerHeight*2,
              φ = 30,
              α = 0,
+         csNum = 1,
              λ = {},
            num = data.nodes.length,
            arr = [1,1];
    	for (var i = data.nodes.length - 1; i >= 0; i--) {
    		λ = screwPos();
-      console.log(λ);
    		data.nodes[i].x = λ.x;
    		data.nodes[i].y = λ.y;
    		data.nodes[i].fixed = true;
@@ -118,7 +117,7 @@ window.onload = function(){
     }
     function dragstart(d) {
       d3.select(this).classed("fixed", d.fixed = true);
-      d3.event.sourceEvent.stopPropagation();
+      //d3.event.sourceEvent.stopPropagation();
     }
     var plusOrMinus = 1;
     function pos(){
@@ -131,11 +130,11 @@ window.onload = function(){
         }
     }
     function screwPos(){
-      α += 1;
-      plusOrMinus = α & 1 ? 1 : -1;
+      α += 40;
+      csNum += 1;
       return {
-          x : width/1.2 - α*30,
-          y : height/2 + (α*8)*plusOrMinus
+          x : 15+α,
+          y : height/2+Math.sin(csNum*Math.PI/10)*Math.E*100
       }
     }
 }
