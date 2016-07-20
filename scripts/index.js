@@ -1,6 +1,7 @@
 var d3 = require('../scripts/d3.js');
 var $ = require('../scripts/jquery.min.js');
 var style = require('!raw!../style/index.css');
+var Vue = require('../scripts/vue.js');
 $("style#style").append(style);
 window.onload = function(){
 	var data = {
@@ -137,4 +138,95 @@ window.onload = function(){
           y : height/2+Math.sin(csNum*Math.PI/10)*Math.E*100
       }
     }
+    /*vue*/
+    // The raw data to observe
+    var stats = [
+      { label: 'A', value: Math.random()*100 },
+      { label: 'B', value: Math.random()*100 },
+      { label: 'C', value: Math.random()*100 },
+      { label: 'D', value: Math.random()*100 },
+      { label: 'E', value: Math.random()*100 },
+      { label: 'F', value: Math.random()*100 }
+    ]
+
+    // A resusable polygon graph component
+    Vue.component('polygraph', {
+      props: ['stats'],
+      template: '#polygraph-template',
+      replace: true,
+      computed: { },
+      components: {
+        // a sub component for the labels
+        'axis-label': {
+          props: {
+            stat: Object,
+            index: Number,
+            total: Number
+          },
+          template: '#axis-label-template',
+          replace: true,
+          computed: {
+            translate: function () {
+              var $pos = valueToPoint(
+                +this.stat.value + 10,
+                this.index,
+                this.total
+              );
+              return "translate("+$pos.x+","+$pos.y+")";
+            }
+          }
+        }
+      }
+    })
+
+    // math helper...
+    var abc = 0;
+    function valueToPoint (value, index, total) {
+      abc++;
+      var tx = index*50,
+          ty = Math.sin(abc+Math.PI/5)*Math.E*30+100;
+      return {
+        x: tx,
+        y: ty
+      }
+    }
+
+    // bootstrap the demo
+    var $data = new Vue({
+      el: '#demo',
+      data: {
+        newLabel: '',
+        stats: stats
+      }
+    });
+    setInterval(function(){
+      $data.stats = [
+        { label: 'A', value: Math.random()*100 },
+        { label: 'B', value: Math.random()*100 },
+        { label: 'C', value: Math.random()*100 },
+        { label: 'D', value: Math.random()*100 },
+        { label: 'E', value: Math.random()*100 },
+        { label: 'F', value: Math.random()*100 },
+        { label: 'G', value: Math.random()*100 },
+        { label: 'H', value: Math.random()*100 },
+        { label: 'I', value: Math.random()*100 },
+        { label: 'J', value: Math.random()*100 },
+        { label: 'k', value: Math.random()*100 },
+        { label: 'L', value: Math.random()*100 },
+        { label: 'M', value: Math.random()*100 },
+        { label: 'N', value: Math.random()*100 },
+        { label: 'O', value: Math.random()*100 },
+        { label: 'P', value: Math.random()*100 },
+        { label: 'Q', value: Math.random()*100 },
+        { label: 'R', value: Math.random()*100 },
+        { label: 'S', value: Math.random()*100 },
+        { label: 'T', value: Math.random()*100 },
+        { label: 'U', value: Math.random()*100 },
+        { label: 'V', value: Math.random()*100 },
+        { label: 'W', value: Math.random()*100 },
+        { label: 'X', value: Math.random()*100 },
+        { label: 'Y', value: Math.random()*100 },
+        { label: 'Z', value: Math.random()*100 }
+      ];
+    },100);
 }
