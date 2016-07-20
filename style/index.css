@@ -9,20 +9,44 @@ html,body{
 	opacity: 1;
 	overflow: hidden;
 }
-#svgvas text{
+text{
 	cursor: pointer;
 	fill: #555;
 }
-#svgvas .link {
+.link {
   stroke: #aaa;
   stroke-width: 1px;
 }
-#svgvas .node {
+.node {
   cursor: move;
   fill: #fff;
   stroke: #111;
   stroke-width: 1px;
 }
-#svgvas .node.fixed {
+.node.fixed {
   fill: #f90;
+}
+
+/* vue test */
+
+polygon {
+    fill: #42b983;
+    opacity: .75;
+}
+text {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 10px;
+    fill: #666;
+}
+
+label {
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+}
+
+#raw {
+    position: absolute;
+    top: 0;
+    left: 300px;
 }

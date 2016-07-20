@@ -8,6 +8,31 @@
 </head>
 <body>
 	<div id="svgvas" class="svgvasclass"></div>
+	<!-- template for the polygraph component. -->
+	<script type="text/x-template" id="polygraph-template">
+	  <g>
+	    <axis-label v-for="stat in stats" :stat="stat"
+	      :index="$index"
+	      :total="stats.length">
+	    </axis-label>
+	  </g>
+	</script>
+
+	<!-- template for the axis label component. -->
+	<script type="text/x-template" id="axis-label-template">
+	  <g :transform='translate'>
+	  	<circle class="node" r="9"/>
+	  	<text x="12" y="12">{{stat.label}}</text>
+	  </g>
+	</script>
+
+	<!-- demo root element -->
+	<div id="demo">
+	  <!-- Use the component -->
+	  <svg width="100%" height="400">
+	    <polygraph :stats="stats"></polygraph>
+	  </svg>
+	</div>
 	<script type="text/javascript" src="bin/app.bundle.js"></script>
 </body>
 </html>
