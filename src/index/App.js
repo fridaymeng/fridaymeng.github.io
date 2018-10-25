@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        test
+        无物于物，故能齐于物。
       </div>
     );
   }
