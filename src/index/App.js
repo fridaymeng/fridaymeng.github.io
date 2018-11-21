@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.less';
 
 const linkList = [
-        {"href": "bigworld.html","text" : "this big big world"},
+        {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
         {"href": "https://www.quora.com/","text" : "quora"},
         {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "http://blog.jobbole.com/","text" : "伯乐在线"},
@@ -36,9 +36,14 @@ const linkList = [
 ];
 
 let $html = linkList.map((item) => {
-  return <li key={Math.random()}><a rel="noopener noreferrer" href={item.href} target="_blank">{item.text}</a></li>;
+  return <div className="list-li" key={Math.random()}>
+          <div className="list-li-box">
+            <div><a rel="noopener noreferrer" href={item.href} target="_blank"><img alt="" src={item.src} /></a></div>
+            <div><a rel="noopener noreferrer" href={item.href} target="_blank">{item.text}</a></div>
+          </div>
+        </div>;
 });
-$html = <ul>{$html}</ul>
+$html = <div class="list">{$html}</div>
 class App extends Component {
   render() {
     return $html;
