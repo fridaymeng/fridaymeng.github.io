@@ -3,7 +3,7 @@ import './App.less';
 
 const linkList = [
         {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
-        {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
+        {"href": "https://github.com/fridaymeng/svg-spiral","text" : "screw" , "src" : require("../assets/img/screw.png")},
         {"href": "https://www.quora.com/","text" : "quora"},
         {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "http://blog.jobbole.com/","text" : "伯乐在线"},
@@ -36,6 +36,8 @@ const linkList = [
         {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
 ];
 
+
+
 let $html = linkList.map((item) => {
   return <div className="list-li" key={Math.random()}>
           <div className="list-li-box">
@@ -46,6 +48,9 @@ let $html = linkList.map((item) => {
 });
 $html = <div class="list">{$html}</div>
 class App extends Component {
+  componentDidMount(){
+
+  }
   render() {
     return $html;
   }
