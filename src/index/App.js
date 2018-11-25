@@ -3,7 +3,7 @@ import './App.less';
 
 const linkList = [
         {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
-        {"href": "https://github.com/fridaymeng/svg-spiral","text" : "screw" , "src" : require("../assets/img/screw.png")},
+        {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
         {"href": "https://www.quora.com/","text" : "quora"},
         {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "http://blog.jobbole.com/","text" : "伯乐在线"},
@@ -36,23 +36,41 @@ const linkList = [
         {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
 ];
 
-
-
-let $html = linkList.map((item) => {
-  return <div className="list-li" key={Math.random()}>
-          <div className="list-li-box">
-            <div><a rel="noopener noreferrer" href={item.href} target="_blank"><img alt="" src={item.src} /></a></div>
-            <div><a rel="noopener noreferrer" href={item.href} target="_blank">{item.text}</a></div>
-          </div>
-        </div>;
-});
-$html = <div class="list">{$html}</div>
 class App extends Component {
-  componentDidMount(){
-
+  constructor(props){
+    super(props);
+    this.state = {
+      html : ""
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  componentWillMount(){
+    let $html = linkList.map((item) => {
+      return <div className="list-li" key={Math.random()}>
+              <div className="list-li-box">
+                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank"><img data-href={item.href} alt="" src={item.src} /></a></div>
+                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank">{item.text}</a></div>
+              </div>
+            </div>;
+    });
+    this.setState({
+      html : $html
+    });
+  }
+  handleClick(e){
+    const $history = this.props.history;
+    const $href = e.target.dataset.href;
+    if(/http/.test($href)){
+      var win = window.open($href, '_blank');
+      win.focus(); 
+    }else{
+      $history.push($href);
+    }
+    e.preventDefault();
+    e.stopPropagation();
   }
   render() {
-    return $html;
+    return <div className="list">{this.state.html}</div>;
   }
 }
 
