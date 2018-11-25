@@ -4,6 +4,7 @@ import { renderRoutes } from "react-router-config";
 
 import Index from "./index/App";
 import Screw from "./screw/App";
+import Tree from "./tree/App";
 
 const routes = [
   { path: '/',
@@ -13,6 +14,10 @@ const routes = [
   { path: '/screw',
     exact: true,
     component: Screw
+  },
+  { path: '/tree',
+    exact: true,
+    component: Tree
   }
 ];
 
