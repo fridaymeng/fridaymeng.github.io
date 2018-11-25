@@ -47,9 +47,9 @@ class App extends Component {
   componentWillMount(){
     let $html = linkList.map((item) => {
       return <div className="list-li" key={Math.random()}>
-              <div className="list-li-box">
-                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank"><img data-href={item.href} alt="" src={item.src} /></a></div>
-                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank">{item.text}</a></div>
+              <div className={item.src ? "list-li-box" : "list-li-box list-li-box-no-img"}>
+                {item.src ? <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank"><img data-href={item.href} alt="" src={item.src} /></a></div> : ""}
+                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank" title={item.text}>{item.text}</a></div>
               </div>
             </div>;
     });
