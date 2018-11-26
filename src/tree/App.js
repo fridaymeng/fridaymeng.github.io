@@ -12,7 +12,7 @@ class GenerateGroupExpression extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   onChange(checked) {
-    EventEmitter.trigger("refreshExpressionList", {
+    EventEmitter.trigger("recordData", {
       type: "gate",
       data: checked ? "and" : "or",
       groupIndex: this.props.index,
@@ -113,6 +113,16 @@ class GenerateSingleExpression extends React.Component {
   }
   selectExpression(data) {  
   }
+  handleInputChange(e){
+    const target = e.target;
+    const data = target.dataset;
+    EventEmitter.trigger("recordData",{
+      type : "right",
+      value : target.value,
+      order : data.order,
+      index : data.index
+    });
+  }
   render() {
     return (
       <div className="selectListLi">
@@ -148,8 +158,9 @@ class GenerateSingleExpression extends React.Component {
         />
         <Input 
           placeholder="请输入内容" 
-          order={this.props.order}
-          index={this.props.index}
+          data-order={this.props.order}
+          data-index={this.props.index}
+          onChange={this.handleInputChange}
           type="right"
           className={this.state.rightClassName ? this.state.rightClassName : ""}
           style={{ width: 150}}
@@ -311,9 +322,21 @@ class App extends Component{
   }
   componentDidMount(){
     const $this = this;
-    /* 注册refreshExpressionList */
-    EventEmitter.off("refreshExpressionList");
-    EventEmitter.on("refreshExpressionList", function(params) {
+    /* 注册recordData */
+    EventEmitter.off("recordData");
+    EventEmitter.on("recordData", function(params) {
+      switch(params.type){
+        case "left":
+          console.log(params);
+        break;
+        case "right":
+          console.log(params);
+        break;
+        case "operator":
+          console.log(params);
+        break;
+        default:
+      }
       $this.setState({
         refresh: false
       });
@@ -431,18 +454,6 @@ class App extends Component{
   addGroupExpression(e) {
     const $data = e.target.dataset;
     this.findId(this.state.group,$data);
-    /*let $group = this.state.group;
-    if (!$group[0].group) {
-      $group[0].group = [];
-    }
-    $group[0].group.push({
-      gate: "and",
-      expressionList: [{}]
-    });
-    this.setState({
-      group: $group,
-      refresh: true
-    });*/
     this.forceUpdate();
   }
   /*** 删除单个表达式分组 ***/
