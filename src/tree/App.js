@@ -74,7 +74,7 @@ class GenerateGroupExpression extends React.Component {
         </div>
         {this.props.data.map((item, index) => {
           item.rightClassName = item.rightClassName ? item.rightClassName : "";
-          item.rightClassName = "";
+          item.rightClassName = "hide";
           return (
             <GenerateSingleExpression
               groupIndex={this.props.index}
@@ -262,6 +262,14 @@ class OperatorSelectList extends React.Component {
     expressions: [{name:"等于"},{name:"不等于"},{name:"非空"},{name:"空"}]
   };
   handleChange = index => {
+    EventEmitter.trigger("refreshExpressionList", {
+      type: this.props.type,
+      data: this.state.optionsArr[index],
+      order: this.props.order,
+      groupIndex: this.props.groupIndex,
+      parentIndex: this.props.parentIndex,
+      index: this.props.index
+    });
   };
   render() {
     return (
