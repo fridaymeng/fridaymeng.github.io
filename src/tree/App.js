@@ -109,9 +109,14 @@ class GenerateSingleExpression extends React.Component {
     };
     this.selectExpression = this.selectExpression.bind(this);
   }
-  componentWillMount() {
-  }
-  selectExpression(data) {  
+  selectExpression(data){
+    let className = "";
+    if(data.id === 2 || data.id === 3){
+      className = "hide";
+    }
+    this.setState({
+      rightClassName : className
+    });
   }
   handleInputChange(e){
     const target = e.target;
@@ -149,7 +154,6 @@ class GenerateSingleExpression extends React.Component {
           parentIndex={this.props.parentIndex}
           order={this.props.order}
           selectExpression={this.selectExpression}
-          expressions={this.state.expressions}
           className={
             this.props.data.operatorClassName
               ? this.props.data.operatorClassName
@@ -259,16 +263,18 @@ class SelectList extends React.Component {
 class OperatorSelectList extends React.Component {
   state = {
     defaultValue: undefined,
-    expressions: [{name:"等于"},{name:"不等于"},{name:"非空"},{name:"空"}]
+    expressions: [{name:"等于",id:0,symbol:"="},{name:"不等于",id:1,symbol:"!="},{name:"非空",id:2,symbol:"is not null"},{name:"空",id:3,symbol:"is null"}]
   };
   handleChange = index => {
+    const expression = this.state.expressions[index];
+    this.props.selectExpression(expression);
     EventEmitter.trigger("refreshExpressionList", {
-      type: this.props.type,
-      data: this.state.optionsArr[index],
+      type: "operator",
+      data: expression,
+      index: this.props.index,
       order: this.props.order,
       groupIndex: this.props.groupIndex,
-      parentIndex: this.props.parentIndex,
-      index: this.props.index
+      parentIndex: this.props.parentIndex
     });
   };
   render() {
@@ -330,6 +336,19 @@ class App extends Component{
   }
   componentDidMount(){
     const $this = this;
+    /* 注册refreshExpressionList */
+    EventEmitter.off("refreshExpressionList");
+    EventEmitter.on("refreshExpressionList", function(params) {
+      switch(params.type){
+        case "operator":
+          //console.log($this.state.group);
+        break;
+        default:
+      };
+      $this.setState({
+        refresh : false
+      });
+    });
     /* 注册recordData */
     EventEmitter.off("recordData");
     EventEmitter.on("recordData", function(params) {
