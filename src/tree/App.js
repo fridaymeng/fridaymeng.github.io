@@ -6,6 +6,20 @@ import { Select, Button, Switch, Input } from 'antd';
 
 const Option = Select.Option;
 
+const operatorExpression = [
+  {name:"等于",       id: 1,  symbol:"="},
+  {name:"不等于",     id: 2,  symbol:"!="},
+  {name:"非空",       id: 3, symbol:"is not null"},
+  {name:"空",         id: 4,  symbol:"is null"}
+];
+
+const allFields = [
+  {name:"id",       id : uuid(8, 16)},
+  {name:"user",     id : uuid(8, 16)},
+  {name:"age",      id : uuid(8, 16)},
+  {name:"nation",   id : uuid(8, 16)}
+];
+
 class GenerateGroupExpression extends React.Component {
   constructor(props) {
     super(props);
@@ -73,8 +87,6 @@ class GenerateGroupExpression extends React.Component {
           />
         </div>
         {this.props.data.map((item, index) => {
-          item.rightClassName = item.rightClassName ? item.rightClassName : "";
-          item.rightClassName = "hide";
           return (
             <GenerateSingleExpression
               groupIndex={this.props.index}
@@ -105,17 +117,34 @@ class GenerateSingleExpression extends React.Component {
       allFields: this.props.allFields,
       leftFields: this.props.allFields,
       rightFields: this.props.data.rightFields || [],
-      rightClassName: this.props.data.rightClassName
+      operatorId: this.props.data.operatorId,
+      refresh: true
     };
     this.selectExpression = this.selectExpression.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  componentWillMount(){
+    if(this.props.data.operatorId === 3 || this.props.data.operatorId === 4){
+      this.setState({
+        rightClassName : "hide"
+      });
+    }
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (!nextState.refresh) {
+      return false;
+    } else {
+      return true;
+    }
   }
   selectExpression(data){
     let className = "";
-    if(data.id === 2 || data.id === 3){
+    if(data.symbol === "is not null" || data.symbol === "is null"){
       className = "hide";
     }
     this.setState({
-      rightClassName : className
+      rightClassName : className,
+      operatorId : data.id
     });
   }
   handleInputChange(e){
@@ -125,7 +154,9 @@ class GenerateSingleExpression extends React.Component {
       type : "right",
       value : target.value,
       order : data.order,
-      index : data.index
+      index : data.index,
+      groupIndex: this.props.groupIndex,
+      parentIndex: this.props.parentIndex
     });
   }
   render() {
@@ -140,7 +171,6 @@ class GenerateSingleExpression extends React.Component {
           index={this.props.index}
           type="left"
           allFields={this.state.leftFields}
-          defaultValue={this.state.leftDefaultValue}
           search="true"
           className={
             this.props.data.leftClassName ? this.props.data.leftClassName : ""
@@ -148,6 +178,7 @@ class GenerateSingleExpression extends React.Component {
         />
         <OperatorSelectList
           key={Math.random()}
+          operatorId={this.state.operatorId}
           data={this.props.data}
           index={this.props.index}
           groupIndex={this.props.groupIndex}
@@ -166,6 +197,7 @@ class GenerateSingleExpression extends React.Component {
           data-index={this.props.index}
           onChange={this.handleInputChange}
           type="right"
+          defaultValue={this.props.data.rightValue}
           className={this.state.rightClassName ? this.state.rightClassName : ""}
           style={{ width: 150}}
         />
@@ -219,11 +251,28 @@ class SelectList extends React.Component {
     super(props);
     this.state = {
       optionsArr: this.props.allFields,
-      className: "class-" + uuid(10, 16) + " " + this.props.className,
-      defaultValue: this.props.defaultValue
+      className: "class-" + uuid(10, 16) + " " + this.props.className
     };
   }
-  handleChange = index => {};
+  componentWillMount(){
+    this.props.allFields.forEach(item => {
+      if(item.id === this.props.data.leftId){
+        this.setState({
+          defaultValue : item.name
+        });
+      }
+    });
+  }
+  handleChange = index => {
+    EventEmitter.trigger("recordData", {
+      type: this.props.type,
+      data: this.state.optionsArr[index],
+      index: this.props.index,
+      order: this.props.order,
+      groupIndex: this.props.groupIndex,
+      parentIndex: this.props.parentIndex
+    });
+  };
   render() {
     return (
       <div>
@@ -261,14 +310,25 @@ class SelectList extends React.Component {
   }
 }
 class OperatorSelectList extends React.Component {
-  state = {
-    defaultValue: undefined,
-    expressions: [{name:"等于",id:0,symbol:"="},{name:"不等于",id:1,symbol:"!="},{name:"非空",id:2,symbol:"is not null"},{name:"空",id:3,symbol:"is null"}]
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      expressions: operatorExpression
+    };
+  }
+  componentWillMount(){
+    operatorExpression.forEach(item => {
+      if(item.id === this.props.operatorId){
+        this.setState({
+          defaultValue : item.name
+        });
+      }
+    });
+  }
   handleChange = index => {
     const expression = this.state.expressions[index];
     this.props.selectExpression(expression);
-    EventEmitter.trigger("refreshExpressionList", {
+    EventEmitter.trigger("recordData", {
       type: "operator",
       data: expression,
       index: this.props.index,
@@ -325,7 +385,7 @@ class App extends Component{
           id: 0
         }
       ],
-      allFields: [{name:"id"},{name:"user"},{name:"age"},{name:"nation"}],
+      allFields: allFields,
       refresh: true
     };
     this.count = 0;
@@ -336,12 +396,21 @@ class App extends Component{
   }
   componentDidMount(){
     const $this = this;
-    /* 注册refreshExpressionList */
-    EventEmitter.off("refreshExpressionList");
-    EventEmitter.on("refreshExpressionList", function(params) {
+    /* 注册recordData */
+    EventEmitter.off("recordData");
+    EventEmitter.on("recordData", function(params) {
+      let $obj = $this.findGroup($this.state.group,params.groupIndex,{});
+      $obj = $this.findExpression($obj.expressionList,params.index);
       switch(params.type){
         case "operator":
-          //console.log($this.state.group);
+          $obj.operatorId = params.data.id;
+        break;
+        case "left":
+          $obj.leftId = params.data.id;
+        break;
+        case "right":
+          $obj.rightValue = params.value;
+          $obj.rightClassName = "";
         break;
         default:
       };
@@ -349,25 +418,26 @@ class App extends Component{
         refresh : false
       });
     });
-    /* 注册recordData */
-    EventEmitter.off("recordData");
-    EventEmitter.on("recordData", function(params) {
-      switch(params.type){
-        case "left":
-          console.log(params);
-        break;
-        case "right":
-          console.log(params);
-        break;
-        case "operator":
-          console.log(params);
-        break;
-        default:
+  }
+  componentWillUnmount() {
+    this.setState = () => {
+      return;
+    };
+  }
+  findGroup = (group,id,obj) => {
+    group.forEach(item => {
+      if(item.id === id){
+        obj = item;
+      }else{
+        item.group.forEach(li => {
+          this.findGroup(li,id);
+        });
       }
-      $this.setState({
-        refresh: false
-      });
     });
+    return obj;
+  }
+  findExpression(list,id){
+    return list[id];
   }
   renderGroup(params) {
     let $dom = [];
