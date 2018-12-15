@@ -100,7 +100,6 @@ class GenerateGroupExpression extends React.Component {
               delOneExpression={this.props.delOneExpression}
               addOneExpression={this.props.addOneExpression}
               allFields={this.props.allFields}
-              allParams={this.props.allParams}
             />
           );
         })}
@@ -393,29 +392,39 @@ class App extends Component{
     this.delOneExpression = this.delOneExpression.bind(this);
     this.addGroupExpression = this.addGroupExpression.bind(this);
     this.delGroupExpression = this.delGroupExpression.bind(this);
+    this.findGroup = this.findGroup.bind(this);
   }
   componentDidMount(){
     const $this = this;
     /* 注册recordData */
     EventEmitter.off("recordData");
     EventEmitter.on("recordData", function(params) {
-      let $obj = $this.findGroup($this.state.group,params.groupIndex,{});
-      $obj = $this.findExpression($obj.expressionList,params.index);
-      switch(params.type){
-        case "operator":
-          $obj.operatorId = params.data.id;
-        break;
-        case "left":
-          $obj.leftId = params.data.id;
-        break;
-        case "right":
-          $obj.rightValue = params.value;
-          $obj.rightClassName = "";
-        break;
-        default:
-      };
-      $this.setState({
-        refresh : false
+      $this.findGroup({
+        group : $this.state.group,
+        index : params.groupIndex,
+        type : "expression",
+        callback : function(item){
+          let $obj = $this.findExpression(item.expressionList,params.index);
+          switch(params.type){
+            case "gate":
+              item.gate = params.data;
+            break;
+            case "operator":
+              $obj.operatorId = params.data.id;
+            break;
+            case "left":
+              $obj.leftId = params.data.id;
+            break;
+            case "right":
+              $obj.rightValue = params.value;
+              $obj.rightClassName = "";
+            break;
+            default:
+          };
+          $this.setState({
+            refresh : false
+          });
+        }
       });
     });
   }
@@ -424,17 +433,34 @@ class App extends Component{
       return;
     };
   }
-  findGroup = (group,id,obj) => {
-    group.forEach(item => {
-      if(item.id === id){
-        obj = item;
+  findGroup = (params) => {
+    params.group && params.group.forEach((item,index) => {
+      if(item.id === params.index){
+        if(params.type === "expression"){
+          /* 表达式 */
+          params.callback(item);
+        }else if(params.type === "delete"){
+          /* 删除分组 */
+          params.group.splice(index,1);
+        }else{
+          item.group.push({
+            gate: "and",
+            expressionList: [{}],
+            group: [],
+            id: ++this.count,
+            parentId: item.id
+          });
+        }
       }else{
-        item.group.forEach(li => {
-          this.findGroup(li,id);
+        this.findGroup({
+          group : item.group,
+          index : params.index,
+          parentIndex : params.parentIndex,
+          order : params.order,
+          type : params.type
         });
       }
     });
-    return obj;
   }
   findExpression(list,id){
     return list[id];
@@ -446,16 +472,6 @@ class App extends Component{
       if (item.group && item.group.length > 0) {
         $domChild.push(this.renderGroup({data : item.group, index : index + 1}));
       }
-      if (
-        params.data[index].expressionList.length === 0 &&
-        params.data[index].group &&
-        params.data[index].group.length === 0
-      ) {
-        params.data[index].expressionList.push({});
-      }
-      if (!params.data[index].group && params.data[index].expressionList.length === 0) {
-        params.data[index].expressionList.push({});
-      }
       $dom.push(
         <GenerateGroupExpression
           key={Math.random()}
@@ -464,11 +480,10 @@ class App extends Component{
           order={index}
           id={uuid(10, 16)}
           total={params.data.length}
-          gate={params.data[index].gate}
-          data={params.data[index].expressionList}
+          gate={item.gate}
+          data={item.expressionList}
           groupLth={item.group ? item.group.length : 0}
           allFields={this.state.allFields}
-          allParams={this.props.allParams}
           delOneExpression={this.delOneExpression}
           addOneExpression={this.addOneExpression}
           delGroupExpression={this.delGroupExpression}
@@ -476,6 +491,7 @@ class App extends Component{
           childrens={$domChild}
         />
       );
+      $domChild = [];
     });
     return $dom;
   }
@@ -541,8 +557,9 @@ class App extends Component{
             id: ++this.count,
             parentId: item.parentId + 1
           });
+        }else{
+          this.findId(item.group,params);
         }
-        this.findId(item.group,params);
       }
       return item;
     });
@@ -550,21 +567,41 @@ class App extends Component{
   /*** 添加单个表达式分组 ***/
   addGroupExpression(e) {
     const $data = e.target.dataset;
-    this.findId(this.state.group,$data);
+    const $this = this;
+    if($data.parentIndex === "false"){
+      this.state.group[0].group.push({
+        gate: "and",
+        expressionList: [{}],
+        group: [],
+        id: ++this.count,
+        parentId: 0
+      });
+    }else{
+      //this.findId(this.state.group,$data);
+      $this.findGroup({
+        group : $this.state.group,
+        index : Number($data.index),
+        parentIndex : Number($data.parentIndex),
+        order : Number($data.order)
+      });
+      //let $obj = $this.findExpression($group.expressionList,params.index);
+    }
     this.forceUpdate();
   }
   /*** 删除单个表达式分组 ***/
   delGroupExpression(e) {
     const $data = e.target.dataset;
-    const $order = $data.order;
-    const $parentIndex = $data.parentIndex;
-    if($parentIndex !== "false"){
-      this.state.group[$parentIndex].group.splice($order, 1);
-      this.setState({
-        group: this.state.group,
-        refresh: true
-      });
-    };
+    this.findGroup({
+      group : this.state.group,
+      index : Number($data.index),
+      parentIndex : Number($data.parentIndex),
+      order : Number($data.order),
+      type : "delete"
+    });
+    this.setState({
+      group: this.state.group,
+      refresh: true
+    });
   }
   render(){
     return (
