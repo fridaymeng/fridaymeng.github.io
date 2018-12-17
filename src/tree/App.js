@@ -422,7 +422,8 @@ class App extends Component{
             default:
           };
           $this.setState({
-            refresh : false
+            group : $this.state.group,
+            refresh : false 
           });
         }
       });
@@ -436,20 +437,31 @@ class App extends Component{
   findGroup = (params) => {
     params.group && params.group.forEach((item,index) => {
       if(item.id === params.index){
-        if(params.type === "expression"){
-          /* 表达式 */
-          params.callback(item);
-        }else if(params.type === "delete"){
-          /* 删除分组 */
-          params.group.splice(index,1);
-        }else{
-          item.group.push({
-            gate: "and",
-            expressionList: [{}],
-            group: [],
-            id: ++this.count,
-            parentId: item.id
-          });
+        switch(params.type){
+          case "expression":
+            /* 表达式change */
+            params.callback && params.callback(item);
+          break;
+          case "addExpression":
+            /* 添加表达式 */
+            item.expressionList.push({});
+          break;
+          case "deleteExpression":
+            /* 删除表达式 */
+            item.expressionList.splice(params.expressionIndex,1);
+          break;
+          case "delete":
+            /* 删除分组 */
+            params.group.splice(index,1);
+          break;
+          default:
+            item.group.push({
+              gate: "and",
+              expressionList: [{}],
+              group: [],
+              id: ++this.count,
+              parentId: item.id
+            });
         }
       }else{
         this.findGroup({
@@ -457,7 +469,9 @@ class App extends Component{
           index : params.index,
           parentIndex : params.parentIndex,
           order : params.order,
-          type : params.type
+          type : params.type,
+          callback : params.callback,
+          expressionIndex : params.expressionIndex
         });
       }
     });
@@ -511,7 +525,13 @@ class App extends Component{
     if ($parentIndex === "false") {
       this.state.group[$index].expressionList.push({});
     } else {
-      this.state.group[$parentIndex].group[$order].expressionList.push({});
+      this.findGroup({
+        group : this.state.group,
+        index : Number($index),
+        parentIndex : Number($parentIndex),
+        order : Number($order),
+        type : "addExpression"
+      });
     }
     this.setState({
       group: this.state.group,
@@ -526,12 +546,16 @@ class App extends Component{
     const $order = $data.order;
     const $expressionIndex = $data.expressionIndex;
     if ($parentIndex === "false") {
-      this.state.group[$index].expressionList.splice($data.expressionIndex, 1);
+      this.state.group[$index].expressionList.splice($expressionIndex, 1);
     } else {
-      this.state.group[$parentIndex].group[$order].expressionList.splice(
-        $expressionIndex,
-        1
-      );
+      this.findGroup({
+        group : this.state.group,
+        index : Number($index),
+        parentIndex : Number($parentIndex),
+        expressionIndex : $expressionIndex,
+        order : Number($order),
+        type : "deleteExpression"
+      });
     }
     this.setState({
       expressionList: this.state.group,
@@ -577,14 +601,12 @@ class App extends Component{
         parentId: 0
       });
     }else{
-      //this.findId(this.state.group,$data);
       $this.findGroup({
         group : $this.state.group,
         index : Number($data.index),
         parentIndex : Number($data.parentIndex),
         order : Number($data.order)
       });
-      //let $obj = $this.findExpression($group.expressionList,params.index);
     }
     this.forceUpdate();
   }

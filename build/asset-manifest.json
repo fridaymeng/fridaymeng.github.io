@@ -1,17 +1,17 @@
 {
   "main.css": "./static/css/main.2b46afb7.chunk.css",
-  "main.js": "./static/js/main.680a2e87.chunk.js",
-  "main.js.map": "./static/js/main.680a2e87.chunk.js.map",
+  "main.js": "./static/js/main.ca671e29.chunk.js",
+  "main.js.map": "./static/js/main.ca671e29.chunk.js.map",
   "static/css/1.5fae7a51.chunk.css": "./static/css/1.5fae7a51.chunk.css",
   "static/js/1.0b35a2eb.chunk.js": "./static/js/1.0b35a2eb.chunk.js",
   "static/js/1.0b35a2eb.chunk.js.map": "./static/js/1.0b35a2eb.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
   "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
-  "static/css/main.2b46afb7.chunk.css.map": "./static/css/main.2b46afb7.chunk.css.map",
+  "static/css/1.5fae7a51.chunk.css.map": "./static/css/1.5fae7a51.chunk.css.map",
   "static/media/zkboxing.png": "./static/media/zkboxing.5e0e0881.png",
   "static/media/screw.png": "./static/media/screw.5fe7e161.png",
-  "static/css/1.5fae7a51.chunk.css.map": "./static/css/1.5fae7a51.chunk.css.map",
+  "static/css/main.2b46afb7.chunk.css.map": "./static/css/main.2b46afb7.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.45229da685b365b0f6d446a34d8d9898.js": "./precache-manifest.45229da685b365b0f6d446a34d8d9898.js",
+  "precache-manifest.7a5249f383ebd4190f37e15aea493d6f.js": "./precache-manifest.7a5249f383ebd4190f37e15aea493d6f.js",
   "service-worker.js": "./service-worker.js"
 }
