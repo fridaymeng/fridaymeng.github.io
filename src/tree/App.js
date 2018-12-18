@@ -462,6 +462,7 @@ class App extends Component{
               id: ++this.count,
               parentId: item.id
             });
+          break;
         }
       }else{
         this.findGroup({

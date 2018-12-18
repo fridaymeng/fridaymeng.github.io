@@ -29,7 +29,6 @@ const linkList = [
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
         {"href": "http://www.zwbk.org/","text" : "中文百科"},
         {"href": "http://senseable.mit.edu/","text" : "MIT Senseable City Lab"},
-        {"href": "https://flowingdata.com/","text" : "To understand data and ourselves"},
         {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
 ];
 
