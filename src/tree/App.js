@@ -631,6 +631,9 @@ class App extends Component{
       <div className="tree-wrap" id="tree-id">
         <div className="selectGroupWrap">
           {this.renderGroup({data : this.state.group})}
+          <pre className="language-bash">
+            {JSON.stringify(this.state.group, null, 2)}
+          </pre>
         </div>
       </div>
     );
