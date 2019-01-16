@@ -6,8 +6,7 @@ const linkList = [
         {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
         {"href": "/tree","text" : "tree" },
         {"href": "/connection","text" : "connection" },
-        {"href": "https://www.quora.com/","text" : "quora"},
-        {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
+        /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://thenextweb.com/","text" : "TheNextWeb"},
         {"href": "http://visjs.org/","text" : "visjs"},
@@ -17,10 +16,8 @@ const linkList = [
         {"href": "http://www.worldwidetelescope.org/","text" : "worldwidetelescope"},
         {"href": "http://www.cnet.com/","text" : "cNet"},
         {"href": "http://www.scientificamerican.com/","text" : "scientificAmerican"},
-        {"href": "http://lodash.com/","text" : "lodash"},
         {"href": "http://marvl.infotech.monash.edu.au/software/","text" : "Monash VIS"},
         {"href": "http://www.tinypng.com/","text" : "tinypng"},
-        {"href": "http://todomvc.com/","text" : "todoMVC"},
         {"href": "http://reactivex.io/","text" : "Responsive Programming"},
         {"href": "http://overapi.com/","text" : "overapi"},
         {"href": "http://www.reactnative.com/","text" : "reactnative"},
@@ -29,7 +26,7 @@ const linkList = [
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
         {"href": "http://www.zwbk.org/","text" : "中文百科"},
         {"href": "http://senseable.mit.edu/","text" : "MIT Senseable City Lab"},
-        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
+        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"} */
 ];
 
 class App extends Component {
