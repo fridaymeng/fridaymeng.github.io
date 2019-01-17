@@ -3,10 +3,10 @@ import './App.less';
 
 const linkList = [
         {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
-        {"href": "/tree","text" : "tree" },
+        {"href": "/tree","text" : "tree" , "src" : require("../assets/img/tree.png")},
         {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
-        {"href": "/connection","text" : "connection" },
-        /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
+        {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
+        {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://thenextweb.com/","text" : "TheNextWeb"},
         {"href": "http://visjs.org/","text" : "visjs"},
@@ -24,9 +24,8 @@ const linkList = [
         {"href": "http://openprocessing.org/","text" : "openprocessing"},
         {"href": "http://www.deviantart.com/","text" : "deviantart"},
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
-        {"href": "http://www.zwbk.org/","text" : "中文百科"},
         {"href": "http://senseable.mit.edu/","text" : "MIT Senseable City Lab"},
-        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"} */
+        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
 ];
 
 class App extends Component {
