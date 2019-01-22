@@ -385,7 +385,8 @@ class App extends Component{
         }
       ],
       allFields: allFields,
-      refresh: true
+      refresh: true,
+      nums: 0
     };
     this.count = 0;
     this.addOneExpression = this.addOneExpression.bind(this);
@@ -411,6 +412,8 @@ class App extends Component{
             break;
             case "operator":
               $obj.operatorId = params.data.id;
+              delete $obj.rightValue;
+              delete $obj.rightClassName;
             break;
             case "left":
               $obj.leftId = params.data.id;
@@ -423,8 +426,9 @@ class App extends Component{
           };
           $this.setState({
             group : $this.state.group,
-            refresh : false 
+            refresh : false
           });
+          $this.child.undateString();
         }
       });
     });
@@ -433,6 +437,9 @@ class App extends Component{
     this.setState = () => {
       return;
     };
+  }
+  onRef = (ref) => {
+    this.child = ref
   }
   findGroup = (params) => {
     params.group && params.group.forEach((item,index) => {
@@ -631,12 +638,30 @@ class App extends Component{
       <div className="tree-wrap" id="tree-id">
         <div className="selectGroupWrap">
           {this.renderGroup({data : this.state.group})}
-          <pre className="language-bash">
-            {JSON.stringify(this.state.group, null, 2)}
-          </pre>
+          <StringFormat key={Math.random()} onRef={this.onRef} group={this.state.group}></StringFormat>
         </div>
       </div>
     );
+  }
+}
+
+class StringFormat extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      html : ""
+    };
+  }
+  componentDidMount(){
+    this.props.onRef(this);
+  }
+  undateString = () => {
+    this.forceUpdate();
+  }
+  render(){
+    return (<pre className="language-bash">
+    {JSON.stringify(this.props.group, null, 2)}
+  </pre>);
   }
 }
 
