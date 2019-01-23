@@ -420,7 +420,6 @@ class App extends Component{
             break;
             case "right":
               $obj.rightValue = params.value;
-              $obj.rightClassName = "";
             break;
             default:
           };
