@@ -8,7 +8,6 @@ const linkList = [
         {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
         {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
-        {"href": "http://thenextweb.com/","text" : "TheNextWeb"},
         {"href": "http://visjs.org/","text" : "visjs"},
         {"href": "http://bitwiseshiftleft.github.io/sjcl/doc/","text" : "sjcl加密"},
         {"href": "http://www.javascriptoo.com/","text" : "javascriptOO"},
@@ -20,10 +19,9 @@ const linkList = [
         {"href": "http://reactivex.io/","text" : "Responsive Programming"},
         {"href": "http://overapi.com/","text" : "Overapi"},
         {"href": "https://flutter.io/","text" : "Flutter"},
-        {"href": "http://openprocessing.org/","text" : "openprocessing"},
         {"href": "http://www.deviantart.com/","text" : "deviantart"},
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
-        {"href": "https://robomongo.org/","text" : "mongodb工具库"},
+        {"href": "https://robomongo.org/","text" : "mongodb工具"},
         {"href": "http://senseable.mit.edu/","text" : "MIT Senseable City Lab"},
         {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
 ];
