@@ -56,15 +56,18 @@ constructor(props) {
           .attr("width", data.width);
       });
       this.outerSvgRegion        = d3.select("#model-svg-id");
-      this.outerRegionWrap      = this.outerSvgRegion.append("g").attr("id", "box-svg-id");
+      this.outerRegionWrap      = this.outerSvgRegion
+        .append("g")
+        .attr("id", "box-svg-id")
+        .attr("fill", "url(#diagramPattern)");
       this.outerRegionWrap.append("rect")
-      .attr("width", this.state.width)
-      .attr("height", this.state.height)
-          .attr("class", "rectTable")
-      .call(d3.zoom()
-          .scaleExtent([.1, 100])
-              .on("zoom", svgZoomed)
-          );
+        .attr("width", this.state.width)
+        .attr("height", this.state.height)
+        .attr("class", "rectTable")
+        .call(d3.zoom()
+        .scaleExtent([.1, 100])
+            .on("zoom", svgZoomed)
+        );
       this.outerPathAndNodes = this.outerRegionWrap.append("g");
       /* 所有连接线区域 */
       this.outerAllPathRegion = this.outerPathAndNodes.append("g");
@@ -72,54 +75,83 @@ constructor(props) {
       this.outerRegion      = this.outerPathAndNodes.append("g");
       let $outerRegion      = this.outerPathAndNodes;
       /*** 绘制箭头 ***/    
-  let outerDefs       = this.outerRegionWrap.append("defs");  
-  outerDefs.append("marker")  
-          .attr("id","arrowEnd")  
-          .attr("markerUnits","strokeWidth")  
-          .attr("markerWidth","12")  
-          .attr("markerHeight","12")  
-          .attr("viewBox","0 0 12 12")   
-          .attr("refX","10")  
-          .attr("refY","6")  
-          .attr("orient","auto")
-          .append("path")
-          .attr("d","M2,2 L10,6 L2,10 L6,6 L2,2")  
-          .attr("class","pathArrow"); 
-      outerDefs.append("marker")  
-          .attr("id","arrowStart")  
-          .attr("markerUnits","strokeWidth")  
-          .attr("markerWidth","12")  
-          .attr("markerHeight","12")  
-          .attr("viewBox","0 0 12 12")   
-          .attr("refX","0")  
-          .attr("refY","6")  
-          .attr("orient","auto")
-          .append("path")
-          .attr("d","M10,2 L2,6 L10,10 L6,6 L10,2")
-          .attr("class","pathArrow");
-      /* 动态连接线 */
-      this.outerRegion
-          .append("path")
-          .attr("class","unrestrainedPath")
-          .attr("id","unrestrainedPathId")
-          .attr("marker-end","url(#arrowEnd)")
-          .attr("marker-start","url(#arrowStart)")
-          .attr("d","M0,0 0,0");
-      /*** 固定组件 ***/
-      this.outerFixRegion   = this.outerRegion
-          .data([{x : 0, y : 0}])
-          .append("g")
-          .attr("id","fixedTableRegion")
-          .call(d3.drag()
-              .on("start", this.fixedTableStarted)
-              .on("drag", this.fixedTableDragIng)
-              .on("end", this.fixedTableDragEnd)
-          );
-      /*** 放大缩小 ***/
-      function svgZoomed() {
-          $outerRegion.attr("transform", d3.event.transform);
-      }
-      this.updateTableList();
+        let outerDefs       = this.outerRegionWrap.append("defs");  
+        outerDefs.append("marker")  
+            .attr("id","arrowEnd")  
+            .attr("markerUnits","strokeWidth")  
+            .attr("markerWidth","12")  
+            .attr("markerHeight","12")  
+            .attr("viewBox","0 0 12 12")   
+            .attr("refX","10")  
+            .attr("refY","6")  
+            .attr("orient","auto")
+            .append("path")
+            .attr("d","M2,2 L10,6 L2,10 L6,6 L2,2")  
+            .attr("class","pathArrow"); 
+        outerDefs.append("marker")  
+            .attr("id","arrowStart")  
+            .attr("markerUnits","strokeWidth")  
+            .attr("markerWidth","12")  
+            .attr("markerHeight","12")  
+            .attr("viewBox","0 0 12 12")   
+            .attr("refX","0")  
+            .attr("refY","6")  
+            .attr("orient","auto")
+            .append("path")
+            .attr("d","M10,2 L2,6 L10,10 L6,6 L10,2")
+            .attr("class","pathArrow");
+        /* 网格 */
+        const gridArr = new Array(20);
+        this.bgRegion = outerDefs
+            .append("pattern")
+            .attr("id", "diagramPattern")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 100)
+            .attr("height", 100)
+            .attr("patternUnits", "userSpaceOnUse");
+        this.bgRegion
+            .selectAll("path")
+            .data(gridArr)
+            .enter()
+            .append("path")
+            .attr("stroke", "#e0e0e0")
+            .attr("stroke-width", "0.25")
+            .attr("dashArray", "")
+            .attr("d", (d, index) => {
+                if (index === 0) {
+                return `M0,0.5 L100,0.5 Z`;
+                } else if (index < 10 && index > 0) {
+                return `M0,${index * 10}.125 L100,${index * 10}.125 Z`;
+                } else if (index === 10) {
+                return `M0.5,0 L0.5,100 Z`;
+                } else if (index > 10) {
+                return `M${(index - 10) * 10}.125,0 L${(index - 10) * 10}.125,100 Z`;
+                }
+            });
+        /* 动态连接线 */
+        this.outerRegion
+            .append("path")
+            .attr("class","unrestrainedPath")
+            .attr("id","unrestrainedPathId")
+            .attr("marker-end","url(#arrowEnd)")
+            .attr("marker-start","url(#arrowStart)")
+            .attr("d","M0,0 0,0");
+        /*** 固定组件 ***/
+        this.outerFixRegion   = this.outerRegion
+            .data([{x : 0, y : 0}])
+            .append("g")
+            .attr("id","fixedTableRegion")
+            .call(d3.drag()
+                .on("start", this.fixedTableStarted)
+                .on("drag", this.fixedTableDragIng)
+                .on("end", this.fixedTableDragEnd)
+            );
+        /*** 放大缩小 ***/
+        function svgZoomed() {
+            $outerRegion.attr("transform", d3.event.transform);
+        }
+        this.updateTableList();
   }
   componentWillUpdate(){
   }
@@ -162,7 +194,7 @@ constructor(props) {
               this.outerTableRegion
                   .append("text")
                   .attr("y",this.state.tableHeight + 20)
-                  .attr("x",0)
+                  .attr("x",d => d.width/2)
                   .text(d => d.title);
               /*** 可连接点 ***/
               let $this = this;
