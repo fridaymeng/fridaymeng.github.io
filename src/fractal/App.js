@@ -11,12 +11,13 @@ class App extends Component {
     const wrapG = d3.select("#fractal-wrap svg")
       .append("g");
     const data = Array(1000);
+    refresh();
     setInterval(() => {
-      data.push(undefined);
+      d3.selectAll("circle").remove();
       refresh();
-    },1000);
+    },3000);
     function refresh(){
-      wrapG.selectAll("node")
+      wrapG.selectAll("circle")
       .data(data)
       .enter()
       .append("circle")
@@ -39,7 +40,7 @@ class App extends Component {
         }
       })
       .transition()
-      .duration(1250)
+      .duration(1550)
       .delay(function(d,i){
         return i;
       })
