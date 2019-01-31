@@ -5,6 +5,7 @@ import { renderRoutes } from "react-router-config";
 import Index from "./index/App";
 import Screw from "./screw/App";
 import Tree from "./tree/App";
+import Fractal from "./fractal/App";
 import Connection from "./connection/App";
 
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
   { path: '/connection',
     exact: true,
     component: Connection
+  },
+  { path: '/fractal',
+    exact: true,
+    component: Fractal
   }
 ];
 

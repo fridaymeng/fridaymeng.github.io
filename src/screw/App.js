@@ -8,13 +8,23 @@ class App extends Component {
             width : 1800,
           height : 900,
       drawSpiral : function(){
-          var draw = SVG('drawing').size('100%', '100%').attr('id', 'networkTopology');
+          var draw = SVG('drawing')
+            .size('100%', '100%')
+            .attr('id', 'networkTopology');
           var masterArr = [],
-              coordArr = [],coordArr2 = [],coordArr3 = [],coordArr4 = [],coordArr5 = [],
-              t = 0,t2 = 0,t3 = 0,t4 = 0,t5 = 0,
-              r = 0,
-              step = 10,
-              i;
+            coordArr = [],
+            coordArr2 = [],
+            coordArr3 = [],
+            coordArr4 = [],
+            coordArr5 = [],
+            t = 0,
+            t2 = 0,
+            t3 = 0,
+            t4 = 0,
+            t5 = 0,
+            r = 0,
+            step = 10,
+            i;
           masterArr.length = 300;
           let resultCoord = {};
           let resultCoord2 = {};
@@ -101,7 +111,7 @@ class App extends Component {
       }
       };
       if(SVG.supported){
-      nodeDistri.drawSpiral();// create node dirtribution
+        nodeDistri.drawSpiral();// create node dirtribution
       }else{
         document.getElementById("drawing").innerHTML = "您的浏览器不支持SVG矢量图！"
       }
