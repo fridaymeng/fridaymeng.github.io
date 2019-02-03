@@ -3,6 +3,15 @@ import * as d3 from "d3";
 import './App.less';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      interval : 0
+    }
+  }
+  componentWillUnmount(){
+    clearInterval(this.state.interval);
+  }
   componentDidMount(){
     d3.select("#fractal-wrap svg").call(
         d3.zoom().scaleExtent([.1, 100])
@@ -12,10 +21,13 @@ class App extends Component {
       .append("g");
     const data = Array(2000);
     refresh();
-    setInterval(() => {
+    const $interval = setInterval(() => {
       d3.selectAll("circle").remove();
       refresh();
     },3000);
+    this.setState({
+      interval : $interval
+    });
     function refresh(){
       wrapG.selectAll("circle")
       .data(data)
