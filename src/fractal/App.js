@@ -22,12 +22,13 @@ class App extends Component {
     const data = Array(2000);
     refresh();
     const $interval = setInterval(() => {
-      d3.selectAll("circle").remove();
-      refresh();
+      //d3.selectAll("circle").remove();
+      
     },3000);
-    this.setState({
+    refresh();
+    /* this.setState({
       interval : $interval
-    });
+    }); */
     function refresh(){
       wrapG.selectAll("circle")
       .data(data)
@@ -39,16 +40,16 @@ class App extends Component {
       })
       .attr("cx",(d,i) => {
         if(i%2){
-          return -2500*Math.random()*i;
+          return -0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
         }else{
-          return 2500*Math.random()*i;
+          return 0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
         }
       })
       .attr("cy",(d,i) => {
         if(i%2){
-          return -2500*Math.random()*i;
+          return -0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
         }else{
-          return 2500*Math.random()*i;
+          return 0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
         }
       })
       .transition()
@@ -57,10 +58,14 @@ class App extends Component {
         return i;
       })
       .attr("cx",(d,i) => {
-        return Math.cos(i/Math.PI/2)*200 + 400;
+        //return Math.random()*1000;
+        return (1+.5*i)*Math.cos(i)+800;
+        //return Math.cos(i/Math.PI/2)*200 + 400;
       })
       .attr("cy",(d,i) => {
-        return Math.sin(i/Math.PI/2)*200 + 400;
+        //return Math.random()*1000;
+        return (2+.09*i)*Math.sin(i)+400;
+        //return Math.sin(i/Math.PI/2)*200 + 400;
       });
     }
     /*** 放大缩小 ***/
