@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "./static/media/screw.5fe7e161.png"
   },
   {
-    "revision": "e97e85ba1dba22548379",
+    "revision": "b5e3bff603fbcd67758e",
     "url": "./static/css/main.e691a868.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "./static/js/runtime~main.4a686d48.js"
   },
   {
-    "revision": "e97e85ba1dba22548379",
-    "url": "./static/js/main.e97e85ba.chunk.js"
+    "revision": "b5e3bff603fbcd67758e",
+    "url": "./static/js/main.b5e3bff6.chunk.js"
   },
   {
     "revision": "03b1f26e410425c6c38dbbde4a5ecae3",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "./static/css/1.0825bdd2.chunk.css"
   },
   {
-    "revision": "a0b6949022a537655a52733d9cb61fc1",
+    "revision": "206f9259a23f3b6367c7acbb4d0f8e0c",
     "url": "./index.html"
   }
 ];
