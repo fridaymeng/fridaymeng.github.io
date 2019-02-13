@@ -21,10 +21,10 @@ class App extends Component {
       .append("g");
     const data = Array(2000);
     refresh();
-    const $interval = setInterval(() => {
+    /* const $interval = setInterval(() => {
       //d3.selectAll("circle").remove();
       
-    },3000);
+    },3000); */
     refresh();
     /* this.setState({
       interval : $interval
@@ -47,9 +47,9 @@ class App extends Component {
       })
       .attr("cy",(d,i) => {
         if(i%2){
-          return -0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
-        }else{
           return 0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
+        }else{
+          return -0.25*(1+4*i-(1+2*i)*Math.cos(Math.PI*i));
         }
       })
       .transition()
