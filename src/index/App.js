@@ -7,7 +7,8 @@ const linkList = [
         {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
         {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
         {"href": "/fractal","text" : "分形几何学", "src" : require("../assets/img/fractal.png")},
-        {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
+        {"href": "/fouriertransformation","text" : "傅立叶变换"},
+        /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},
         {"href": "http://bitwiseshiftleft.github.io/sjcl/doc/","text" : "sjcl加密"},
@@ -23,7 +24,7 @@ const linkList = [
         {"href": "http://rxmarbles.com/","text" : "Rxmarbles"},
         {"href": "https://robomongo.org/","text" : "mongodb工具"},
         {"href": "http://senseable.mit.edu/","text" : "MIT Senseable City Lab"},
-        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"}
+        {"href": "http://githut.info/","text" : "A SMALL PLACE TO DISCOVER LANGUAGES IN GITHUB"} */
 ];
 
 class App extends Component {

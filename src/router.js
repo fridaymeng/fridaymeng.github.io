@@ -7,27 +7,39 @@ import Screw from "./screw/App";
 import Tree from "./tree/App";
 import Fractal from "./fractal/App";
 import Connection from "./connection/App";
+import FourierTransformation from "./fourierTransformation/App";
+
 
 const routes = [
-  { path: '/',
+  { 
+    path: '/',
     exact: true,
     component: Index
   },
-  { path: '/screw',
+  { 
+    path: '/screw',
     exact: true,
     component: Screw
   },
-  { path: '/tree',
+  { 
+    path: '/tree',
     exact: true,
     component: Tree
   },
-  { path: '/connection',
+  { 
+    path: '/connection',
     exact: true,
     component: Connection
   },
-  { path: '/fractal',
+  { 
+    path: '/fractal',
     exact: true,
     component: Fractal
+  },
+  { 
+    path: '/fouriertransformation',
+    exact: true,
+    component: FourierTransformation
   }
 ];
 

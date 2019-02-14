@@ -20,7 +20,6 @@ class App extends Component {
     const wrapG = d3.select("#fractal-wrap svg")
       .append("g");
     const data = Array(2000);
-    refresh();
     /* const $interval = setInterval(() => {
       //d3.selectAll("circle").remove();
       
