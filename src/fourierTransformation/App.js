@@ -9,7 +9,7 @@ class App extends Component {
       interval : 0,
       coordWave : {
         dot : {
-          x : 500,//圆点x坐标
+          x : 250,//圆点x坐标
           y : 250,//圆点y坐标
           k : 50,//曲线偏距（y轴）
           a : 50//曲线振幅（x轴）
@@ -108,7 +108,7 @@ class App extends Component {
     /* x轴 */
     this.state.coordG
       .append("path")
-      .attr("d",`M${coordWave.dot.x-coordWave.dot.a},${coordWave.dot.y} L${coordWave.dot.x+coordWave.dot.a*6.5},${coordWave.dot.y}`)
+      .attr("d",`M${coordWave.dot.x-coordWave.dot.a*6},${coordWave.dot.y} L${coordWave.dot.x+coordWave.dot.a*60.5},${coordWave.dot.y}`)
       .attr("class","path-coord")
       .attr("marker-end", "url(#arrowEnd)");
     /* y轴 */
@@ -117,19 +117,29 @@ class App extends Component {
       .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/3} L${coordWave.dot.x},${coordWave.dot.y*2+coordWave.dot.k}`)
       .attr("class","path-coord")
       .attr("marker-start", "url(#arrowStart)");
+    let curvelVal = "";
+    for(let i = 0; i < 1; i++) {
+      /* curvelVal += `${coordWave.dot.x+coordWave.dot.a*(i*2+1)},${coordWave.dot.y-coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(i*2+1)},${coordWave.dot.y+coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(i*2+2)},${coordWave.dot.y+coordWave.dot.k} `; */
+      curvelVal += `${coordWave.dot.x+coordWave.dot.a*(1+4*i)},${coordWave.dot.y-coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(1+4*i)},${coordWave.dot.y+coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(2+4*i)},${coordWave.dot.y+coordWave.dot.k} 
+      
+      ${coordWave.dot.x+coordWave.dot.a*(3+4*i)},${coordWave.dot.y+coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(3+4*i)},${coordWave.dot.y-coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(4+4*i)},${coordWave.dot.y-coordWave.dot.k} 
+      
+      ${coordWave.dot.x+coordWave.dot.a*(5+4*i)},${coordWave.dot.y-coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(5+4*i)},${coordWave.dot.y+coordWave.dot.k} 
+      ${coordWave.dot.x+coordWave.dot.a*(6+4*i)},${coordWave.dot.y+coordWave.dot.k} `;
+    }
+    console.log(curvelVal);
     this.state.coordG
       .append("path")
       .attr("class","path-fill-none")
       .attr("d",`M ${coordWave.dot.x},${coordWave.dot.y-coordWave.dot.k} 
-      C ${coordWave.dot.x+coordWave.dot.a},${coordWave.dot.y-coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a},${coordWave.dot.y+coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*2},${coordWave.dot.y+coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*3},${coordWave.dot.y+coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*3},${coordWave.dot.y-coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*4},${coordWave.dot.y-coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*5},${coordWave.dot.y-coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*5},${coordWave.dot.y+coordWave.dot.k} 
-        ${coordWave.dot.x+coordWave.dot.a*6},${coordWave.dot.y+coordWave.dot.k}`);
+      C ${curvelVal}`);
   }
   handleChangeParamsK(e){
     let dot = this.state.coordWave.dot;
