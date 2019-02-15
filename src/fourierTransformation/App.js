@@ -11,7 +11,7 @@ class App extends Component {
       coordWave : {
         dot : {
           x : 250,//圆点x坐标
-          y : 250,//圆点y坐标
+          y : 300,//圆点y坐标
           k : 50,//曲线偏距（y轴）
           a : 50,//曲线振幅（x轴）
           cycle : 1
@@ -176,27 +176,31 @@ class App extends Component {
       "height" : "1000px",
       "width" : "100%"
     }}>
-      <Col span={1} className="text-title">偏距：</Col>
-      <Col span={3}>
-        <Input 
-          value={this.state.coordWave.dot.k} 
-          type="number" 
-          onChange={this.handleChangeParamsK} />
-      </Col>
-      <Col span={1} className="text-title">振幅：</Col>
-      <Col span={3}>
-        <Input 
-          value={this.state.coordWave.dot.a} 
-          type="number" 
-          onChange={this.handleChangeParamsA} />
-      </Col>
-      <Col span={1} className="text-title">周期：</Col>
-      <Col span={3}>
-        <Input 
-          value={this.state.coordWave.dot.cycle} 
-          type="number" 
-          onChange={this.handleChangeParamsCycle} />   
-      </Col>   
+      <div className="top-ctl">
+        <div>
+          <Col span={1} className="text-title">偏距：</Col>
+          <Col span={3}>
+            <Input 
+              value={this.state.coordWave.dot.k} 
+              type="number" 
+              onChange={this.handleChangeParamsK} />
+          </Col>
+          <Col span={1} className="text-title">振幅：</Col>
+          <Col span={3}>
+            <Input 
+              value={this.state.coordWave.dot.a} 
+              type="number" 
+              onChange={this.handleChangeParamsA} />
+          </Col>
+          <Col span={1} className="text-title">周期：</Col>
+          <Col span={3}>
+            <Input 
+              value={this.state.coordWave.dot.cycle} 
+              type="number" 
+              onChange={this.handleChangeParamsCycle} />   
+          </Col> 
+        </div>
+      </div> 
       <svg></svg>
     </div>;
   }
