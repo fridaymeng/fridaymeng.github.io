@@ -140,7 +140,12 @@ class App extends Component {
   }
   handleChangeParamsK(e){
     let dot = this.state.coordWave.dot;
-    dot.k = Number.parseInt(e.target.value,10);
+    let k = Number.parseInt(e.target.value,10);
+    if(k < 1 || !k){
+      alert("不能小于1");
+      return;
+    }
+    dot.k = k;
     this.setState({
       coordWave : {
         dot : dot
@@ -151,7 +156,12 @@ class App extends Component {
   }
   handleChangeParamsA(e){
     let dot = this.state.coordWave.dot;
-    dot.a = Number.parseInt(e.target.value,10);
+    let a = Number.parseInt(e.target.value,10);
+    if(a < 1 || !a){
+      alert("不能小于1");
+      return;
+    }
+    dot.a = a;
     this.setState({
       coordWave : {
         dot : dot
@@ -162,7 +172,12 @@ class App extends Component {
   }
   handleChangeParamsCycle(e){
     let dot = this.state.coordWave.dot;
-    dot.cycle = Number.parseInt(e.target.value,10);
+    let cycle = Number.parseInt(e.target.value,10);
+    if(cycle < 1 || !cycle){
+      alert("不能为空或小于1");
+      return;
+    }
+    dot.cycle = cycle;
     this.setState({
       coordWave : {
         dot : dot
@@ -182,7 +197,7 @@ class App extends Component {
           <Col span={3}>
             <Input 
               value={this.state.coordWave.dot.k} 
-              type="number" 
+              type="number"
               onChange={this.handleChangeParamsK} />
           </Col>
           <Col span={1} className="text-title">振幅：</Col>

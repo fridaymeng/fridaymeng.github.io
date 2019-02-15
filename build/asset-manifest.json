@@ -1,7 +1,7 @@
 {
   "main.css": "./static/css/main.dc005c13.chunk.css",
-  "main.js": "./static/js/main.c4a55008.chunk.js",
-  "main.js.map": "./static/js/main.c4a55008.chunk.js.map",
+  "main.js": "./static/js/main.e0c98e7a.chunk.js",
+  "main.js.map": "./static/js/main.e0c98e7a.chunk.js.map",
   "static/css/1.1e13c66f.chunk.css": "./static/css/1.1e13c66f.chunk.css",
   "static/js/1.81b78095.chunk.js": "./static/js/1.81b78095.chunk.js",
   "static/js/1.81b78095.chunk.js.map": "./static/js/1.81b78095.chunk.js.map",
@@ -13,9 +13,9 @@
   "static/media/fractal.png": "./static/media/fractal.aa7f9cf1.png",
   "static/media/fourierTransformation.png": "./static/media/fourierTransformation.b568dd4e.png",
   "static/media/tree.png": "./static/media/tree.03b1f26e.png",
-  "static/css/main.dc005c13.chunk.css.map": "./static/css/main.dc005c13.chunk.css.map",
   "static/css/1.1e13c66f.chunk.css.map": "./static/css/1.1e13c66f.chunk.css.map",
+  "static/css/main.dc005c13.chunk.css.map": "./static/css/main.dc005c13.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.1eb6e8c987840f2a8434fcac30ed31f6.js": "./precache-manifest.1eb6e8c987840f2a8434fcac30ed31f6.js",
+  "precache-manifest.9fbce67f1307516ca16dfe0a90856a57.js": "./precache-manifest.9fbce67f1307516ca16dfe0a90856a57.js",
   "service-worker.js": "./service-worker.js"
 }
