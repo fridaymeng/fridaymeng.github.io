@@ -7,7 +7,7 @@ const linkList = [
         {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
         {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
         {"href": "/fractal","text" : "分形几何学", "src" : require("../assets/img/fractal.png")},
-        {"href": "/fouriertransformation","text" : "傅立叶变换"},
+        {"href": "/fouriertransformation","text" : "傅立叶变换", "src" : require("../assets/img/fourierTransformation.png")},
         /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},
