@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import * as d3 from "d3";
 import './App.less';
+import { Input,Col } from 'antd';
 
 class App extends Component {
   constructor(props) {
@@ -12,12 +13,14 @@ class App extends Component {
           x : 250,//圆点x坐标
           y : 250,//圆点y坐标
           k : 50,//曲线偏距（y轴）
-          a : 50//曲线振幅（x轴）
+          a : 50,//曲线振幅（x轴）
+          cycle : 1
         }
       }
     }
     this.handleChangeParamsA = this.handleChangeParamsA.bind(this);
     this.handleChangeParamsK = this.handleChangeParamsK.bind(this);
+    this.handleChangeParamsCycle = this.handleChangeParamsCycle.bind(this);
     this.renderSinWave = this.renderSinWave.bind(this);
   }
   componentWillUnmount(){
@@ -108,7 +111,7 @@ class App extends Component {
     /* x轴 */
     this.state.coordG
       .append("path")
-      .attr("d",`M${coordWave.dot.x-coordWave.dot.a*6},${coordWave.dot.y} L${coordWave.dot.x+coordWave.dot.a*60.5},${coordWave.dot.y}`)
+      .attr("d",`M${coordWave.dot.x-coordWave.dot.a*coordWave.dot.cycle},${coordWave.dot.y} L${coordWave.dot.x+coordWave.dot.a*5*coordWave.dot.cycle},${coordWave.dot.y}`)
       .attr("class","path-coord")
       .attr("marker-end", "url(#arrowEnd)");
     /* y轴 */
@@ -117,24 +120,18 @@ class App extends Component {
       .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/3} L${coordWave.dot.x},${coordWave.dot.y*2+coordWave.dot.k}`)
       .attr("class","path-coord")
       .attr("marker-start", "url(#arrowStart)");
+    /* 周期 */
     let curvelVal = "";
-    for(let i = 0; i < 1; i++) {
-      /* curvelVal += `${coordWave.dot.x+coordWave.dot.a*(i*2+1)},${coordWave.dot.y-coordWave.dot.k} 
-      ${coordWave.dot.x+coordWave.dot.a*(i*2+1)},${coordWave.dot.y+coordWave.dot.k} 
-      ${coordWave.dot.x+coordWave.dot.a*(i*2+2)},${coordWave.dot.y+coordWave.dot.k} `; */
+    for(let i = 0; i < coordWave.dot.cycle; i++) {
       curvelVal += `${coordWave.dot.x+coordWave.dot.a*(1+4*i)},${coordWave.dot.y-coordWave.dot.k} 
       ${coordWave.dot.x+coordWave.dot.a*(1+4*i)},${coordWave.dot.y+coordWave.dot.k} 
       ${coordWave.dot.x+coordWave.dot.a*(2+4*i)},${coordWave.dot.y+coordWave.dot.k} 
       
       ${coordWave.dot.x+coordWave.dot.a*(3+4*i)},${coordWave.dot.y+coordWave.dot.k} 
       ${coordWave.dot.x+coordWave.dot.a*(3+4*i)},${coordWave.dot.y-coordWave.dot.k} 
-      ${coordWave.dot.x+coordWave.dot.a*(4+4*i)},${coordWave.dot.y-coordWave.dot.k} 
-      
-      ${coordWave.dot.x+coordWave.dot.a*(5+4*i)},${coordWave.dot.y-coordWave.dot.k} 
-      ${coordWave.dot.x+coordWave.dot.a*(5+4*i)},${coordWave.dot.y+coordWave.dot.k} 
-      ${coordWave.dot.x+coordWave.dot.a*(6+4*i)},${coordWave.dot.y+coordWave.dot.k} `;
+      ${coordWave.dot.x+coordWave.dot.a*(4+4*i)},${coordWave.dot.y-coordWave.dot.k} `;
     }
-    console.log(curvelVal);
+    /* 绘制波形 */
     this.state.coordG
       .append("path")
       .attr("class","path-fill-none")
@@ -163,13 +160,43 @@ class App extends Component {
       this.renderSinWave();
     });
   }
+  handleChangeParamsCycle(e){
+    let dot = this.state.coordWave.dot;
+    dot.cycle = Number.parseInt(e.target.value,10);
+    this.setState({
+      coordWave : {
+        dot : dot
+      }
+    },() => {
+      this.renderSinWave();
+    });
+  }
   render() {
     return <div id="fourier-wrap" style={{ 
       "height" : "1000px",
       "width" : "100%"
     }}>
-      偏距：<input value={this.state.coordWave.dot.k} type="number" onChange={this.handleChangeParamsK} />
-      振幅：<input value={this.state.coordWave.dot.a} type="number" onChange={this.handleChangeParamsA} />
+      <Col span={1} className="text-title">偏距：</Col>
+      <Col span={3}>
+        <Input 
+          value={this.state.coordWave.dot.k} 
+          type="number" 
+          onChange={this.handleChangeParamsK} />
+      </Col>
+      <Col span={1} className="text-title">振幅：</Col>
+      <Col span={3}>
+        <Input 
+          value={this.state.coordWave.dot.a} 
+          type="number" 
+          onChange={this.handleChangeParamsA} />
+      </Col>
+      <Col span={1} className="text-title">周期：</Col>
+      <Col span={3}>
+        <Input 
+          value={this.state.coordWave.dot.cycle} 
+          type="number" 
+          onChange={this.handleChangeParamsCycle} />   
+      </Col>   
       <svg></svg>
     </div>;
   }
