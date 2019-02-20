@@ -117,7 +117,7 @@ class App extends Component {
     /* y轴 */
     this.state.coordG
       .append("path")
-      .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/3} L${coordWave.dot.x},${coordWave.dot.y*2+coordWave.dot.k}`)
+      .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/1.5} L${coordWave.dot.x},${coordWave.dot.y*1.2+coordWave.dot.k}`)
       .attr("class","path-coord")
       .attr("marker-start", "url(#arrowStart)");
     /* 周期 */

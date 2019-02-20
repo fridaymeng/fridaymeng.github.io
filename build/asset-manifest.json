@@ -1,7 +1,7 @@
 {
-  "main.css": "./static/css/main.dc005c13.chunk.css",
-  "main.js": "./static/js/main.e0c98e7a.chunk.js",
-  "main.js.map": "./static/js/main.e0c98e7a.chunk.js.map",
+  "main.css": "./static/css/main.cc2ecb00.chunk.css",
+  "main.js": "./static/js/main.8fe528b1.chunk.js",
+  "main.js.map": "./static/js/main.8fe528b1.chunk.js.map",
   "static/css/1.1e13c66f.chunk.css": "./static/css/1.1e13c66f.chunk.css",
   "static/js/1.81b78095.chunk.js": "./static/js/1.81b78095.chunk.js",
   "static/js/1.81b78095.chunk.js.map": "./static/js/1.81b78095.chunk.js.map",
@@ -14,8 +14,8 @@
   "static/media/fourierTransformation.png": "./static/media/fourierTransformation.b568dd4e.png",
   "static/media/tree.png": "./static/media/tree.03b1f26e.png",
   "static/css/1.1e13c66f.chunk.css.map": "./static/css/1.1e13c66f.chunk.css.map",
-  "static/css/main.dc005c13.chunk.css.map": "./static/css/main.dc005c13.chunk.css.map",
+  "static/css/main.cc2ecb00.chunk.css.map": "./static/css/main.cc2ecb00.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.9fbce67f1307516ca16dfe0a90856a57.js": "./precache-manifest.9fbce67f1307516ca16dfe0a90856a57.js",
+  "precache-manifest.97e473a893b77d3bac918491ae055480.js": "./precache-manifest.97e473a893b77d3bac918491ae055480.js",
   "service-worker.js": "./service-worker.js"
 }
