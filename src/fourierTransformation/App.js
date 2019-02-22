@@ -14,7 +14,7 @@ class App extends Component {
           y : 300,//圆点y坐标
           k : 50,//曲线偏距（y轴）
           a : 50,//曲线振幅（x轴）
-          cycle : 1
+          cycle : 5
         }
       }
     }
@@ -108,13 +108,13 @@ class App extends Component {
     const coordWave = this.state.coordWave;
     d3.selectAll("path.path-fill-none").remove();
     d3.selectAll("path.path-coord").remove();
-    /* x轴 */
+    /* 正弦曲线x轴 */
     this.state.coordG
       .append("path")
       .attr("d",`M${coordWave.dot.x-coordWave.dot.a*coordWave.dot.cycle},${coordWave.dot.y} L${coordWave.dot.x+coordWave.dot.a*5*coordWave.dot.cycle},${coordWave.dot.y}`)
       .attr("class","path-coord")
       .attr("marker-end", "url(#arrowEnd)");
-    /* y轴 */
+    /* 正弦曲线y轴 */
     this.state.coordG
       .append("path")
       .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/1.5} L${coordWave.dot.x},${coordWave.dot.y*1.2+coordWave.dot.k}`)
@@ -137,6 +137,37 @@ class App extends Component {
       .attr("class","path-fill-none")
       .attr("d",`M ${coordWave.dot.x},${coordWave.dot.y-coordWave.dot.k} 
       C ${curvelVal}`);
+    /* 圆 */
+    const dis = 400;
+    /* 圆x轴 */
+    this.state.coordG
+      .append("path")
+      .attr("d",`M${coordWave.dot.x-coordWave.dot.a*coordWave.dot.cycle},${coordWave.dot.y+dis} L${coordWave.dot.x+coordWave.dot.a*5},${coordWave.dot.y+dis}`)
+      .attr("class","path-coord")
+      .attr("marker-end", "url(#arrowEnd)");
+    /* 圆y轴 */
+    this.state.coordG
+      .append("path")
+      .attr("d",`M${coordWave.dot.x},${-coordWave.dot.k+coordWave.dot.y/1.5+dis} L${coordWave.dot.x},${coordWave.dot.y*1.5+coordWave.dot.k+dis}`)
+      .attr("class","path-coord")
+      .attr("marker-start", "url(#arrowStart)");
+    /* 绘制圆 */
+    let curvelCircleVal = "";
+    for(let i = 0; i < coordWave.dot.cycle; i++) {
+      curvelCircleVal += 
+      `${coordWave.dot.x},${coordWave.dot.y+dis+coordWave.dot.k*Math.sin(180/Math.PI)*i+coordWave.dot.k} 
+       ${coordWave.dot.x+coordWave.dot.a*Math.cos(180/Math.PI)*i+coordWave.dot.a},${coordWave.dot.y+coordWave.dot.k*2*Math.sin(180/Math.PI)*i+coordWave.dot.k+dis} 
+       ${coordWave.dot.x+coordWave.dot.a*2*Math.cos(180/Math.PI)*i+coordWave.dot.a},${coordWave.dot.y+coordWave.dot.k*2*Math.sin(180/Math.PI)*i+coordWave.dot.k+dis} 
+      
+       ${coordWave.dot.x+coordWave.dot.a*2*Math.cos(180/Math.PI)*i+coordWave.dot.a},${coordWave.dot.y+coordWave.dot.k*Math.sin(180/Math.PI)*i+coordWave.dot.k+dis} 
+       ${coordWave.dot.x+coordWave.dot.a*Math.cos(180/Math.PI)*i+coordWave.dot.a},${coordWave.dot.y+dis} 
+       ${coordWave.dot.x},${coordWave.dot.y+dis} `;
+    }
+    this.state.coordG
+      .append("path")
+      .attr("class","path-fill-none")
+      .attr("d",`M ${coordWave.dot.x},${coordWave.dot.y-coordWave.dot.k+dis+coordWave.dot.k} 
+      C ${curvelCircleVal}`);
   }
   handleChangeParamsK(e){
     let dot = this.state.coordWave.dot;
