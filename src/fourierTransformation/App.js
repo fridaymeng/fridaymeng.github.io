@@ -108,6 +108,7 @@ class App extends Component {
     const coordWave = this.state.coordWave;
     d3.selectAll("path.path-fill-none").remove();
     d3.selectAll("path.path-coord").remove();
+    d3.selectAll("circle").remove();
     /* 正弦曲线x轴 */
     this.state.coordG
       .append("path")
@@ -152,7 +153,7 @@ class App extends Component {
       .attr("class","path-coord")
       .attr("marker-start", "url(#arrowStart)");
     /* 绘制圆 */
-    let curvelCircleVal = "";
+    /* let curvelCircleVal = "";
     for(let i = 0; i < coordWave.dot.cycle; i++) {
       curvelCircleVal += 
       `${coordWave.dot.x},${coordWave.dot.y+dis+coordWave.dot.k*Math.sin(180/Math.PI)*i+coordWave.dot.k} 
@@ -167,7 +168,23 @@ class App extends Component {
       .append("path")
       .attr("class","path-fill-none")
       .attr("d",`M ${coordWave.dot.x},${coordWave.dot.y-coordWave.dot.k+dis+coordWave.dot.k} 
-      C ${curvelCircleVal}`);
+      C ${curvelCircleVal}`); */
+    /* 回归 */
+    let data = new Array(720);
+    this.state.coordG.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("class","circle")
+      .attr("cx",(d,i) => {
+        let r = 200 * Math.sin(2 * (Math.PI/360 * coordWave.dot.cycle) * (i+1));
+        return r * Math.cos(Math.PI/180*(i+1)) + coordWave.dot.x;
+      })
+      .attr("cy",(d,i) => {
+        let r = 200 * Math.sin(2 * (Math.PI/360 * coordWave.dot.cycle ) * (i+1));
+        return r * Math.sin(Math.PI/180*(i+1)) + coordWave.dot.y + dis;
+      })
+      .attr("r",1);
   }
   handleChangeParamsK(e){
     let dot = this.state.coordWave.dot;
