@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "./static/media/tree.03b1f26e.png"
   },
   {
-    "revision": "07deeb8ecd3d9395762c",
-    "url": "./static/css/main.76ee54e6.chunk.css"
+    "revision": "0a7f66e099bc88f7b85a",
+    "url": "./static/css/main.5ac506c3.chunk.css"
   },
   {
     "revision": "b568dd4eecd42d97179cba1d8ac7e427",
     "url": "./static/media/fourierTransformation.b568dd4e.png"
   },
   {
-    "revision": "cf5632b5daa53e556825",
-    "url": "./static/js/1.cf5632b5.chunk.js"
+    "revision": "dd3b716ac2f5ef3bc100",
+    "url": "./static/js/1.dd3b716a.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/screw.5fe7e161.png"
   },
   {
-    "revision": "07deeb8ecd3d9395762c",
-    "url": "./static/js/main.07deeb8e.chunk.js"
+    "revision": "0a7f66e099bc88f7b85a",
+    "url": "./static/js/main.0a7f66e0.chunk.js"
   },
   {
     "revision": "5e0e0881c20c7c91e3929c2d4311dd92",
@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "./static/media/fractalb.3b378027.png"
   },
   {
-    "revision": "cf5632b5daa53e556825",
-    "url": "./static/css/1.d51eba69.chunk.css"
+    "revision": "dd3b716ac2f5ef3bc100",
+    "url": "./static/css/1.c3b14809.chunk.css"
   },
   {
-    "revision": "e7d35c9fd81c1f49c94d4c8d40eaab13",
+    "revision": "bf3dd26e9c994fbe7cd06e2afe5e7fdd",
     "url": "./index.html"
   }
 ];
