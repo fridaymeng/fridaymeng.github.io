@@ -4,10 +4,11 @@ import './App.less';
 const linkList = [
         {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
         {"href": "/tree","text" : "tree" , "src" : require("../assets/img/tree.png")},
-        {"href": "http://zkboxing.com/calculationx.html","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
+        {"href": "http://zkboxing.com","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
         {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
         {"href": "/fractal","text" : "分形几何学", "src" : require("../assets/img/fractalb.png")},
         {"href": "/fouriertransformation","text" : "傅立叶变换", "src" : require("../assets/img/fourierTransformation.png")},
+        {"href": "/threejs","text" : "Threejs", "src" : require("../assets/img/threejs.png")}
         /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},

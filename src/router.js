@@ -8,6 +8,8 @@ import Tree from "./tree/App";
 import Fractal from "./fractal/App";
 import Connection from "./connection/App";
 import FourierTransformation from "./fourierTransformation/App";
+import Threejs from "./threejs/App";
+
 
 
 const routes = [
@@ -40,6 +42,11 @@ const routes = [
     path: '/fouriertransformation',
     exact: true,
     component: FourierTransformation
+  },
+  { 
+    path: '/threejs',
+    exact: true,
+    component: Threejs
   }
 ];
 
