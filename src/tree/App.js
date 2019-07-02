@@ -6,11 +6,11 @@ class App extends Component {
     super(props)
     this.state = {}
   }
-  onChangeFunc(data) {
-    //console.log(data)
+  onChange(data) {
+    console.log(data)
   }
   render() {
-    return <Querybuilder onChangeFunc={this.onChangeFunc}></Querybuilder>
+    return <Querybuilder onChange={this.onChange}></Querybuilder>
   }
 }
 
