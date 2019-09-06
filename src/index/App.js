@@ -3,7 +3,7 @@ import './App.less';
 
 const linkList = [
         {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
-        {"href": "/tree","text" : "tree" , "src" : require("../assets/img/tree.png")},
+        {"href": "/tree","text" : "tree" , "src" : require("../assets/img/tree.jpg")},
         {"href": "http://zkboxing.com","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
         {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
         {"href": "/fractal","text" : "分形几何学", "src" : require("../assets/img/fractalb.png")},
