@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Querybuilder from 'react-sql-query-builder'
+import Arrr from './Tree'
 
 class App extends Component {
   constructor(props) {
