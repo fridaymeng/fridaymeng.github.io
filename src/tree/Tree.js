@@ -6,20 +6,7 @@ import { Select, Button, Switch, Input } from 'antd'
 
 const Option = Select.Option
 
-const operatorExpression = [
-  { name: 'equal', id: 1, symbol: '=' },
-  { name: 'not equal', id: 2, symbol: '!=' },
-  { name: 'is not null', id: 3, symbol: 'is not null' },
-  { name: 'is null', id: 4, symbol: 'is null' },
-  { name: 'in', id: 5, symbol: 'in' },
-  { name: 'not in', id: 6, symbol: 'not in' },
-  { name: 'less', id: 7, symbol: 'less' },
-  { name: 'less or equal', id: 8, symbol: 'less or equal' },
-  { name: 'greater', id: 9, symbol: 'greater' },
-  { name: 'greater or equal', id: 10, symbol: 'greater or equal' }
-]
-
-const allFields = [{ name: 'ID', id: uuid(8, 16) }, { name: 'User', id: uuid(8, 16) }, { name: 'Age', id: uuid(8, 16) }, { name: 'Nation', id: uuid(8, 16) }, { name: 'Datepicker', id: uuid(8, 16) }, { name: 'SelectList', id: uuid(8, 16) }]
+let operatorExpression = []
 
 class GenerateGroupExpression extends React.Component {
   constructor(props) {
@@ -224,6 +211,9 @@ class SelectList extends React.Component {
   }
   componentWillMount() {
     this.props.allFields.forEach(item => {
+      if((typeof item.id) === "undefined"){
+        item.id = uuid(8, 16)
+      }
       if (item.id === this.props.data.leftId) {
         this.setState({
           defaultValue: item.name
@@ -277,6 +267,9 @@ class OperatorSelectList extends React.Component {
   }
   componentWillMount() {
     operatorExpression.forEach(item => {
+      if((typeof item.id) === "undefined"){
+        item.id = uuid(8, 16)
+      }
       if (item.id === this.props.operatorId) {
         this.setState({
           defaultValue: item.name
@@ -332,7 +325,7 @@ class App extends Component {
           id: 0
         }
       ],
-      allFields: allFields,
+      allFields: this.props.fields,
       refresh: true
     }
     this.count = 0
@@ -341,6 +334,9 @@ class App extends Component {
     this.addGroupExpression = this.addGroupExpression.bind(this)
     this.delGroupExpression = this.delGroupExpression.bind(this)
     this.findGroup = this.findGroup.bind(this)
+  }
+  componentWillMount(){
+    operatorExpression = this.props.operators || []
   }
   componentDidMount() {
     const $this = this
