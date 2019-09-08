@@ -11,8 +11,10 @@ class App extends Component {
         { name: 'User', id: 2 }, 
         { name: 'Age', id: 3 }, 
         { name: 'Nation', id: 4 }, 
-        { name: 'Datepicker', id: 5 ,type : "DatePicker"}, 
-        { name: 'SelectList', id: 6 }],
+        { name: 'Date Picker', id: 5 ,type : "DatePicker"}, 
+        { name: 'Month Picker', id: 6 ,type : "MonthPicker"}, 
+        { name: 'Range Picker', id: 7 ,type : "RangePicker"}
+      ],
       operators : [
         { name: 'equal', id: 1, symbol: '=' },
         { name: 'not equal', id: 2, symbol: '!=' },
