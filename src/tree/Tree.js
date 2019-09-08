@@ -126,7 +126,7 @@ class GenerateSingleExpression extends React.Component {
     this.setState({
       rightClassName: className,
       operatorId: data.id,
-      rightDefaultValue : undefined
+      rightDefaultValue : null
     })
   }
   selectFields(data){
@@ -135,7 +135,7 @@ class GenerateSingleExpression extends React.Component {
       rightClassName : "hide",
       rightValueType : "Input",
       leftId : data.id,
-      operatorDefaultValue: undefined
+      operatorId: ''
     }
     if(data.type === "DatePicker"){
       params.rightValueType = "DatePicker"
@@ -173,7 +173,6 @@ class GenerateSingleExpression extends React.Component {
           groupIndex={this.props.groupIndex}
           parentIndex={this.props.parentIndex}
           order={this.props.order}
-          operatorDefaultValue={this.state.operatorDefaultValue}
           selectExpression={this.selectExpression}
           className={this.state.operatorClassName}
         />
@@ -339,7 +338,7 @@ class OperatorSelectList extends React.Component {
       <div>
         <Select
           className={this.props.className}
-          defaultValue={this.state.defaultValue}
+          value={this.state.defaultValue}
           style={{ width: 200, margin: '0 6px 0 6px' }}
           placeholder="please select"
           optionFilterProp="children"
