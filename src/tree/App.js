@@ -11,7 +11,7 @@ class App extends Component {
         { name: 'User', id: 2 }, 
         { name: 'Age', id: 3 }, 
         { name: 'Nation', id: 4 }, 
-        { name: 'Datepicker', id: 5 }, 
+        { name: 'Datepicker', id: 5 ,type : "DatePicker"}, 
         { name: 'SelectList', id: 6 }],
       operators : [
         { name: 'equal', id: 1, symbol: '=' },
