@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import Querybuilder from 'react-sql-query-builder'
+import Querybuilder from 'react-sql-query-builder'
 import Tree from './Tree'
 
 class App extends Component {
@@ -33,8 +33,8 @@ class App extends Component {
     // console.log(data)
   }
   render() {
-    return <Tree fields={this.state.fields} operators={this.state.operators} onChange={this.onChange} />
-    // return <Querybuilder onChange={this.onChange}></Querybuilder>
+    // return <Tree fields={this.state.fields} operators={this.state.operators} onChange={this.onChange} />
+    return <Querybuilder fields={this.state.fields} operators={this.state.operators} onChange={this.onChange}></Querybuilder>
   }
 }
 
