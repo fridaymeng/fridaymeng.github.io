@@ -28,7 +28,7 @@ class App extends Component {
     }
   }
   onChange(data) {
-    console.log(data)
+    // console.log(data)
   }
   render() {
     return <Tree fields={this.state.fields} operators={this.state.operators} onChange={this.onChange} />

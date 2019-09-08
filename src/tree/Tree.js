@@ -161,7 +161,7 @@ class GenerateSingleExpression extends React.Component {
           selectExpression={this.selectExpression}
           className={this.props.data.operatorClassName ? this.props.data.operatorClassName : ''}
         />
-        <Input placeholder="value" data-order={this.props.order} data-index={this.props.index} onChange={this.handleInputChange} type="right" defaultValue={this.props.data.rightValue} className={this.state.rightClassName ? this.state.rightClassName : ''} style={{ width: 150 }} />
+        <Input placeholder="value" data-order={this.props.order} data-index={this.props.index} onChange={this.handleInputChange} type="right" defaultValue={this.props.data.rightValue} className={this.state.rightClassName ? this.state.rightClassName : ''} style={{ width: 180 }} />
         <div>
           <Button
             icon="close-circle"
