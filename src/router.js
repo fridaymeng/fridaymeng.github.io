@@ -9,42 +9,46 @@ import Fractal from "./fractal/App";
 import Connection from "./connection/App";
 import FourierTransformation from "./fourierTransformation/App";
 import Threejs from "./threejs/App";
-
-
+import Nodes from "./nodes/App";
 
 const routes = [
-  { 
-    path: '/',
+  {
+    path: "/",
     exact: true,
     component: Index
   },
-  { 
-    path: '/screw',
+  {
+    path: "/nodes",
+    exact: true,
+    component: Nodes
+  },
+  {
+    path: "/screw",
     exact: true,
     component: Screw
   },
-  { 
-    path: '/tree',
+  {
+    path: "/tree",
     exact: true,
     component: Tree
   },
-  { 
-    path: '/connection',
+  {
+    path: "/connection",
     exact: true,
     component: Connection
   },
-  { 
-    path: '/fractal',
+  {
+    path: "/fractal",
     exact: true,
     component: Fractal
   },
-  { 
-    path: '/fouriertransformation',
+  {
+    path: "/fouriertransformation",
     exact: true,
     component: FourierTransformation
   },
-  { 
-    path: '/threejs',
+  {
+    path: "/threejs",
     exact: true,
     component: Threejs
   }
@@ -52,11 +56,7 @@ const routes = [
 
 class Routers extends Component {
   render() {
-    return (
-      <HashRouter basename="/">
-        {renderRoutes(routes)}
-      </HashRouter>
-    );
+    return <HashRouter basename="/">{renderRoutes(routes)}</HashRouter>;
   }
 }
 export default Routers;

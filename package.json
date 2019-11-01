@@ -118,5 +118,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "d3-force": "^2.0.1"
   }
 }

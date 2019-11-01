@@ -1,15 +1,36 @@
-import React, { Component } from 'react';
-import './App.less';
+import React, { Component } from "react";
+import "./App.less";
 
 const linkList = [
-        {"href": "/screw","text" : "screw" , "src" : require("../assets/img/screw.png")},
-        {"href": "/tree","text" : "tree" , "src" : require("../assets/img/tree.jpg")},
-        {"href": "http://zkboxing.com","text" : "zkboxing" , "src" : require("../assets/img/zkboxing.png")},
-        {"href": "/connection","text" : "connection" , "src" : require("../assets/img/connection.png")},
-        {"href": "/fractal","text" : "分形几何学", "src" : require("../assets/img/fractalb.png")},
-        {"href": "/fouriertransformation","text" : "傅立叶变换", "src" : require("../assets/img/fourierTransformation.png")},
-        {"href": "/threejs","text" : "Threejs", "src" : require("../assets/img/threejs.png")}
-        /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
+  { href: "/nodes", text: "nodes" },
+  { href: "/screw", text: "screw", src: require("../assets/img/screw.png") },
+  { href: "/tree", text: "tree", src: require("../assets/img/tree.jpg") },
+  {
+    href: "http://zkboxing.com",
+    text: "zkboxing",
+    src: require("../assets/img/zkboxing.png")
+  },
+  {
+    href: "/connection",
+    text: "connection",
+    src: require("../assets/img/connection.png")
+  },
+  {
+    href: "/fractal",
+    text: "分形几何学",
+    src: require("../assets/img/fractalb.png")
+  },
+  {
+    href: "/fouriertransformation",
+    text: "傅立叶变换",
+    src: require("../assets/img/fourierTransformation.png")
+  },
+  {
+    href: "/threejs",
+    text: "Threejs",
+    src: require("../assets/img/threejs.png")
+  }
+  /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},
         {"href": "http://bitwiseshiftleft.github.io/sjcl/doc/","text" : "sjcl加密"},
@@ -29,33 +50,64 @@ const linkList = [
 ];
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      html : ""
+      html: ""
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  componentWillMount(){
-    let $html = linkList.map((item) => {
-      return <div className="list-li" key={Math.random()}>
-              <div className={item.src ? "list-li-box" : "list-li-box list-li-box-no-img"}>
-                {item.src ? <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank"><img data-href={item.href} alt="" src={item.src} /></a></div> : ""}
-                <div><a onClick={this.handleClick} href="/" rel="noopener noreferrer" data-href={item.href} target="_blank" title={item.text}>{item.text}</a></div>
+  componentWillMount() {
+    let $html = linkList.map(item => {
+      return (
+        <div className="list-li" key={Math.random()}>
+          <div
+            className={
+              item.src ? "list-li-box" : "list-li-box list-li-box-no-img"
+            }
+          >
+            {item.src ? (
+              <div>
+                <a
+                  onClick={this.handleClick}
+                  href="/"
+                  rel="noopener noreferrer"
+                  data-href={item.href}
+                  target="_blank"
+                >
+                  <img data-href={item.href} alt="" src={item.src} />
+                </a>
               </div>
-            </div>;
+            ) : (
+              ""
+            )}
+            <div>
+              <a
+                onClick={this.handleClick}
+                href="/"
+                rel="noopener noreferrer"
+                data-href={item.href}
+                target="_blank"
+                title={item.text}
+              >
+                {item.text}
+              </a>
+            </div>
+          </div>
+        </div>
+      );
     });
     this.setState({
-      html : $html
+      html: $html
     });
   }
-  handleClick(e){
+  handleClick(e) {
     const $history = this.props.history;
     const $href = e.target.dataset.href;
-    if(/http/.test($href)){
-      var win = window.open($href, '_blank');
-      win.focus(); 
-    }else{
+    if (/http/.test($href)) {
+      var win = window.open($href, "_blank");
+      win.focus();
+    } else {
       $history.push($href);
     }
     e.preventDefault();
