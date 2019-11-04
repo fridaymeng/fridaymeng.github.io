@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.less";
 
 const linkList = [
-  { href: "/nodes", text: "nodes" },
+  { href: "/nodes", text: "nodes", src: require("../assets/img/nodes04.png") },
   { href: "/screw", text: "screw", src: require("../assets/img/screw.png") },
   { href: "/tree", text: "tree", src: require("../assets/img/tree.jpg") },
   {
