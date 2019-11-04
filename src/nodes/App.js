@@ -43,7 +43,7 @@ class App extends Component {
       .append("circle")
       .attr("r", 2.5)
       .attr("fill", function(d) {
-        return d.type === "a" ? "brown" : "steelblue";
+        return "#00f5ff";
       });
 
     var simulation = d3
