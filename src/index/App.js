@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./App.less";
 
 const linkList = [
-  { href: "/nodes", text: "nodes", src: require("../assets/img/nodes04.png") },
-  { href: "/screw", text: "screw", src: require("../assets/img/screw.png") },
-  { href: "/tree", text: "tree", src: require("../assets/img/tree.jpg") },
+  { href: "/map", text: "Map Monitor" },
+  { href: "/nodes", text: "Nodes", src: require("../assets/img/nodes04.png") },
+  { href: "/screw", text: "Screw", src: require("../assets/img/screw.png") },
+  { href: "/tree", text: "Tree", src: require("../assets/img/tree.jpg") },
   {
     href: "http://zkboxing.com",
     text: "zkboxing",
@@ -22,7 +23,7 @@ const linkList = [
   },
   {
     href: "/fouriertransformation",
-    text: "傅立叶变换",
+    text: "Rourier Transformation",
     src: require("../assets/img/fourierTransformation.png")
   },
   {

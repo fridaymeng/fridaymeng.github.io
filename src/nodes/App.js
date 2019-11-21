@@ -16,18 +16,18 @@ class App extends Component {
     const height = document.body.clientHeight || 400;
     var nodes = [].concat(
       d3.range(10000).map(function() {
-        return { r: 0 };
+        return { r: 10 };
       }),
-      d3.range(50).map(function() {
+      d3.range(60).map(function() {
         return { r: 100 };
       }),
-      d3.range(100).map(function() {
+      d3.range(110).map(function() {
         return { r: 200 };
       }),
-      d3.range(150).map(function() {
+      d3.range(170).map(function() {
         return { r: 300 };
       }),
-      d3.range(200).map(function() {
+      d3.range(230).map(function() {
         return { r: 400 };
       })
     );

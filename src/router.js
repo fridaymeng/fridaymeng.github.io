@@ -10,6 +10,7 @@ import Connection from "./connection/App";
 import FourierTransformation from "./fourierTransformation/App";
 import Threejs from "./threejs/App";
 import Nodes from "./nodes/App";
+import Maps from "./map/App";
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: "/nodes",
     exact: true,
     component: Nodes
+  },
+  {
+    path: "/map",
+    exact: true,
+    component: Maps
   },
   {
     path: "/screw",
