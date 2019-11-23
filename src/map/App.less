@@ -1,47 +1,19 @@
 #drawing{
-  background: #f3f4f5;
+  background: #111;
   #svg {
     width: 1200px;
     height: 1200px;
   }
-  .subunit.SCT { fill: #ddc; }
-  .subunit.WLS { fill: #cdd; }
-  .subunit.NIR { fill: #cdc; }
-  .subunit.ENG { fill: #dcd; }
-
-  .subunit.IRL,
-  .subunit-label.IRL {
-    display: none;
+  path{
+    fill: #0088cc;
+    stroke: #fff;
+    stroke-width: .1px;
   }
-
-  .subunit-boundary {
-    fill: none;
-    stroke: #777;
-    stroke-dasharray: 2,2;
-    stroke-linejoin: round;
+  path.graticule{
+    fill: transparent;
+    stroke: #222;
   }
-
-  .subunit-boundary.IRL {
-    stroke: #aaa;
+  text{
+    fill: #fff;
   }
-
-  .subunit-label {
-    fill: #777;
-    fill-opacity: .5;
-    font-size: 20px;
-    font-weight: 300;
-    text-anchor: middle;
-  }
-
-  .place,
-  .place-label {
-    fill: #444;
-  }
-
-  text {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    pointer-events: none;
-  }
-
 }

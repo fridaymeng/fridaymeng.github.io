@@ -3,26 +3,18 @@ import React, { Component } from "react";
 import * as d3 from "d3";
 import "./App.less";
 import uk from "./uk.json";
-
-// https://observablehq.com/collection/@d3/d3-force
-
-/* const data = {
-  nodes: [{ x: 469, y: 410 }, { x: 493, y: 364 }],
-  links: [{ source: 0, target: 1 }]
-}; */
+import world from "./world.json";
 
 class App extends Component {
   componentDidMount() {
-    var width = 960,
-      height = 1160;
+    const width = document.body.clientWidth || 1000;
+    const height = document.body.clientHeight || 1000;
 
     var projection = d3
-      .geoAlbers()
-      .center([0, 55.4])
-      .rotate([4.4, 0])
-      .parallels([50, 60])
-      .scale(1200 * 5)
-      .translate([width / 2, height / 2]);
+      .geoMercator()
+      .scale(width / 2 / Math.PI)
+      .translate([width / 2, height / 2])
+      .precision(0.1);
 
     var path = d3
       .geoPath()
@@ -34,8 +26,14 @@ class App extends Component {
       .append("svg")
       .attr("width", width)
       .attr("height", height);
-    var subunits = topojson.feature(uk, uk.objects.subunits),
-      places = topojson.feature(uk, uk.objects.places);
+    var subunits = topojson.feature(world, world.objects.states);
+
+    var graticule = d3.geoGraticule();
+    svg
+      .append("path")
+      .datum(graticule)
+      .attr("class", "graticule")
+      .attr("d", path);
 
     svg
       .selectAll(".subunit")
@@ -50,7 +48,7 @@ class App extends Component {
     svg
       .append("path")
       .datum(
-        topojson.mesh(uk, uk.objects.subunits, function(a, b) {
+        topojson.mesh(world, world.objects.states, function(a, b) {
           return a !== b && a.id !== "IRL";
         })
       )
@@ -60,7 +58,7 @@ class App extends Component {
     svg
       .append("path")
       .datum(
-        topojson.mesh(uk, uk.objects.subunits, function(a, b) {
+        topojson.mesh(world, world.objects.states, function(a, b) {
           return a === b && a.id === "IRL";
         })
       )
@@ -79,32 +77,6 @@ class App extends Component {
         return "translate(" + path.centroid(d) + ")";
       })
       .attr("dy", ".35em")
-      .text(function(d) {
-        return d.properties.name;
-      });
-
-    svg
-      .append("path")
-      .datum(places)
-      .attr("d", path)
-      .attr("class", "place");
-
-    svg
-      .selectAll(".place-label")
-      .data(places.features)
-      .enter()
-      .append("text")
-      .attr("class", "place-label")
-      .attr("transform", function(d) {
-        return "translate(" + projection(d.geometry.coordinates) + ")";
-      })
-      .attr("x", function(d) {
-        return d.geometry.coordinates[0] > -1 ? 6 : -6;
-      })
-      .attr("dy", ".35em")
-      .style("text-anchor", function(d) {
-        return d.geometry.coordinates[0] > -1 ? "start" : "end";
-      })
       .text(function(d) {
         return d.properties.name;
       });
