@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import SVG from "svg.js";
 import svgPanZoom from "svg-pan-zoom";
+import './App.less';
 
 class App extends Component {
   componentDidMount(){
@@ -8,7 +9,7 @@ class App extends Component {
             width : 1800,
           height : 900,
       drawSpiral : function(){
-          var draw = SVG('drawing')
+          var draw = SVG('drawings')
             .size('100%', '100%')
             .attr('id', 'networkTopology');
           var masterArr = [],
@@ -125,7 +126,7 @@ class App extends Component {
       });
   }
   render() {
-    return <div id="drawing" style={{ 
+    return <div id="drawings" style={{ 
       "height" : "800px",
       "width" : "100%"
     }}></div>;
