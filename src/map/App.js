@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
 import "./App.less";
-import uk from "./uk.json";
-import world from "./world.json";
+import uk from "./lib/uk.json";
+import world from "./lib/world.json";
 
 class App extends Component {
   componentDidMount() {
