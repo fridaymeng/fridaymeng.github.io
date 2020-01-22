@@ -30,7 +30,8 @@ const linkList = [
     href: "/threejs",
     text: "Threejs",
     src: require("../assets/img/threejs.png")
-  }
+  },
+  { href: "http://zkboxing.com/book/", text: "ES6 笔记" },
   /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},
