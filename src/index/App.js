@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.less";
 
 const linkList = [
-  { href: "/map", text: "Map Monitor" },
+  { href: "/map", text: "Map Monitor", src: require("../assets/img/map.png")  },
   { href: "/nodes", text: "Nodes", src: require("../assets/img/nodes04.png") },
   { href: "/screw", text: "Screw", src: require("../assets/img/screw.png") },
   { href: "/tree", text: "Tree", src: require("../assets/img/tree.jpg") },
@@ -31,7 +31,11 @@ const linkList = [
     text: "Threejs",
     src: require("../assets/img/threejs.png")
   },
-  { href: "http://zkboxing.com/book/", text: "ES6 笔记" },
+  { 
+    href: "http://zkboxing.com/book/", 
+    text: "ES6 笔记",
+    src: require("../assets/img/es6book.png") 
+  },
   /* {"href": "http://idl.cs.washington.edu/","text" : "Stanford VIS"},
         {"href": "https://www.palantir.com/","text" : "palantir"},
         {"href": "http://visjs.org/","text" : "visjs"},
