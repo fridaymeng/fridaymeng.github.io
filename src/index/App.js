@@ -26,11 +26,6 @@ const linkList = [
     text: "Rourier Transformation",
     src: require("../assets/img/fourierTransformation.png")
   },
-  {
-    href: "/threejs",
-    text: "Threejs",
-    src: require("../assets/img/threejs.png")
-  },
   { 
     href: "http://zkboxing.com/book/", 
     text: "ES6 笔记",
