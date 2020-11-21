@@ -10,18 +10,26 @@ class GenerateDiagram extends Component {
 constructor(props) {
       super(props);
       this.state = {
-          "width"                 : "1500px",
-          "height"                : "600px",
+          "width"                 : document.body.clientWidth - 10,
+          "height"                : 600,
           "tableWidth"            : 60,//组件宽度
           "tableHeight"           : 60,//组件高度
           "circleRadius"          : 5,//小圆半径
-          "items"                 : [{
+          "items"                 : [],//组件列表
+          "connectRalation"       : []//连线关系
+      };
+      this.addTableCt                 = this.addTableCt.bind(this);
+      this.sortByClick                = this.sortByClick.bind(this);
+  }
+  componentDidMount() {
+      this.setState({
+          items: [{
             "id"                    : uuid(16,16),
             "type"                  : "table",//表，过滤组件，关联组件，透视组件，目标表
             "width"                 : 60,
             "height"                : 60,
-            "x"                     : Math.random()*1e3,
-            "y"                     : Math.random()*1e3/2,
+            "x"                     : Math.random()*this.state.width,
+            "y"                     : Math.random()*this.state.height,
             "circleRadius"          : 5,
             "title"                 : uuid(7,16),
             "index"                 : 0,
@@ -31,19 +39,14 @@ constructor(props) {
             "type"                  : "table",//表，过滤组件，关联组件，透视组件，目标表
             "width"                 : 60,
             "height"                : 60,
-            "x"                     : Math.random()*1e3,
-            "y"                     : Math.random()*1e3/2,
+            "x"                     : Math.random()*this.state.width,
+            "y"                     : Math.random()*this.state.height,
             "circleRadius"          : 5,
             "title"                 : uuid(7,16),
             "index"                 : 1,
             "fixed"                 : false
-          }],//组件列表
-          "connectRalation"       : []//连线关系
-      };
-      this.addTableCt                 = this.addTableCt.bind(this);
-      this.sortByClick                = this.sortByClick.bind(this);
-  }
-  componentDidMount() {
+          }]
+      })
       let $this = this;
       /* 注册resize */
       EventEmitter.off("resizeSvg");
@@ -352,8 +355,8 @@ constructor(props) {
           "type"                  : "table",//表，过滤组件，关联组件，透视组件，目标表
           "width"                 : this.state.tableWidth,
           "height"                : this.state.tableHeight,
-          "x"                     : Math.random()*1e3,
-          "y"                     : Math.random()*1e3/2,
+          "x"                     : Math.random()*this.state.width,
+          "y"                     : Math.random()*this.state.height,
           "circleRadius"          : this.state.circleRadius,
           "title"                 : uuid(7,16),
           "index"                 : this.state.items.length,
@@ -368,25 +371,26 @@ constructor(props) {
   }
   render() {
       return (
-    <div>
-              <div className="model-svg-wrap" style={{
-                  width   : this.state.width,
-                  height  : this.state.height
-              }}>
-                  <svg className="model-svg" id="model-svg-id"></svg>
-              </div>
-              <button type="submit" onClick={this.addTableCt} style={{
-                  "height": "36px",
-                  "margin": "5px 0 0 0",
-                  "padding" : "6px 12px",
-                  "fontSize": "14px",
-                  "borderRadius": "5px",
-                  "background" : "#111",
-                  "border" : "1px solid #111",
-                  "color" : "#fff",
-                  "cursor" : "pointer"
-              }}>Add One Rect</button>
-    </div>
+        <div class="wrap">
+                <div className="model-svg-wrap" style={{
+                    width   : this.state.width,
+                    height  : this.state.height
+                }}>
+                    <svg className="model-svg" id="model-svg-id"></svg>
+                </div>
+                <button type="submit" onClick={this.addTableCt} style={{
+                    "height": "36px",
+                    "margin": "5px 0 0 0",
+                    "padding" : "6px 12px",
+                    "fontSize": "14px",
+                    "borderRadius": "5px",
+                    "background" : "#111",
+                    "border" : "1px solid #111",
+                    "color" : "#fff",
+                    "cursor" : "pointer",
+                    "width": "300px"
+                }}>Add</button>
+        </div>
       );
   }
 }

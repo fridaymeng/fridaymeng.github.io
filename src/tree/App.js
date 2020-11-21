@@ -39,6 +39,7 @@ class App extends Component {
         fields={this.state.fields}
         operators={this.state.operators}
         onChange={this.onChange}
+        console={false}
       ></Querybuilder>
     );
   }

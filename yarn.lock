@@ -9657,10 +9657,10 @@ react-slick@~0.25.2:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-sql-query-builder@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.npm.taobao.org/react-sql-query-builder/download/react-sql-query-builder-1.2.6.tgz#a83135b3075bbbe019694c91dcd564e1677d2bff"
-  integrity sha1-qDE1swdbu+AZaUyR3NVk4Wd9K/8=
+react-sql-query-builder@1.2.12:
+  version "1.2.12"
+  resolved "https://registry.npm.taobao.org/react-sql-query-builder/download/react-sql-query-builder-1.2.12.tgz?cache=0&sync_timestamp=1605887013218&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-sql-query-builder%2Fdownload%2Freact-sql-query-builder-1.2.12.tgz#10b3c24ae9f96f2e57e88ec39055c66438340723"
+  integrity sha1-ELPCSun5by5X6I7DkFXGZDg0ByM=
 
 react@^16.5.2:
   version "16.14.0"

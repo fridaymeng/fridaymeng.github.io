@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.less';
 import Routers from './router';
 import 'antd/dist/antd.less';
+import './index.less';
 //import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Routers />, document.getElementById('root'));
