@@ -8,6 +8,7 @@ import Tree from "./tree/App";
 import Fractal from "./fractal/App";
 import Connection from "./connection/App";
 import FourierTransformation from "./fourierTransformation/App";
+import Fourier from "./fourier/App";
 import Nodes from "./nodes/App";
 import Maps from "./map/App";
 
@@ -51,6 +52,11 @@ const routes = [
     path: "/fouriertransformation",
     exact: true,
     component: FourierTransformation
+  },
+  {
+    path: "/fourier",
+    exact: true,
+    component: Fourier
   }
 ];
 

@@ -26,6 +26,11 @@ const linkList = [
     text: "Rourier Transformation",
     src: require("../assets/img/fourierTransformation.png")
   },
+  {
+    href: "/fourier",
+    text: "Fourier",
+    src: require("../assets/img/fl.png")
+  },
   { 
     href: "http://zkboxing.com/book/", 
     text: "ES6 笔记",
