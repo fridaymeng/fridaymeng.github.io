@@ -371,7 +371,7 @@ constructor(props) {
   }
   render() {
       return (
-        <div class="wrap">
+        <div className="wrap">
                 <div className="model-svg-wrap" style={{
                     width   : this.state.width,
                     height  : this.state.height

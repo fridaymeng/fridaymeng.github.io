@@ -104,7 +104,7 @@ class GenerateSingleExpression extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this)
     this.selectFields = this.selectFields.bind(this)
   }
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.data.operatorId === 3 || this.props.data.operatorId === 4) {
       this.setState({
         rightClassName: 'hide'
@@ -278,7 +278,7 @@ class SelectList extends React.Component {
       className: 'class-' + uuid(10, 16) + ' ' + this.props.className
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     this.props.allFields.forEach(item => {
       if((typeof item.id) === "undefined"){
         item.id = uuid(8, 16)
@@ -337,7 +337,7 @@ class OperatorSelectList extends React.Component {
       defaultValue : this.props.operatorDefaultValue
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     operatorExpression.forEach(item => {
       if((typeof item.id) === "undefined"){
         item.id = uuid(8, 16)
@@ -407,10 +407,8 @@ class App extends Component {
     this.delGroupExpression = this.delGroupExpression.bind(this)
     this.findGroup = this.findGroup.bind(this)
   }
-  componentWillMount(){
-    operatorExpression = this.props.operators || []
-  }
   componentDidMount() {
+    operatorExpression = this.props.operators || []
     const $this = this
     /* 注册recordData */
     EventEmitter.off('recordData')

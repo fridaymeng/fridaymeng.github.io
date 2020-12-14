@@ -11,6 +11,7 @@ import FourierTransformation from "./fourierTransformation/App";
 import Fourier from "./fourier/App";
 import Nodes from "./nodes/App";
 import Maps from "./map/App";
+import Tensorflow from "./tensorflow/App";
 
 const routes = [
   {
@@ -57,6 +58,11 @@ const routes = [
     path: "/fourier",
     exact: true,
     component: Fourier
+  },
+  {
+    path: "/tensorflow",
+    exact: true,
+    component: Tensorflow
   }
 ];
 

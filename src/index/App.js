@@ -31,6 +31,11 @@ const linkList = [
     text: "Fourier",
     src: require("../assets/img/fl.png")
   },
+  {
+    href: "/tensorflow",
+    text: "Tensorflow",
+    src: require("../assets/img/tensor.png")
+  },
   { 
     href: "http://zkboxing.com/book/", 
     text: "ES6 笔记",
@@ -63,7 +68,7 @@ class App extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  componentWillMount() {
+  componentDidMount() {
     let $html = linkList.map(item => {
       return (
         <div className="list-li" key={Math.random()}>
