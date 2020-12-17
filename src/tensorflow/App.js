@@ -6,14 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      num: 0,
-      radius: 100,
-      lineX2: 0,
-      lineY2: 0,
-      width: 1000,
-      data: [],
-      path: '',
-      path2: ''
+      data: []
     }
     this.startRotate = this.startRotate.bind(this);
     this.startTensorFlow = this.startTensorFlow.bind(this);
@@ -32,51 +25,47 @@ class App extends Component {
     * tf.ones（值全是1）
     * tf.zeros（值全是0）
     */
-   const initialValues = tf.zeros([5]);
-   const biases = tf.variable(initialValues); // 初始化biases
-   biases.print(); // 输出: [0, 0, 0, 0, 0]
+    function predict(input) {
+      // y = a * x ^ 2 + b * x + c
+      // More on tf.tidy in the next section
+      return tf.tidy(() => {
+        const x = tf.scalar(input);
 
-  const updatedValues = tf.tensor1d([0, 1, 0, 1, 0]);
-  biases.assign(updatedValues); // 更新 biases的值
-  biases.print(); // 输出: [0, 1, 0, 1, 0]
+        const ax2 = a.mul(x.square());
+        const bx = b.mul(x);
+        const y = ax2.add(bx).add(c);
+
+        return y;
+      });
+    }
+    //上一篇介绍的 tf.scalar（零维）
+    const a = tf.scalar(2);
+    const b = tf.scalar(4);
+    const c = tf.scalar(8);
+
+    const result = predict(3000000);
+    result.print() 
   }
   startRotate () {
-    let data = this.state.data
-    setInterval(() => {
-      const angle = (Math.PI / 180) * this.state.num;
-      const x2 = Math.cos(angle) * this.state.radius + this.state.radius + 5;
-      const y2 = Math.sin(angle) * this.state.radius + this.state.radius + 5;
-      data = [{x2, y2}, ...this.state.data];
-      if (this.state.data.length >= 2000) data.pop()
-      let path = '';
-      data.forEach((item, index) => {
-        if (index === 0) {
-          path += `M${x2 + index + this.state.radius*3} ${Math.sin((Math.PI / 180) * (this.state.num + index)) * this.state.radius + this.state.radius + 5}`
-        } else {
-          path += ` L${x2 + index + this.state.radius*3} ${Math.sin((Math.PI / 180) * (this.state.num + index)) * this.state.radius + this.state.radius + 5}`
-        }
-      })
-      // path += ` Z`; 闭合曲线
-      this.setState({
-        num: this.state.num + 1,
-        width: this.state.data.length,
-        lineX2: x2,
-        lineY2: y2,
-        data,
-        path
-      })
-    }, 1000/144)
+    const data = [
+      {title: 'dfgsg', id: 0}]
+    // path += ` Z`; 闭合曲线
+    this.setState({
+      data
+    })
   }
   render() {
-    /* var items = [];
+    var items = [];
     this.state.data.forEach((item, index) => {
-      items.push(<circle key={index} className="circlepoint" r='1' cx={item.x2} cy={item.y2}></circle>);
-    }) */
+      items.push(<g key={index} transform={`translate(${index * 150}, 10)`}>
+        <rect rx="5" width="100" height="45" className="react"></rect>
+        <text y="30" x="20" className="text">{item.title}</text>
+      </g>);
+    })
     return <div id="wrap">
         <div id="fourier" style={{ 
-        "height" : this.state.radius * 3,
-        "width" : "100%",
-        "overflowX" : "scroll"
+        "height" : "600px",
+        "width" : "100%"
       }}>
         <svg>
           <defs>
@@ -85,16 +74,7 @@ class App extends Component {
               <path d="M 0 0 L 20 10 L 0 20 z" />
             </marker>
           </defs>
-          <circle className="circles" r={this.state.radius} cx={this.state.radius + 5} cy={this.state.radius + 5}></circle>
-          <line className="lines" x1={this.state.radius + 5} y1={this.state.radius + 5} x2={this.state.lineX2} y2={this.state.lineY2}></line>
-          <line markerEnd="url(#Triangle)" className="lines2" x1={this.state.lineX2} y1={this.state.lineY2} x2={this.state.lineX2 + this.state.radius*3 - 10} y2={this.state.lineY2}></line>
-          <path className="paths" d={this.state.path}></path>
-        </svg>
-        <div style={{"width": this.state.width}}>{this.state.width}</div>
-      </div>
-      <div>
-        <svg>
-          <path className="paths" d={this.state.path2}></path>
+          {items}
         </svg>
       </div>
     </div>;
