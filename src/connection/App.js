@@ -156,8 +156,6 @@ constructor(props) {
         }
         this.updateTableList();
   }
-  componentWillUpdate(){
-  }
   componentDidUpdate(){
       this.updateTableList();
   }

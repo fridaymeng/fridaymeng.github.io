@@ -1,7 +1,6 @@
 import React,{ Component } from 'react';
 import * as d3 from "d3";
 import './App.less';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,8 @@ class App extends Component {
       width: 1000,
       data: [],
       path: '',
-      path2: ''
+      path2: '',
+      interval: 0
     }
     this.startRotate = this.startRotate.bind(this);
   }
@@ -26,7 +26,7 @@ class App extends Component {
   }
   startRotate () {
     let data = this.state.data
-    setInterval(() => {
+    const interval = setInterval(() => {
       const angle = (Math.PI / 180) * this.state.num;
       const x2 = Math.cos(angle) * this.state.radius + this.state.radius + 5;
       const y2 = Math.sin(angle) * this.state.radius + this.state.radius + 5;
@@ -58,6 +58,9 @@ class App extends Component {
         path2
       })
     }, 1000/144)
+    this.setState({
+      interval
+    })
   }
   render() {
     /* var items = [];
