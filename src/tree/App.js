@@ -12,19 +12,19 @@ class App extends Component {
     };
   }
   onChange(data, sql) {
-    const sqlStart = "select * from where "
-    console.log(sqlStart + sql)
+    /* const sqlStart = "select * from where "
+    console.log(sqlStart + sql) */
   }
   render() {
-    return <Tree fields={this.state.fields} operators={this.state.operators} onChange={this.onChange} />
-    /* return (
-      <Querybuilder
+    return <div>
+      <Tree fields={this.state.fields} operators={this.state.operators} onChange={this.onChange} />
+      {/* <Querybuilder
         fields={this.state.fields}
         operators={this.state.operators}
         onChange={this.onChange}
         console={false}
-      ></Querybuilder>
-    ); */
+      /> */}
+    </div>
   }
 }
 
