@@ -6,14 +6,44 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      featureData: [],
+      layer1Data: [],
+      outputData: [],
+      path: "M0 400"
     }
-    this.startRotate = this.startRotate.bind(this);
     this.startTensorFlow = this.startTensorFlow.bind(this);
   }
   componentDidMount(){
-    this.startRotate()
     this.startTensorFlow()
+    const featureData = [
+      {title: 'X1', id: 1},
+      {title: 'X2', id: 2},
+      {title: 'X3', id: 3},
+      {title: 'Y1', id: 4},
+      {title: 'Y2', id: 5},
+      {title: 'Y3', id: 6}
+    ]
+    const layer1Data = [
+      {title: 'A', id: 1},
+      {title: 'B', id: 2},
+      {title: 'C', id: 3}
+    ]
+    const outputData = [
+      {title: 'R', id: 1}
+    ]
+    this.setState({
+      featureData,
+      layer1Data,
+      outputData
+    })
+    /* let num = 0
+    setInterval(() => {
+      num += 1
+      const path = this.state.path + ` L${num} ${Math.sin(Math.PI / 45 * num)*50 + 400}`
+      this.setState({
+        path
+      })
+    }, 1000/144) */
   }
   startTensorFlow () {
     /* 
@@ -46,18 +76,26 @@ class App extends Component {
     const result = predict(3000000);
     result.print() 
   }
-  startRotate () {
-    const data = [
-      {title: 'dfgsg', id: 0}]
-    // path += ` Z`; 闭合曲线
-    this.setState({
-      data
-    })
-  }
   render() {
     var items = [];
-    this.state.data.forEach((item, index) => {
-      items.push(<g key={index} transform={`translate(${index * 150}, 10)`}>
+    this.state.featureData.forEach((item, index) => {
+      items.push(<g key={Math.random()} transform={`translate(${index}, ${index * 50})`}>
+        <rect rx="5" width="100" height="45" className="react"></rect>
+        <text y="30" x="20" className="text">{item.title}</text>
+        {<path className="paths" d={`M100 ${index + 22} L300 ${index * -50 + 22}`}></path>}
+        {index === 4 ? <path className="paths" d={`M100 ${index + 22} L300 ${(index * -40) + 30}`}></path> : ""}
+        {index === 5 ? <path className="paths" d={`M100 ${index + 22} L300 ${(index * -30) + 22}`}></path> : ""}
+      </g>);
+    })
+    this.state.layer1Data.forEach((item, index) => {
+      items.push(<g key={Math.random()} transform={`translate(${index + 300}, ${index * 50})`}>
+        <rect rx="5" width="100" height="45" className="react"></rect>
+        <text y="30" x="20" className="text">{item.title}</text>
+        <path className="paths" d={`M100 ${index + 22} L300 ${index * -50 + 22}`}></path>
+      </g>);
+    })
+    this.state.outputData.forEach((item, index) => {
+      items.push(<g key={Math.random()} transform={`translate(${index + 600}, ${index * 50})`}>
         <rect rx="5" width="100" height="45" className="react"></rect>
         <text y="30" x="20" className="text">{item.title}</text>
       </g>);
@@ -68,13 +106,8 @@ class App extends Component {
         "width" : "100%"
       }}>
         <svg>
-          <defs>
-            <marker id="Triangle" viewBox="0 0 20 20" refX="0" refY="10"
-                markerWidth="10" markerHeight="10" orient="auto">
-              <path d="M 0 0 L 20 10 L 0 20 z" />
-            </marker>
-          </defs>
           {items}
+          <path className="paths" d={this.state.path}></path>
         </svg>
       </div>
     </div>;
