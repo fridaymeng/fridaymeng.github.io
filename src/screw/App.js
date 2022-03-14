@@ -1,0 +1,324 @@
+import React,{ Component } from 'react';
+import * as d3 from "d3";
+import './App.less';
+
+class App extends Component {
+  componentDidMount () {
+    let objectWrap, gWrap, pathWrap;
+    const connectData = [];
+    // circle radius
+    const mainCirceRadius = 1.5;
+    const svgHeight = 800;
+
+    // main circle drag
+    const drag = d3
+      .drag()
+      .on("start", dragstart)
+      .on("drag", draging)
+      .on("end", dragend);
+
+    function renderNodes (params = {}) {
+      d3.selectAll(".unit-dis").remove();
+      objectWrap = gWrap.selectAll("g")
+        .data(params.data)
+        .enter()
+        .append("g")
+        .attr("id", d => d.id)
+        .attr("class", "unit-dis")
+        .call(drag)
+        .attr('transform', (d) => `translate(${params.data[2].x}, ${params.data[2].y})`);
+      objectWrap.transition()
+        .duration(750)
+        .delay(function(d, i) { return i; })
+        .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+      renderMain();
+    }
+
+    // draw connect lines
+    function renderLines (data) {
+      pathWrap.selectAll(".connect-fixed-line").remove();
+      const allPath = pathWrap.selectAll(".connect-fixed-line")
+        .data(data)
+        .enter()
+        .append("path")
+        .attr("class", (d) => `start-${d.source} end-${d.target} connect-fixed-line`)
+        .attr("style", "stroke: #111;stroke-width: 1px;")
+        .attr("marker-end","url(#arrowEnd)")
+        .attr("d", (d) => `M${data[2].x1},${data[2].y1} ${data[2].x2},${data[2].y2}`)
+        .attr("data-id", d => d.id);
+      allPath.transition()
+        .duration(750)
+        .delay(function(d, i) { return i; })
+        .attr("d", (d) => `M${d.x1},${d.y1} ${d.x2},${d.y2}`);
+    }
+
+    // drag start
+    function dragstart (event, d) {
+      // d3.select(this).classed("fixed", false);
+      d.dx = event.sourceEvent.x;
+      d.dy = event.sourceEvent.y;
+    }
+    // draging
+    function draging (event, d) {
+      const $this = this;
+      d.xp = d.x - (d.dx - event.sourceEvent.x);
+      d.yp = d.y - (d.dy - event.sourceEvent.y);
+      connectData.forEach(item => {
+        const index = item.source === d.id ? item.startIndex : item.endIndex;
+        const xValue = Math.cos(Math.PI / 180 * index * 90) * mainCirceRadius;
+        const yValue = Math.sin(Math.PI / 180 * index * 90) * mainCirceRadius;
+        if (item.source === d.id) {
+          item.x1 = d.xp + xValue;
+          item.y1 = d.yp + yValue;
+        } else if (item.target === d.id) {
+          item.x2 = d.xp + xValue;
+          item.y2 = d.yp + yValue;
+        }
+      });
+      d3.select($this).attr("transform", () => `translate(${d.xp}, ${d.yp})`);
+    }
+    // drag end
+    function dragend (event, d) {
+      d.x = d.xp || event.sourceEvent.x;
+      d.y = d.yp || event.sourceEvent.y;
+    }
+
+    function renderMain () {
+      // main circle
+      objectWrap.append("circle")
+          .attr("fill", "#fff")
+          .attr("class", "main-circle")
+          .attr("fill", "#900")
+          .attr("stroke", "#900")
+          .attr("r", mainCirceRadius);
+    }
+
+    function init(params = {}) {
+      const wrap = d3.select(`#${params.id}`).attr("height", svgHeight);
+      const wraps = wrap.append("div");
+      const svg = wraps.append("svg");
+      // fill pattern
+      svg.append("rect")
+        .attr("width", "100%")
+        .attr("height", svgHeight)
+        .attr("fill", "url(#diagramPattern)")
+        .on("click", (event) => {
+          d3.selectAll(".unit-dis").attr("class", "unit-dis");
+        })
+        .call(
+          d3.zoom()
+          .scaleExtent([.1, 100])
+          .on("zoom", svgZoomed)
+        );
+      const svgWrap = svg.append("g");
+      pathWrap = svgWrap.append("g");
+      gWrap = svgWrap.append("g");
+      wrap.attr("class", "nodelayout-wrap");
+      svg
+        .attr("width", "100%")
+        .attr("height", svgHeight);
+      // connect line
+      gWrap.append("path")
+        .attr("class", "connect-line")
+        .attr("marker-end","url(#arrowEnd)");
+      function svgZoomed(d) {
+        svgWrap.attr("transform", d.transform);
+      }
+      const nodeData = params.nodes.map((item, index) => {
+        return {
+          id: item.id,
+          text: 'name',
+          x: item.x,
+          y: item.y
+        };
+      });
+      renderNodes({
+        data: nodeData
+      });
+      renderLines(params.lines);
+      // node connect line
+      if (params.lines) {
+        params.lines.forEach((item, index) => {
+          const startIndex = 0
+          const endIndex = 2
+          connectData.push({
+            id: Math.random(),
+            source: '',
+            target: '',
+            startIndex: startIndex,
+            endIndex: endIndex,
+            x1: item.x1,
+            y1: item.y1,
+            x2: item.x2,
+            y2: item.y2
+          });
+        });
+      }
+      // arrow  
+      let markerWrap = svg.append("defs");  
+      markerWrap.append("marker")  
+        .attr("id","arrowEnd")  
+        .attr("markerUnits","strokeWidth")  
+        .attr("markerWidth","12")  
+        .attr("markerHeight","12")  
+        .attr("viewBox","0 0 12 12")   
+        .attr("refX","10")  
+        .attr("refY","6")  
+        .attr("orient","auto")
+        .append("path")
+        .attr("d","M2,2 L10,6 L2,10 L6,6 L2,2")  
+        .attr("class","pathArrow");
+      markerWrap.append("marker")  
+        .attr("id","arrowStart")  
+        .attr("markerUnits","strokeWidth")  
+        .attr("markerWidth","12")  
+        .attr("markerHeight","12")  
+        .attr("viewBox","0 0 12 12")   
+        .attr("refX","0")  
+        .attr("refY","6")  
+        .attr("orient","auto")
+        .append("path")
+        .attr("d","M10,2 L2,6 L10,10 L6,6 L10,2")
+        .attr("class","pathArrow");
+      /* 网格 */
+      const gridArr = new Array(20);
+      const patternWrap = markerWrap
+        .append("pattern")
+        .attr("id", "diagramPattern")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 100)
+        .attr("height", 100)
+        .attr("patternUnits", "userSpaceOnUse");
+      patternWrap
+        .selectAll("path")
+        .data(gridArr)
+        .enter()
+        .append("path")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", "0.25")
+        .attr("dashArray", "")
+        .attr("d", (d, index) => {
+          if (index === 0) {
+          return `M0,0.5 L100,0.5 Z`;
+          } else if (index < 10 && index > 0) {
+          return `M0,${index * 10}.125 L100,${index * 10}.125 Z`;
+          } else if (index === 10) {
+          return `M0.5,0 L0.5,100 Z`;
+          } else if (index > 10) {
+          return `M${(index - 10) * 10}.125,0 L${(index - 10) * 10}.125,100 Z`;
+            }
+        });
+    }
+
+    // start draw
+    const nodes = [];
+    const lines = [];
+    
+    function drawSpiral() {
+        var masterArr = [],
+            coordArr = [],coordArr2 = [],coordArr3 = [],coordArr4 = [],coordArr5 = [],
+            t = 0,t2 = 0,t3 = 0,t4 = 0,t5 = 0,
+            r = 0,
+            step = 10,
+            i;
+        masterArr.length = 310;
+        for(i = 0; i < masterArr.length; i ++){
+          r = .05 * (1 + t);
+          const resultCoord = getCoord(r,t);
+          const resultCoord2 = getCoord(r,t2);
+          const resultCoord3 = getCoord(r,t3);
+          const resultCoord4 = getCoord(r,t4);
+          const resultCoord5 = getCoord(r,t5);
+          coordArr[i] = resultCoord;
+          coordArr2[i] = resultCoord2;
+          coordArr3[i] = resultCoord3;
+          coordArr4[i] = resultCoord4;
+          coordArr5[i] = resultCoord5;
+          nodes.push({
+            id: Math.random(),
+            x: resultCoord.x + 300,
+            y: resultCoord.y + 200
+          });
+          nodes.push({
+            id: Math.random(),
+            x: resultCoord2.x + 600,
+            y: resultCoord2.y + 200
+          });
+          nodes.push({
+            id: Math.random(),
+            x: resultCoord3.x + 900,
+            y: resultCoord3.y + 200
+          });
+          nodes.push({
+            id: Math.random(),
+            x: resultCoord4.x + 1200,
+            y: resultCoord4.y + 200
+          });
+          nodes.push({
+            id: Math.random(),
+            x: resultCoord5.x + 1500,
+            y: resultCoord5.y + 200
+          });
+          if(i > 1){
+            lines.push({
+              x1: coordArr[i-1].x + 300,
+              y1: coordArr[i-1].y + 600,
+              x2: coordArr[i].x + 300,
+              y2: coordArr[i].y + 600
+            });
+            lines.push({
+              x1: coordArr2[i-1].x + 600,
+              y1: coordArr2[i-1].y + 600,
+              x2: coordArr2[i].x + 600,
+              y2: coordArr2[i].y + 600
+            });
+            lines.push({
+              x1: coordArr3[i-1].x + 900,
+              y1: coordArr3[i-1].y + 600,
+              x2: coordArr3[i].x + 900,
+              y2: coordArr3[i].y + 600
+            });
+            lines.push({
+              x1: coordArr4[i-1].x + 1200,
+              y1: coordArr4[i-1].y + 600,
+              x2: coordArr4[i].x + 1200,
+              y2: coordArr4[i].y + 600
+            });
+            lines.push({
+              x1: coordArr5[i-1].x + 1500,
+              y1: coordArr5[i-1].y + 600,
+              x2: coordArr5[i].x + 1500,
+              y2: coordArr5[i].y + 600
+            });
+          }
+          t = t + step;
+          t2 = t2 + step*.9;
+          t3 = t3 + step*.2;
+          t4 = t4 + step*.4;
+          t5 = t5 + step*.9999;
+        }
+    }
+    drawSpiral();
+    
+    function getCoord (r, t) {
+      return {
+        x : r * Math.cos(t * 360),
+        y : r * Math.sin(t * 360)
+      };
+    }
+    init({
+      id: "drawings",
+      nodes,
+      lines
+    });
+  }
+  render() {
+    return <div id="drawings" style={{ 
+      "height" : "800px",
+      "width" : "100%"
+    }}></div>;
+  }
+}
+
+export default App;
