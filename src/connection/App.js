@@ -83,8 +83,8 @@ class App extends Component {
     nodeLayouts.reset()
   }
   render() {
-    return <div>
-      <div style={{ "padding": "0 0 10px" }}>
+    return <div style={{ "padding": "5px" }}>
+      <div style={{ "padding": "0 0 10px", "position": "absolute", "top": "105px", "right": "20px" }}>
         <button
           onClick={this.add}
           style={{
