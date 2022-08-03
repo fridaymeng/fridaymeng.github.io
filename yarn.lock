@@ -8059,10 +8059,10 @@ node-sass@^5.0.0:
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
 
-nodelayout@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/nodelayout/-/nodelayout-1.5.5.tgz#9bfaf076b0752feb31d2053f6c1461685c4654c9"
-  integrity sha512-N7RH3ze5flbsz6AL19wsBLr04ioB9FBh7Myg8/2o/GyW2i17lhGpau2UR4HESZMsmBGZMP1BkBvUfxzL5CAOrw==
+nodelayout@^1.5.7:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/nodelayout/-/nodelayout-1.5.7.tgz#ce2c9eed9ba83f7d1aa8d350204bd5e6eb68eec5"
+  integrity sha512-DCFqLWDu/NpW2CbBt3E8AEJ/vZyuam2kGoFt3HjO3/KPWcVuw0Qjqx+eq91FZyMxk0HfDO+O4EOYbUevCv0ufQ==
   dependencies:
     "@babel/core" "^7.16.5"
     babel-loader "^8.2.3"
