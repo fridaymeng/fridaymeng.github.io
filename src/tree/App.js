@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Querybuilder from "react-sql-query-builder";
-import { operators , fields } from './data'
-import Tree from './Tree'
-
+import QueryBuilder from "react-sql-query-builder";
+import { operators , fields } from './data';
+const queryBuilder = new QueryBuilder();
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +10,34 @@ class App extends Component {
       operators
     };
   }
+  componentDidMount () {
+    const rules = [{
+      condition: 'AND',
+      id: 0,
+      rules: [{
+        id: 3,
+        operator: 1,
+        value: 9
+      }, {
+        condition: 'OR',
+        id: 9,
+        rules: [{
+          id: 4,
+          operator: 2,
+          value: 'JAPAN'
+        }]
+      }]
+    }];
+    queryBuilder.init({
+      rules,
+      fields,
+      operators,
+      id: "wrap-tree",
+      handleChange: (rules) => {
+        // console.log(rules)
+      }
+    })
+  }
   onChanges (data, sql) {
   }
   onChange(data, sql) {
@@ -18,19 +45,7 @@ class App extends Component {
     console.log(sqlStart + sql) */
   }
   render() {
-    return <div>
-      <Tree
-        console={true}
-        fields={this.state.fields}
-        operators={this.state.operators}
-        onChange={this.onChanges}
-      />
-      <Querybuilder
-        fields={this.state.fields}
-        operators={this.state.operators}
-        onChange={this.onChange}
-        console={false}
-      />
+    return <div id="wrap-tree">
     </div>
   }
 }
